@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        instrument: ['Instrument Sans', 'sans-serif'],
-        rethink: ['Rethink Sans', 'sans-serif'],
+        'rethink': ['"Rethink Sans"', 'sans-serif'],
+        'instrument': ['"Instrument Sans"', 'sans-serif'],
       },
     },
   },

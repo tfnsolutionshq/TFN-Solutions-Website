@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const TopBar = () => {
   return (
@@ -9,12 +10,12 @@ const TopBar = () => {
           <span className="text-sm md:text-base font-rethink">Talk to Us</span>
         </div>
         <div className="flex items-center space-x-4">
-          <a
-            href="#"
+          <Link
+            to={`/become-a-member`}
             className="bg-[#D15300] text-white text-sm md:text-sm px-2 py-4 md:px-4 hover:bg-orange-600 transition-colors"
           >
             Become a Member
-          </a>
+          </Link>
           <a href="#" className="text-sm md:text-sm hover:underline">
             Alumni Directory
           </a>

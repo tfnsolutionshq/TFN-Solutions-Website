@@ -1,114 +1,110 @@
-import { Facebook, Twitter, Instagram, } from "lucide-react"
+import { Facebook, Twitter, Instagram } from "lucide-react"
 
 const Footer = () => {
   return (
-    <footer className="bg-[#030F27] text-white py-10 px-8 md:px-24 relative">
-
+    <footer className="bg-[#030F27] text-white py-10 px-4 sm:px-8 md:px-12 lg:px-24 relative">
       <div className="container mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* First column group (takes 1/4 of the width) */}
-          <div className="lg:col-span-3 grid grid-cols-4 gap-8">
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4 uppercase tracking-wider">Quick Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Event
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Alumni Directory
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Campus Tour
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Donate
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    About Us
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Resources */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4 uppercase tracking-wider">Resources</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Videos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Brochure
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Help */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4 uppercase tracking-wider">Help</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Call us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Email us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Press
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Legal */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4 uppercase tracking-wider">Legal</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Privacy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
-                    Terms
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <div className="flex flex-wrap lg:flex-nowrap gap-6 md:gap-8">
+          {/* Quick Links */}
+          <div className="w-full sm:w-auto flex-1 min-w-[150px]">
+            <h3 className="text-base lg:text-lg font-semibold mb-3 lg:mb-4 uppercase tracking-wider">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-xs sm:text-sm">
+                  Event
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-xs sm:text-sm">
+                  Alumni Directory
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  Campus Tour
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  Donate
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  About Us
+                </a>
+              </li>
+            </ul>
           </div>
 
-          {/* Newsletter (takes 3/4 of the width) */}
-          <div className="lg:col-span-1">
+          {/* Resources */}
+          <div className="w-full sm:w-auto flex-1 min-w-[150px]">
+            <h3 className="text-lg font-semibold mb-4 uppercase tracking-wider">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  Videos
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  Brochure
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Help */}
+          <div className="w-full sm:w-auto flex-1 min-w-[150px]">
+            <h3 className="text-lg font-semibold mb-4 uppercase tracking-wider">Help</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  Call us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  Email us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  Press
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div className="w-full sm:w-auto flex-1 min-w-[150px]">
+            <h3 className="text-lg font-semibold mb-4 uppercase tracking-wider">Legal</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  Privacy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white text-sm sm:text-base">
+                  Terms
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter (takes more width) */}
+          <div className="w-full lg:w-2/5 min-w-[250px]">
             <h3 className="text-lg font-semibold mb-4 uppercase tracking-wider">Subscribe to our newsletter</h3>
             <p className="text-sm sm:text-base text-gray-300 mb-4">
               The latest news, articles, and resources, sent to your inbox weekly
