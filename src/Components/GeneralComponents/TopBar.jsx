@@ -2,7 +2,7 @@ import { Phone } from "lucide-react"
 
 const TopBar = () => {
   return (
-    <div className="w-full bg-[#20608B] text-white px-4 md:px-8">
+    <div className="w-full bg-[#20608B] text-white px-8 md:px-24">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Phone className="h-4 w-4 mr-1" />

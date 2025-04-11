@@ -1,8 +1,8 @@
-import { Facebook, Twitter, Instagram, ChevronRight } from "lucide-react"
+import { Facebook, Twitter, Instagram, } from "lucide-react"
 
 const Footer = () => {
   return (
-    <footer className="bg-[#030F27] text-white py-10 px-4 md:px-8 relative">
+    <footer className="bg-[#030F27] text-white py-10 px-8 md:px-24 relative">
 
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
