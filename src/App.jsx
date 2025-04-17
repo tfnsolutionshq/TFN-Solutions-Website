@@ -8,6 +8,10 @@ import Newpassword from "./Pages/Authentication/new-password";
 import AlumniDirectory from "./Pages/alumni-directory";
 import BranchList from "./Pages/branch-list";
 import History from "./Pages/history";
+import Gallery from "./Pages/Gallery/galleria";
+import ViewGallery from "./Pages/Gallery/view-gallery";
+import Donations from "./Pages/Donation/donations";
+import DonationDetaisl from "./Pages/Donation/donation-details";
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
         <Route path="/alumni-directory" element={<AlumniDirectory />} />
         <Route path="/branch-list" element={<BranchList />} />
         <Route path="/history" element={<History />} />
+        <Route path="/galleria" element={<Gallery />} />
+        <Route path="/view-gallery" element={<ViewGallery />} />
+        <Route path="/donations" element={<Donations />} />
+        <Route path="/donation-details" element={<DonationDetaisl />} />
       </Routes>
     </Router>
   )
