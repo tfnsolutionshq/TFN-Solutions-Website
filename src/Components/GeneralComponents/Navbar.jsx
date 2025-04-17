@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Menu, Search } from "lucide-react"
 import Logo from "../../assets/Images/unizik-logo.png"
+import { Link } from "react-router-dom"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

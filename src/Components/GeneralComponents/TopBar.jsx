@@ -16,9 +16,9 @@ const TopBar = () => {
           >
             Become a Member
           </Link>
-          <a href="#" className="text-sm md:text-sm hover:underline">
+          <Link to={`/alumni-directory`} className="text-sm md:text-sm hover:underline">
             Alumni Directory
-          </a>
+          </Link>
         </div>
       </div>
     </div>

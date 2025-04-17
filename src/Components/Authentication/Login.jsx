@@ -61,7 +61,7 @@ const Login = () => {
           {/* Form Card */}
           <div className="relative z-10 flex flex-col md:flex-row justify-center px-6 md:px-0 pt-24">
             {/* Form Container */}
-            <div className="w-full md:w-2/5 lg:w-2/5 bg-white border p-6 md:p-8 rounded-lg my-8 md:my-16 mx-auto">
+            <div className="w-full md:w-2/5 lg:w-3/5 bg-white border p-6 md:p-8 rounded-lg my-8 md:my-16 mx-auto">
               {/* Logo and Title */}
               <div className="flex flex-col items-center mb-6">
                 <img src={Logo} alt="Unizik Logo" className="w-20 h-20 mb-4" />

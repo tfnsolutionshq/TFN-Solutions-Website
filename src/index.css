@@ -5,7 +5,7 @@
 @import './styles/fonts.css';
 
 body {
-  font-family: 'Rethink Sans', sans-serif;
+  font-family: 'Rethink Sans';
 }
 
 @keyframes blink {
