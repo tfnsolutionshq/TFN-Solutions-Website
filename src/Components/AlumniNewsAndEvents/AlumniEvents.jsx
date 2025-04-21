@@ -62,7 +62,7 @@ const EventsListingPage = () => {
     }
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white mb-24">
             {/* Navigation */}
             <div className="max-w-6xl mx-auto px-6 mt-4 sm:px-0 lg:px-0 py-4">
                 <nav className="flex items-center text-sm text-gray-500">

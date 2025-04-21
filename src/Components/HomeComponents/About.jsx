@@ -5,7 +5,7 @@ import AboutBg from "../../assets/Images/aboutbgg.png"
 const AboutUs = () => {
     return (
         <>
-        <main className="relative">
+        <main className="relative" id="about">
             {/* Background split into three parts */}
             <div className="absolute inset-0 w-full h-full">
                 <div className="flex h-full">

@@ -1,8 +1,15 @@
 import { useState, useEffect, useRef } from "react"
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
 import { Link } from "react-router-dom"
+import ShareStoryPopup from "./ShareStoryPopup"
+
 
 const StoriesThatInspire = () => {
+  const [showSharePopup, setShowSharePopup] = useState(false)
+
+  const openSharePopup = () => {
+    setShowSharePopup(true)
+  }
   // Alumni success stories data
   const stories = [
     {
@@ -135,14 +142,7 @@ const StoriesThatInspire = () => {
     }
   }
 
-  // Mouse handlers for pause on hover
-  const handleMouseEnter = () => {
-    pauseRef.current = true
-  }
-
-  const handleMouseLeave = () => {
-    pauseRef.current = false
-  }
+  
 
   return (
     <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-8">
@@ -155,7 +155,7 @@ const StoriesThatInspire = () => {
             </p>
           </div>
           
-          <Link to="/stories" className="flex items-center text-[#D85E00] font-medium group">
+          <Link onClick={openSharePopup} className="flex items-center text-[#D85E00] font-medium group">
             <span>SHARE YOUR STORY</span>
             <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
@@ -165,8 +165,7 @@ const StoriesThatInspire = () => {
         <div 
           className="relative" 
           ref={sliderRef}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -242,6 +241,9 @@ const StoriesThatInspire = () => {
           </div>
         </div>
       </div>
+
+
+      <ShareStoryPopup isOpen={showSharePopup} onClose={() => setShowSharePopup(false)} />
     </section>
   )
 }

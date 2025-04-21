@@ -10,7 +10,7 @@ const EventDetailPage = () => {
   const event = {
     title: "Alumni Reunion Reboot 2.0 (Lagos Chapter)",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alumnievents2.jpg-eis7HjmIUWP1BmZkl1QIkkBKbvwTUw.jpeg",
+      "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/Frame%204.png?raw=true",
     description:
       "Post Graduate Studies: The Important factor to bear in mind Post Graduate Studies: The Important factor to bear in mind Post Graduate Studies: The Important factor to bear in mind Post Graduate Studies: The Important factor to bear in mind Post Graduate Studies: The Important factor to bear in mind Post Graduate Studies.",
     date: "17 Jan, 2024",
@@ -21,13 +21,13 @@ const EventDetailPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mb-24">
       {/* Banner Image - Full Width */}
       <div className="w-full relative left-1/2 right-1/2 -mx-[50vw] left-[50%] right-[50%] max-w-none" style={{position:'relative',width:'100vw',left:'50%',right:'50%',transform:'translateX(-50%)'}}>
         
       </div>
       {/* Navigation and Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="max-w-6xl mx-auto px-6 mt-3 sm:px-0 lg:px-0 py-4">
         <nav className="flex items-center text-sm text-gray-500">
           <a href="#" className="flex items-center hover:text-gray-700">
             <Home className="h-4 w-4 mr-1" />
@@ -41,7 +41,7 @@ const EventDetailPage = () => {
           <span className="text-gray-900">Info</span>
         </nav>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-0 lg:px-0 mt-3">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-0">{event.title}</h1>
           <div className="flex items-center space-x-2">
@@ -65,7 +65,7 @@ const EventDetailPage = () => {
           {/* Left Column - Event Details */}
           <div className="lg:col-span-2">
             {/* Event Image */}
-            <div className="w-full aspect-video mb-6 overflow-hidden rounded-md">
+            <div className="w-full aspect-video mb-6 overflow-hidden">
               <img src={event.image || "/placeholder.svg"} alt={event.title} className="w-full h-full object-cover" />
             </div>
 
@@ -111,7 +111,7 @@ const EventDetailPage = () => {
             {/* Map Location */}
             <div className="mb-8">
               <h2 className="text-xl font-bold mb-4">Map Location</h2>
-              <div className="w-full h-64 bg-gray-200 rounded-md overflow-hidden">
+              <div className="w-full h-64 bg-gray-200 overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.46312651567!2d3.1191195!3d6.5244031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1650000000000!5m2!1sen!2sng"
                   width="100%"

@@ -30,8 +30,8 @@ const HallOfFame = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7">
           {/* Orange box with years */}
           <div className="bg-[#D15300] text-white flex flex-col justify-center items-center p-4">
-            <span className="text-4xl sm:text-7xl font-bold font-rethink">34</span>
-            <span className="text-xs sm:text-sm text-center font-rethink">Years of Excellence</span>
+            <span className="text-7xl sm:text-7xl font-bold font-rethink">34</span>
+            <span className="text-sm sm:text-sm text-center font-rethink">Years of Excellence</span>
           </div>
 
           {/* First 9 alumni photos */}
@@ -50,8 +50,8 @@ const HallOfFame = () => {
 
           {/* 60+ Charity Projects */}
           <div className="bg-[#030F27] text-white flex flex-col justify-center items-center p-4">
-            <span className="text-6xl sm:text-7xl font-bold font-rethink">60+</span>
-            <span className="text-xs sm:text-sm text-center font-rethink">Charity Projects</span>
+            <span className="text-7xl sm:text-7xl font-bold font-rethink">60+</span>
+            <span className="text-sm sm:text-sm text-center font-rethink">Charity Projects</span>
           </div>
 
           {/* Next 9 alumni photos */}
@@ -81,7 +81,7 @@ const HallOfFame = () => {
             <p className="text-gray-600 font-rethink">You too can be a part of the journey</p>
             <div className="h-px bg-[#D15300] w-full "></div>
             <div className="flex justify-between items-center">
-              <Link to="/membership" className="text-[#D15300] font-rethink font-medium">
+              <Link to="/become-a-member" className="text-[#D15300] font-rethink font-medium">
                 BECOME A MEMBER NOW
               </Link>
               <ArrowRight className="text-[#D15300] h-4 w-4" />

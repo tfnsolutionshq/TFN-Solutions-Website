@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @import './styles/fonts.css';
-
+*{
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Rethink Sans';
 }

@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom"
 import { ChevronRight, House, Music } from "lucide-react"
+import { useState } from "react"
+import UnizikAnthemPopup from "../HomeComponents/UnizikAnthemPopup"
 
 const HistoryContent = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
+
+  const openPopup = () => {
+    setIsPopupOpen(true)
+  }
+
+  const closePopup = () => {
+    setIsPopupOpen(false)
+  }
   // News items data
   const newsItems = [
     {
@@ -154,18 +165,22 @@ const HistoryContent = () => {
           </div>
 
           {/* Campus Tour Box */}
-          <div className="bg-[#F8E5D9] px-6 py-6 flex items-center justify-between">
-            <div>
-              <h3 className="font-medium text-lg text-[#D15300]">Unizik Anthem</h3>
+          <Link onClick={openPopup}>
+            <div className="bg-[#F8E5D9] px-6 py-6 flex items-center justify-between">
+              <div>
+                <h3 className="font-medium text-lg text-[#D15300]">Unizik Anthem</h3>
+              </div>
+              <Music className="h-10 w-10 text-[#D15300]" />
             </div>
-            <Music className="h-10 w-10 text-[#D15300]" />
-          </div>
-          <div className="bg-[#D9DBDF] px-6 py-6 flex items-center justify-between">
-            <div>
-              <h3 className="font-medium text-lg text-[#030F27]">Campus Tour</h3>
+          </Link>
+          <Link to={`/galleria`}>
+            <div className="bg-[#D9DBDF] px-6 py-6 flex items-center justify-between">
+              <div>
+                <h3 className="font-medium text-lg text-[#030F27]">Campus Tour</h3>
+              </div>
+              <House className="h-12 w-12 text-[#030F27]" />
             </div>
-            <House className="h-12 w-12 text-[#030F27]" />
-          </div>
+          </Link>
 
           {/* Unizik Alumni Box */}
           {/* <div className="mt-6 bg-[#D85E00]/10 p-4 ">
@@ -174,6 +189,9 @@ const HistoryContent = () => {
           </div> */}
         </div>
       </div>
+
+
+      <UnizikAnthemPopup isOpen={isPopupOpen} onClose={closePopup} />
     </div>
   )
 }

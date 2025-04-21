@@ -16,9 +16,11 @@ const Header = () => {
     <header className="bg-white border-b py-3 px-8 md:px-24">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo - Left */}
+        <Link to={`/`}>
         <div className="flex items-center">
           <img src={Logo} alt="" />
         </div>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button className="md:hidden focus:outline-none" onClick={toggleMenu}>
@@ -28,21 +30,21 @@ const Header = () => {
         {/* Desktop Navigation - Center */}
         <nav className="hidden md:flex items-center justify-center flex-1 mx-4">
           <div className="flex space-x-6">
-            <a href="#" className="text-black font-semibold font-medium hover:text-blue-600">
+            <Link to={`/`} className="text-black font-semibold font-medium hover:text-blue-600">
               Home
-            </a>
-            <a href="#" className="text-black font-semibold hover:text-blue-600">
+            </Link>
+            <a href="#about" className="text-black font-semibold hover:text-blue-600">
               About Us
             </a>
-            <a href="#" className="text-black font-semibold hover:text-blue-600">
+            <Link to={`/alumni-news`} className="text-black font-semibold hover:text-blue-600">
               News/Events
-            </a>
-            <a href="#" className="text-black font-semibold hover:text-blue-600">
+            </Link>
+            <Link to={`/branch-list`} className="text-black font-semibold hover:text-blue-600">
               Chapters
-            </a>
-            <a href="#" className="text-black font-semibold hover:text-blue-600">
+            </Link>
+            <Link to={`/`} className="text-black font-semibold hover:text-blue-600">
               Resources
-            </a>
+            </Link>
           </div>
         </nav>
 
@@ -61,19 +63,19 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden mt-4 pb-4">
           <nav className="flex flex-col space-y-3 px-4">
-            <a href="#" className="text-blue-800 font-medium">
+            <a to={``} className="text-blue-800 font-medium">
               Home
             </a>
-            <a href="#" className="text-gray-700">
+            <a to={``} className="text-gray-700">
               About Us
             </a>
-            <a href="#" className="text-gray-700">
+            <a to={``} className="text-gray-700">
               News/Events
             </a>
-            <a href="#" className="text-gray-700">
+            <a to={``} className="text-gray-700">
               Chapters
             </a>
-            <a href="#" className="text-gray-700">
+            <a to={``} className="text-gray-700">
               Resources
             </a>
             <div className="relative mt-2">

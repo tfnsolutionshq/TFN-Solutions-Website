@@ -5,7 +5,7 @@ const NewsDetailPage = () => {
   const article = {
     title: "Alumni Reunion Reboot 2.0 (Lagos Chapter)",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alumninewsdetail.jpg-E328mNfZk4NrNwcjUZ6sfXTUeciwjK.jpeg",
+      "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/Frame%204.png?raw=true",
     postedDate: "June 17, 2024",
     content:
       "Post Graduate Studies: The Important factor to bear in mind Post Graduate Studies: The Important factor to bear in mind Post Graduate Studies: The Important factor to bear in mind Post Graduate Studies: The Important factor to bear in mind Post Graduate Studies: The Important factor to bear in mind Post Graduate Studies.",
@@ -18,42 +18,42 @@ const NewsDetailPage = () => {
       title: "Tips: How to secure Transcript for Int'l Purpose",
       date: "17 JUNE 2020",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alumninews.jpg-qX7cN9BIMWceNjQbHCeq48vwUXWfBN.jpeg",
+        "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/Frame%204.png?raw=true",
     },
     {
       id: 2,
       title: "Post Graduate Studies: The Important factor to bear in mind",
       date: "17 JUNE 2020",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alumninews.jpg-qX7cN9BIMWceNjQbHCeq48vwUXWfBN.jpeg",
+        "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/Frame%204.png?raw=true",
     },
     {
       id: 3,
       title: "Unizik Renovation Project on the Library unit",
       date: "17 JUNE 2020",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alumninews.jpg-qX7cN9BIMWceNjQbHCeq48vwUXWfBN.jpeg",
+        "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/Frame%204.png?raw=true",
     },
     {
       id: 4,
       title: "Masters Application is now open for all interested candidates",
       date: "17 JUNE 2020",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alumninews.jpg-qX7cN9BIMWceNjQbHCeq48vwUXWfBN.jpeg",
+        "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/Frame%204.png?raw=true",
     },
     {
       id: 5,
       title: "New Vice Chancellor Inaugurated on the new session",
       date: "17 JUNE 2020",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alumninews.jpg-qX7cN9BIMWceNjQbHCeq48vwUXWfBN.jpeg",
+        "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/Frame%204.png?raw=true",
     },
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mb-24">
       {/* Navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="max-w-6xl mx-auto px-6 mt-3 sm:px-0 lg:px-0 py-4">
         <nav className="flex items-center text-sm text-gray-500">
           <a href="#" className="flex items-center hover:text-gray-700">
             <Home className="h-4 w-4 mr-1" />
@@ -69,7 +69,7 @@ const NewsDetailPage = () => {
       </div>
 
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-0 mt-3 lg:px-0">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-0">{article.title}</h1>
           <div className="flex items-center space-x-2">
@@ -94,7 +94,7 @@ const NewsDetailPage = () => {
           {/* Left Column - Article Content */}
           <div className="lg:col-span-2">
             {/* Article Image */}
-            <div className="w-full aspect-video mb-6 overflow-hidden rounded-md">
+            <div className="w-full aspect-video mb-6 overflow-hidden">
               <img
                 src={article.image || "/placeholder.svg"}
                 alt={article.title}
@@ -128,7 +128,7 @@ const NewsDetailPage = () => {
               <div className="space-y-4">
                 {recentNews.map((item) => (
                   <a key={item.id} href="#" className="flex items-start space-x-3 group">
-                    <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-md">
+                    <div className="w-16 h-16 flex-shrink-0 overflow-hidden ">
                       <img
                         src={item.image || "/placeholder.svg"}
                         alt={item.title}
