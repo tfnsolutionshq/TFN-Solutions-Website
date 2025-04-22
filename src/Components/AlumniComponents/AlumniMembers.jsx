@@ -1,63 +1,99 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Home, Grid, List, Filter } from "lucide-react"
 import FilterSidebar from "./FilterSidebar"
+import { Link, useLocation } from "react-router-dom"
 
 const AlumniMembersPage = () => {
   const [activeTab, setActiveTab] = useState("members")
   const [viewMode, setViewMode] = useState("grid")
   const [showFilter, setShowFilter] = useState(false)
+  const location = useLocation()
+  
+  // Check for tab parameter in URL
+  useEffect(() => {
+    // Check if we should show executives tab
+    const searchParams = new URLSearchParams(location.search)
+    const tab = searchParams.get('tab')
+    if (tab === 'executives') {
+      setActiveTab('executives')
+    }
+  }, [location])
 
   // Sample members data
   const members = [
     {
       id: 1,
-      name: "Uche ThankGod",
-      position: "Senior Product Engineer",
-      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/programs/image%20(3).png?raw=true",
+      name: "Martins Okolongwu",
+      position: "CEO, TFN Solutions",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/Martins%20AFW.jpg?raw=true",
     },
     {
       id: 2,
-      name: "Prewell Ejiofor",
-      position: "Senior Software Engineer",
-      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/programs/image%20(4).png?raw=true",
+      name: "Engr. Ekene Ezeasor",
+      position: "CEO, Wissenschaft Integrated Limited",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/DSC_5568.JPG?raw=true",
     },
     {
       id: 3,
-      name: "Dr. Obioma Uyemwinma",
-      position: "Vice President (East), Nigeria",
-      image: "/placeholder.svg",
+      name: "ThankGod Uche",
+      position: "Product Designer, Afriwok",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/DSC_5540.JPG?raw=true",
     },
     {
       id: 4,
-      name: "Dr. Obioma Uyemwinma",
-      position: "Vice President (East), Nigeria",
-      image: "/placeholder.svg",
+      name: "Ebenezer Nwolisa",
+      position: "Frontend Developer, Afriwok",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/DSC_5524.JPG?raw=true",
     },
     {
       id: 5,
-      name: "Dr. Ikechukwu I. Umeh",
-      position: "President (National and Global)",
-      image: "/placeholder.svg",
+      name: "Prevail Ejimmadu",
+      position: "Senior Backend Engineer, Afriwok",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/DSC_5539.JPG?raw=true",
     },
     {
       id: 6,
-      name: "Engr. Francis Ochomma",
-      position: "Vice President (East), Nigeria",
-      image: "/placeholder.svg",
+      name: "Stephen Agbo",
+      position: "Mobile App Developer, Afriwok",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/DSC_5517.JPG?raw=true",
     },
     {
       id: 7,
       name: "Dr. Obioma Uyemwinma",
       position: "Vice President (East), Nigeria",
-      image: "/placeholder.svg",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
     },
     {
       id: 8,
       name: "Dr. Obioma Uyemwinma",
       position: "Vice President (East), Nigeria",
-      image: "/placeholder.svg",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
+    },
+    {
+      id: 9,
+      name: "Dr. Obioma Uyemwinma",
+      position: "Vice President (East), Nigeria",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
+    },
+    {
+      id: 10,
+      name: "Dr. Obioma Uyemwinma",
+      position: "Vice President (East), Nigeria",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
+    },
+    {
+      id: 11,
+      name: "Dr. Obioma Uyemwinma",
+      position: "Vice President (East), Nigeria",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
+    },
+    {
+      id: 12,
+      name: "Dr. Obioma Uyemwinma",
+      position: "Vice President (East), Nigeria",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
     },
   ]
 
@@ -67,49 +103,49 @@ const AlumniMembersPage = () => {
       id: 1,
       name: "Dr. Ikechukwu I. Umeh",
       position: "President (National and Global)",
-      image: "/placeholder.svg",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/percent.png?raw=true",
     },
     {
       id: 2,
       name: "Engr. Francis Ochomma",
       position: "Vice President (East), Nigeria",
-      image: "/placeholder.svg",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
     },
     {
       id: 3,
       name: "Mr. Cajetan Okachi",
       position: "Vice President (West), Nigeria",
-      image: "/placeholder.svg",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
     },
     {
       id: 4,
       name: "Dr. Obioma Uyemwinma",
       position: "Vice President (North), Nigeria",
-      image: "/placeholder.svg",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
     },
     {
       id: 5,
       name: "ESV Chinua Kenneth Anigbo",
       position: "Vice President (South), Nigeria",
-      image: "/placeholder.svg",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
     },
     {
       id: 6,
       name: "Christy C. Agim",
       position: "Secretary General",
-      image: "/placeholder.svg",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
     },
     {
       id: 7,
       name: "Mrs Ogo Grace Daminiye",
       position: "Assistant Secretary General",
-      image: "/placeholder.svg",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
     },
     {
       id: 8,
       name: "Mr. Obi Okeke",
       position: "Financial Secretary",
-      image: "/placeholder.svg",
+      image: "https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/aumnimembers/image%2013.png?raw=true",
     },
   ]
 
@@ -135,21 +171,21 @@ const AlumniMembersPage = () => {
             Directory
           </a>
           <span className="mx-2">&gt;</span>
-          <span className="text-gray-900">Alumni Members</span>
+          <span className="text-gray-900">{activeTab === "executives" ? "Alumni Executives" : "Alumni Members"}</span>
         </nav>
       </div>
 
       {/* Header */}
       <div className="max-w-6xl mx-auto px-6 sm:px-0 lg:px-0 mb-24">
         <div className="flex flex-col md:flex-row md:items-start mt-3 md:justify-between mb-6">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Alumni Members</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">{activeTab === "executives" ? "Alumni Executives" : "Alumni Members"}</h1>
           <p className="text-gray-600 text-sm">A glance on all alumni member since 1991 till date at your reach</p>
         </div>
 
         {/* Banner Image */}
         <div className="w-full h-48 md:h-64 lg:h-80 mb-6 overflow-hidden">
           <img
-            src="https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/programs/image%20(3).png?raw=true"
+            src="https://github.com/tfnsolutionshq/Unizik-Alumni-Assets/blob/main/galleryplaceholder.png?raw=true"
             alt="Alumni Members"
             className="w-full h-full object-cover sepia"
           />
@@ -237,10 +273,11 @@ const AlumniMembersPage = () => {
                     viewMode === "list" ? "flex items-center" : ""
                   }`}
                 >
+                  <Link to={`/alumni-profile-details`}>
                   <div
                     className={`${
                       viewMode === "grid" ? "aspect-square" : "w-24 h-24"
-                    } bg-gray-100 relative overflow-hidden`}
+                    }  relative overflow-hidden`}
                   >
                     <img
                       src={person.image || "/placeholder.svg"}
@@ -252,6 +289,7 @@ const AlumniMembersPage = () => {
                     <h3 className="font-medium text-gray-900">{person.name}</h3>
                     <p className="text-sm text-gray-500">{person.position}</p>
                   </div>
+                  </Link>
                 </div>
               ))}
             </div>

@@ -256,7 +256,7 @@ const GalleriaLandingPage = () => {
               </div>
               <div className="mt-4 sm:mt-0">
                 <div className="w-96 h-0.5 bg-[#D15300]"></div>
-                <Link to={event.link} className="flex mt-3 items-center justify-between text-[#D85E00] font-medium group">
+                <Link to={`/view-gallery`} className="flex mt-3 items-center justify-between text-[#D85E00] font-medium group">
                   <span>VIEW ALL IMAGES</span>
                   <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>

@@ -1,79 +1,178 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, ChevronLeft, ChevronRight, Download, SlidersHorizontal } from 'lucide-react';
+import { Search, Download, SlidersHorizontal } from 'lucide-react';
 
 const BranchList = () => {
   // Dummy data for branches
   const branchesData = [
     {
-      id: 1,
-      branch: 'ABUJA 1',
-      chairman: 'SALAWE OBIANUJI',
-      proName: 'AMALA MUONWE',
-      meetingDays: '3RD SUNDAY OF EVERY MONTH',
-      meetingVenues: 'Nelson\'O Hotels, Wuse Zone 1, Abuja',
-      time: '3:30PM'
-    },
-    {
       id: 2,
-      branch: 'ABUJA 1',
-      chairman: 'SALAWE OBIANUJI',
+      branch: 'ABUJA I',
+      chairman: 'SALAWE OBIANUJU BLESSING',
       proName: 'AMALA MUONWE',
       meetingDays: '3RD SUNDAY OF EVERY MONTH',
-      meetingVenues: 'Nelson\'O Hotels, Wuse Zone 1, Abuja',
-      time: '3:30PM'
+      meetingVenues: 'Nelseno Hotels, Wuse Zone 1, Abuja-FCT',
+      time: '3:30 PM'
     },
     {
       id: 3,
-      branch: 'ABUJA 1',
-      chairman: 'SALAWE OBIANUJI',
-      proName: 'AMALA MUONWE',
-      meetingDays: '3RD SUNDAY OF EVERY MONTH',
-      meetingVenues: 'Nelson\'O Hotels, Wuse Zone 1, Abuja',
-      time: '3:30PM'
+      branch: 'AWKA',
+      chairman: 'DR. CHINEDU K. NWANKWO (08066596696)',
+      proName: 'MR. JASPER CHUKWURAH (08135084177)',
+      meetingDays: 'LAST SUNDAY OF EVERY MONTH',
+      meetingVenues: 'Dulce Fast Food (Former Thrillers beside Macdons), Aroma, Awka, Anambra State',
+      time: '4:00 PM'
     },
     {
       id: 4,
-      branch: 'ABUJA 1',
-      chairman: 'SALAWE OBIANUJI',
-      proName: 'AMALA MUONWE',
-      meetingDays: '3RD SUNDAY OF EVERY MONTH',
-      meetingVenues: 'Nelson\'O Hotels, Wuse Zone 1, Abuja',
-      time: '3:30PM'
+      branch: 'ASABA',
+      chairman: 'DR. DAVISON ORIAHI',
+      proName: 'ANTHONY OROBO (+234 803 450 6478)',
+      meetingDays: 'LAST SUNDAY OF EVERY MONTH',
+      meetingVenues: 'Goldenland Hotel, Asaba, Delta State',
+      time: '4:00 PM'
     },
     {
       id: 5,
-      branch: 'ABUJA 1',
-      chairman: 'SALAWE OBIANUJI',
-      proName: 'AMALA MUONWE',
-      meetingDays: '3RD SUNDAY OF EVERY MONTH',
-      meetingVenues: 'Nelson\'O Hotels, Wuse Zone 1, Abuja',
-      time: '3:30PM'
+      branch: 'BAYELSA',
+      chairman: 'MR. MATTHEW AYIB AKARINAMINI NOAH',
+      proName: 'OYEGHE EBIKIO MULUZIGHE',
+      meetingDays: '2ND SUNDAY OF EVERY MONTH',
+      meetingVenues: 'Tamara hall, along Otiotio road, Yenezue-gene, Yenagoa, Bayelsa State',
+      time: '3:00 PM'
     },
     {
       id: 6,
-      branch: 'ABUJA 1',
-      chairman: 'SALAWE OBIANUJI',
-      proName: 'AMALA MUONWE',
-      meetingDays: '3RD SUNDAY OF EVERY MONTH',
-      meetingVenues: 'Nelson\'O Hotels, Wuse Zone 1, Abuja',
-      time: '3:30PM'
+      branch: 'CALABAR',
+      chairman: 'ENGR EKENE IKEJI (Coordinator)',
+      proName: 'OBED NKEMMADU',
+      meetingDays: '1ST SUNDAY OF EVERY MONTH',
+      meetingVenues: 'Big Munch, Ediba Road Close, Off Marian Market Walkover, Calabar, Cross River State',
+      time: '5:00 PM'
     },
     {
       id: 7,
-      branch: 'ABUJA 1',
-      chairman: 'SALAWE OBIANUJI',
-      proName: 'AMALA MUONWE',
-      meetingDays: '3RD SUNDAY OF EVERY MONTH',
-      meetingVenues: 'Nelson\'O Hotels, Wuse Zone 1, Abuja',
-      time: '3:30PM'
+      branch: 'OAU/EKWULOBIA',
+      chairman: 'OBIAGBAOSO C HUKWUEMEKA. O',
+      proName: 'HON. IZUCHUKWU OKWUOGU',
+      meetingDays: '1ST SUNDAY OF EVERY MONTH',
+      meetingVenues: 'Orthon Palace hotel, Ekwulobia, Aguata-Anambra State',
+      time: '3:00 PM'
     },
-  ];
+    {
+      id: 8,
+      branch: 'ENUGU',
+      chairman: 'EZEANYA FREDERICK KABONGO.',
+      proName: 'EMMANUEL NDUBUDE',
+      meetingDays: '3RD SUNDAY OF EVERY MONTH',
+      meetingVenues: 'Dragon Centre, 82 Division Enugu- Enugu State',
+      time: '3:00 PM'
+    },
+    {
+      id: 9,
+      branch: 'IBADAN',
+      chairman: 'CHINEDU EZENWOKIKE',
+      proName: 'OBUM ONYENWE',
+      meetingDays: '2ND SATURDAY OF EVERY MONTH',
+      meetingVenues: 'GIANNI LOUNGE (PI HOSTEL), BODIJA, IBADAN, OYO STATE',
+      time: '4:00 PM'
+    },
+    {
+      id: 10,
+      branch: 'LAGOS AMUWO',
+      chairman: 'ENGR OSITA OGBAJI .C. (08036743164)',
+      proName: 'BENSON EZEH (08137638377)',
+      meetingDays: '1ST SATURDAY OF EVERY MONTH',
+      meetingVenues: 'Royal Vintage Lounge, Agor-palace way, Okota Lagos',
+      time: '4:00 PM'
+    },
+    {
+      id: 11,
+      branch: 'LAGOS ISLAND',
+      chairman: 'THEO EGBUNIKE',
+      proName: 'MICHALE',
+      meetingDays: '2ND SATURDAY BIMONTHLY',
+      meetingVenues: 'Officers Mess Bonny Camp, VICTORIA Island, Lagos',
+      time: '3:00 PM'
+    },
+    {
+      id: 12,
+      branch: 'LAGOS MAINLAND',
+      chairman: 'KENNETH KENECHUKWU OKOLI',
+      proName: 'ESIAKA ROSITA CHINENYE (08063045451)',
+      meetingDays: 'LAST SATURDAY OF THE MONTH',
+      meetingVenues: 'Serena Hotel and Suites - 48, Asoge Street, Off Cele Bus/Stop, Okota/Itire Link Bridge (Ijesha Roundabout), Surulere, Lagos',
+      time: '3:00 PM'
+    },
+    {
+      id: 13,
+      branch: 'NNEWI',
+      chairman: 'CHIJIOKE OKEKE',
+      proName: 'ANGELA OKORIE',
+      meetingDays: '3RD THURSDAY OF EVERY MONTH',
+      meetingVenues: 'Clinical building, NAUTH Old site, Nnewi, Anambra State',
+      time: '3:00 PM'
+    },
+    {
+      id: 14,
+      branch: 'ONITSHA',
+      chairman: 'ILUNO AMALACHUKWU',
+      proName: 'OKUDO SYLVESTER',
+      meetingDays: '3RD SUNDAY OF EVERY MONTH',
+      meetingVenues: "WENDY'S PLACE beside CPS, Onitsha",
+      time: '2:00 PM'
+    },
+    {
+      id: 15,
+      branch: 'OWERRI',
+      chairman: 'ENGR. DR. ONYEBUCHI CHIKEZIE NOSIRI',
+      proName: 'CHIMA UKADIKE',
+      meetingDays: '3RD SUNDAY OF EVERY MONTH',
+      meetingVenues: 'Owerri Sports Club, Owerri, Imo State',
+      time: ''
+    },
+    {
+      id: 16,
+      branch: 'PORT HARCOURT',
+      chairman: 'MUOJEKE MICHAEL OBUMNEME',
+      proName: 'OKECHUKWU NWAMADI',
+      meetingDays: '3RD SUNDAY EVERY MONTH',
+      meetingVenues: "PEOPLE'S CLUB RUMOLA PH, RIVERS STATE",
+      time: '3:00 PM'
+    },
+    {
+      id: 17,
+      branch: 'UK BRANCH',
+      chairman: '',
+      proName: '',
+      meetingDays: '',
+      meetingVenues: '',
+      time: ''
+    },
+    {
+      id: 18,
+      branch: 'USA BRANCH',
+      chairman: 'EUSTACE OBIAJULU DUNN',
+      proName: '',
+      meetingDays: '',
+      meetingVenues: '412 KARUI CLIFFS ROAD, OWINGS MILL MD, USA',
+      time: ''
+    },
+    {
+      id: 19,
+      branch: 'EUROPE',
+      chairman: 'OBINNA NWANKWO',
+      proName: '+4915 219606182',
+      meetingDays: '',
+      meetingVenues: 'GERMANY, EURPOE',
+      time: 'Online',
+    }
+];
 
   const [branches, setBranches] = useState(branchesData);
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(7);
+  const [itemsPerPage, setItemsPerPage] = useState(20);
   const [sortBy, setSortBy] = useState(null);
   const [sortDirection, setSortDirection] = useState('asc');
 
@@ -199,22 +298,22 @@ const BranchList = () => {
             <tbody className="bg-white divide-y divide-gray-200">
               {currentItems.map((branch, index) => (
                 <tr key={branch.id} className={`${index % 2 === 0 ? 'bg-white' : 'bg-[#EDF1F8]'} hover:bg-gray-100`}>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                  <td className="px-6 py-2 text-sm font-medium text-gray-900">
                     {branch.branch}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-6 py-2 text-sm text-gray-500">
                     {branch.chairman}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-6 py-2 text-sm text-gray-500">
                     {branch.proName}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-6 py-2 text-sm text-gray-500">
                     {branch.meetingDays}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-6 py-2 text-sm text-gray-500">
                     {branch.meetingVenues}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-6 py-2 text-sm text-gray-500 whitespace-nowrap">
                     {branch.time}
                   </td>
                 </tr>

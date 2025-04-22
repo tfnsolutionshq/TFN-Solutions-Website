@@ -20,10 +20,12 @@ import AlumniNews from './Pages/AlumniNewsAndEvents/alumni-news'
 import AlumniNewsDetails from './Pages/AlumniNewsAndEvents/alumni-news-details'
 import AlumniEvents from './Pages/AlumniNewsAndEvents/alumni-events'
 import AlumniEventDetails from './Pages/AlumniNewsAndEvents/alumni-event-details'
+import ScrollToTop from "./Components/GeneralComponents/ScrollToTop"
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

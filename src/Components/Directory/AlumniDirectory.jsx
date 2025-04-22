@@ -25,62 +25,62 @@ const AlumniDirectory = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Search for a Branch */}
           <Link to={`/branch-list`}>
-          <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
-            <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
-              <Search className="h-6 w-6 text-blue-500" />
+            <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
+              <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
+                <Search className="h-6 w-6 text-blue-500" />
+              </div>
+              <h3 className="text-lg font-medium mb-2">Search for a Branch</h3>
             </div>
-            <h3 className="text-lg font-medium mb-2">Search for a Branch</h3>
-          </div>
           </Link>
 
           {/* Alumni Executives */}
-          <Link to={`/alumni-national-executives`}>
-          <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
-            <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
-              <Users className="h-6 w-6 text-blue-500" />
+          <Link to={`/alumni-members?tab=executives`}>
+            <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
+              <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-blue-500" />
+              </div>
+              <h3 className="text-lg font-medium mb-2">Alumni Executives</h3>
             </div>
-            <h3 className="text-lg font-medium mb-2">Alumni Executives</h3>
-          </div>
           </Link>
 
           {/* Alumni Members */}
           <Link to={`/alumni-members`}>
-          <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
-            <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
-              <Users className="h-6 w-6 text-blue-500" />
+            <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
+              <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-blue-500" />
+              </div>
+              <h3 className="text-lg font-medium mb-2">Alumni Members</h3>
             </div>
-            <h3 className="text-lg font-medium mb-2">Alumni Members</h3>
-          </div>
           </Link>
 
           {/* Donate */}
           <Link to={`/donations`}>
-          <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
-            <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
-              <CreditCard className="h-6 w-6 text-blue-500" />
+            <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
+              <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
+                <CreditCard className="h-6 w-6 text-blue-500" />
+              </div>
+              <h3 className="text-lg font-medium mb-2">Donate</h3>
             </div>
-            <h3 className="text-lg font-medium mb-2">Donate</h3>
-          </div>
           </Link>
 
           {/* Portal Login */}
           <Link to={`/login`}>
-          <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
-            <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
-              <LogIn className="h-6 w-6 text-blue-500" />
+            <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
+              <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
+                <LogIn className="h-6 w-6 text-blue-500" />
+              </div>
+              <h3 className="text-lg font-medium mb-2">Portal Login</h3>
             </div>
-            <h3 className="text-lg font-medium mb-2">Portal Login</h3>
-          </div>
           </Link>
 
           {/* Become a Member */}
           <Link to={`/become-a-member`}>
-          <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
-            <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
-              <FileText className="h-6 w-6 text-blue-500" />
+            <div className="bg-white p-8 flex flex-col items-center justify-center text-center">
+              <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">
+                <FileText className="h-6 w-6 text-blue-500" />
+              </div>
+              <h3 className="text-lg font-medium mb-2">Become a Member</h3>
             </div>
-            <h3 className="text-lg font-medium mb-2">Become a Member</h3>
-          </div>
           </Link>
         </div>
       </div>

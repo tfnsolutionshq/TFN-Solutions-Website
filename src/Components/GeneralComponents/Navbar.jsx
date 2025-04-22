@@ -30,7 +30,7 @@ const Header = () => {
         {/* Desktop Navigation - Center */}
         <nav className="hidden md:flex items-center justify-center flex-1 mx-4">
           <div className="flex space-x-6">
-            <Link to={`/`} className="text-black font-semibold font-medium hover:text-blue-600">
+            <Link to={`/`} className="text-black  font-medium hover:text-blue-600">
               Home
             </Link>
             <a href="#about" className="text-black font-semibold hover:text-blue-600">
@@ -42,8 +42,8 @@ const Header = () => {
             <Link to={`/branch-list`} className="text-black font-semibold hover:text-blue-600">
               Chapters
             </Link>
-            <Link to={`/`} className="text-black font-semibold hover:text-blue-600">
-              Resources
+            <Link to={`/galleria`} className="text-black font-semibold hover:text-blue-600">
+              Gallery
             </Link>
           </div>
         </nav>
@@ -63,21 +63,21 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden mt-4 pb-4">
           <nav className="flex flex-col space-y-3 px-4">
-            <a to={``} className="text-blue-800 font-medium">
+            <Link to={`/`} className="text-blue-800 font-medium">
               Home
-            </a>
-            <a to={``} className="text-gray-700">
+            </Link>
+            <a href="#about" className="text-gray-700">
               About Us
             </a>
-            <a to={``} className="text-gray-700">
+            <Link to={`/alumni-news`} className="text-gray-700">
               News/Events
-            </a>
-            <a to={``} className="text-gray-700">
+            </Link>
+            <Link to={`/branch-list`} className="text-gray-700">
               Chapters
-            </a>
-            <a to={``} className="text-gray-700">
-              Resources
-            </a>
+            </Link>
+            <Link to={`/galleria`} className="text-gray-700">
+              Gallery
+            </Link>
             <div className="relative mt-2">
               <input
                 type="text"

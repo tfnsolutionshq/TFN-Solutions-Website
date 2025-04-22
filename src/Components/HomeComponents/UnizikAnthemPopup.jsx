@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { X, Play, Pause, FileText, Download } from "lucide-react"
+import UnizikAnthem from "../../assets/unizik-anthem.mp3"
 
 const UnizikAnthemPopup = ({ isOpen, onClose }) => {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -112,7 +113,7 @@ const UnizikAnthemPopup = ({ isOpen, onClose }) => {
           {/* Audio element (hidden) */}
           <audio
             ref={audioRef}
-            src="/unizik-anthem.mp3" // Replace with actual audio file path
+            src="/unizik-anthem.mp3.mp3" // Replace with actual audio file path
             onTimeUpdate={updateProgress}
             onLoadedMetadata={updateProgress}
             onEnded={() => setIsPlaying(false)}

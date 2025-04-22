@@ -1,6 +1,10 @@
 import { Home, Filter, Grid, List } from "lucide-react"
+import { useState } from "react"
+import DonationModal from "./DonationModal"
+import { Link } from "react-router-dom"
 
 const DonationListPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   // Sample donation projects data
   const donationProjects = [
     {
@@ -104,12 +108,17 @@ const DonationListPage = () => {
                 Dr. Rita Oji is a Nigerian and interestingly, one of Nnamdi Azikiwe University alumni who has attained
                 success in her career as a in the department of computer science at Dartmouth...
               </p>
-              <a href="#" className="text-xs text-[#20608B]">
+              <Link to={`/donation-details`} className="text-xs text-[#20608B]">
                 See More
-              </a>
+              </Link>
               <div className="w-full h-0.5 bg-[#D15300] mt-4"></div>
               <div className="pt-2 border-gray-100 flex justify-between items-center">
-                <button className="text-[#D15300] text-sm font-medium">DONATE HERE</button>
+                <button 
+                  onClick={() => setIsModalOpen(true)} 
+                  className="text-[#D15300] text-sm font-medium"
+                >
+                  DONATE HERE
+                </button>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -130,6 +139,9 @@ const DonationListPage = () => {
           </div>
         ))}
       </div>
+
+      {/* Donation Modal */}
+      <DonationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   )
 }

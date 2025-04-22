@@ -1,6 +1,10 @@
 import { Home, ArrowRight, Calendar1 } from "lucide-react"
+import { useState } from "react"
+import DonationModal from "./DonationModal"
 
 const DonationDetailPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  
   // Sample donation data
   const donationData = {
     title: "Udemba School Renovation",
@@ -62,7 +66,10 @@ const DonationDetailPage = () => {
         <h1 className="text-2xl font-bold text-gray-900">{donationData.title}</h1>
         <div className="mt-4 md:mt-0">
           <div className="w-full md:w-96 h-0.5 bg-[#D15300]"></div>
-          <button className="flex items-center justify-between mt-3 text-[#D15300] font-medium">
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="flex items-center justify-between mt-3 text-[#D15300] font-medium"
+          >
             <span>DONATE HERE</span>
             <ArrowRight className="h-4 w-4 ml-2" />
           </button>
@@ -143,7 +150,10 @@ const DonationDetailPage = () => {
               <span className="font-medium">{donationData.totalParticipations}</span>
             </div>
             <div className="w-full h-0.5 bg-[#D15300] mt-6"></div>
-            <button className="w-full flex items-center justify-between text-[#D85E00] font-medium mt-4">
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="w-full flex items-center justify-between text-[#D85E00] font-medium mt-4"
+            >
               <span>DONATE HERE</span>
               <ArrowRight className="h-4 w-4 ml-2" />
             </button>
@@ -172,6 +182,9 @@ const DonationDetailPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Donation Modal */}
+      <DonationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   )
 }
