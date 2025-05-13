@@ -1,26 +1,28 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/home";
 import About from "./Pages/about";
-import BecomeAmember from "./Pages/Authentication/become-a-member";
-import Login from "./Pages/Authentication/login";
-import Resetpassword from "./Pages/Authentication/reset-password";
-import Newpassword from "./Pages/Authentication/new-password";
-import AlumniDirectory from "./Pages/alumni-directory";
-import BranchList from "./Pages/branch-list";
-import History from "./Pages/history";
-import Gallery from "./Pages/Gallery/galleria";
-import ViewGallery from "./Pages/Gallery/view-gallery";
-import Donations from "./Pages/Donation/donations";
-import DonationDetaisl from "./Pages/Donation/donation-details";
-import DonationList from "./Pages/Donation/donation-list";
-import Alumniprofiledetails from "./Pages/AlumniMembers/alumni-profile-details";
-import AlumniMembers from "./Pages/AlumniMembers/alumni-members"
-import AlumniNationalExecutives from "./Pages/AlumniMembers/alumni-national-executives";
-import AlumniNews from './Pages/AlumniNewsAndEvents/alumni-news'
-import AlumniNewsDetails from './Pages/AlumniNewsAndEvents/alumni-news-details'
-import AlumniEvents from './Pages/AlumniNewsAndEvents/alumni-events'
-import AlumniEventDetails from './Pages/AlumniNewsAndEvents/alumni-event-details'
+import Works from "./Pages/works";
+import Crystalbricks from "./Pages/ProjectDetails/crystalbricks";
+import News from "./Pages/latest-news";
+import NewsDetails from "./Pages/future-of-software-development";
+import AItransformation from "./Pages/ai-business-transformation";
+import BuildingScalableNetworkInfrastructure from "./Pages/building-scalable-network-infrastructure";
+import ContactUs from "./Pages/contactus";
 import ScrollToTop from "./Components/GeneralComponents/ScrollToTop"
+import SoftwareDevelopment from "./Pages/ServiceDetails/software-development";
+import BackupAndDisasterRecovery from "./Pages/ServiceDetails/backup-and-disaster-recovery";
+import CloudServices from "./Pages/ServiceDetails/cloud-services";
+import CommunicationAndCollaborationTools from "./Pages/ServiceDetails/communication-and-collaboration-tools";
+import CybersecurityServices from "./Pages/ServiceDetails/cybersecurity-services";
+import DataServices from "./Pages/ServiceDetails/data-services";
+import HardwareAndSoftwareProcurement from "./Pages/ServiceDetails/hardware-and-software-procurement";
+import InfrastructureServices from "./Pages/ServiceDetails/infrastructure-services";
+import ITConsultingAndStrategy from "./Pages/ServiceDetails/it-consulting-and-strategy";
+import ITSupportAndHelpdesk from "./Pages/ServiceDetails/it-support-and-helpdesk";
+import ManagedITServices from "./Pages/ServiceDetails/managed-it-services";
+import Afriwok from "./Pages/ProjectDetails/afriwok";
+import UnizikAlumni from "./Pages/ProjectDetails/unizik-alumni";
+import UnizikPortal from "./Pages/ProjectDetails/unizik-portal";
 
 function App() {
   return (
@@ -29,25 +31,27 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/become-a-member" element={<BecomeAmember />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/reset-password" element={<Resetpassword />} />
-        <Route path="/new-password" element={<Newpassword />} />
-        <Route path="/alumni-directory" element={<AlumniDirectory />} />
-        <Route path="/branch-list" element={<BranchList />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/galleria" element={<Gallery />} />
-        <Route path="/view-gallery" element={<ViewGallery />} />
-        <Route path="/donations" element={<Donations />} />
-        <Route path="/donation-details" element={<DonationDetaisl />} />
-        <Route path="/donation-list" element={<DonationList />} />
-        <Route path="/alumni-members" element={<AlumniMembers />} />
-        <Route path="/alumni-national-executives" element={<AlumniNationalExecutives />} />
-        <Route path="/alumni-profile-details" element={<Alumniprofiledetails />} />
-        <Route path="/alumni-news" element={<AlumniNews />} />
-        <Route path="/alumni-news-details" element={<AlumniNewsDetails />} />
-        <Route path="/alumni-events" element={<AlumniEvents />} />
-        <Route path="/alumni-event-details" element={<AlumniEventDetails />} />
+        <Route path="/works" element={<Works />} />
+        <Route path="/latest-news" element={<News />} />
+        <Route path="/news/future-of-software-development" element={<NewsDetails />} />
+        <Route path="/news/ai-business-transformation" element={<AItransformation />} />
+        <Route path="/news/building-scalable-network-infrastructure" element={<BuildingScalableNetworkInfrastructure />} />
+        <Route path="/works/crystalbricks" element={<Crystalbricks />} />
+        <Route path="/works/afriwok" element={<Afriwok />} />
+        <Route path="/works/unizik-alumni" element={<UnizikAlumni />} />
+        <Route path="/works/unizik-portal" element={<UnizikPortal />} />
+        <Route path="/services/software-development" element={<SoftwareDevelopment />} />
+        <Route path="/services/backup-and-disaster-recovery" element={<BackupAndDisasterRecovery />} />
+        <Route path="/services/cloud-services" element={<CloudServices />} />
+        <Route path="/services/communication-and-collaboration-tools" element={<CommunicationAndCollaborationTools />} />
+        <Route path="/services/cybersecurity-services" element={<CybersecurityServices />} />
+        <Route path="/services/data-services" element={<DataServices />} />
+        <Route path="/services/hardware-and-software-procurement" element={<HardwareAndSoftwareProcurement />} />
+        <Route path="/services/infrastructure-services" element={<InfrastructureServices />} />
+        <Route path="/services/it-consulting-and-strategy" element={<ITConsultingAndStrategy />} />
+        <Route path="/services/it-support-and-helpdesk" element={<ITSupportAndHelpdesk />} />
+        <Route path="/services/managed-it-services" element={<ManagedITServices />} />
+        <Route path="/contactus" element={<ContactUs />} />
       </Routes>
     </Router>
   )

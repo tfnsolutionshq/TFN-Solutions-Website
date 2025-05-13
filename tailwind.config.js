@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'rethink': ['"Rethink Sans"', 'sans-serif'],
+        'inter': ['"Inter"', 'sans-serif'],
         'instrument': ['"Instrument Sans"', 'sans-serif'],
       },
     },

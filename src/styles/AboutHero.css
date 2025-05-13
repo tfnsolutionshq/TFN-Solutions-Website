@@ -1,0 +1,138 @@
+.about-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F7F7F7;
+  overflow: hidden;
+  padding: 60px 0 40px 0;
+}
+
+.about-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-hero-curve {
+  width: 220vw;           /* Stretches well beyond the viewport */
+  max-width: 5000px;      /* Prevents it from being too huge on ultra-wide screens */
+  min-width: 600px;       /* Ensures it's not too small on mobile */
+  height: auto;
+  object-fit: contain;
+  margin-top: 30px;
+  pointer-events: none;
+  display: block;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-hero-title {
+  font-size: 3.0rem;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.1;
+  margin-bottom: 32px;
+  margin-top: 0;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
+}
+
+.about-hero-digital-pill {
+  display: inline-block;
+  background: #3973f6;
+  color: #fff;
+  border: #fff 3px solid;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 2rem;
+  padding: 0.2em 1.2em 0.2em 1.2em;
+  margin: 0 0.3em 0.1em 0.3em;
+  box-shadow: 0 4px 16px rgba(57,115,246,0.15);
+  position: relative;
+  transform: rotate(-10deg);
+}
+
+.about-hero-btn {
+  background: #3973f6;
+  color: #fff;
+  border: none;
+  border-radius: 2em;
+  padding: 0.7em 2.2em 0.7em 1.5em;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 18px;
+  box-shadow: 0 2px 8px rgba(57,115,246,0.10);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: background 0.2s;
+}
+
+.about-hero-btn:hover {
+  background: #2851a3;
+}
+
+.about-hero-btn-arrow {
+  font-size: 1.2em;
+  margin-left: 0.3em;
+}
+
+@media (max-width: 900px) {
+  .about-hero-title {
+    font-size: 2.4rem;
+  }
+  .about-hero-digital-pill {
+    font-size: 2.6rem;
+    padding: 0.15em 0.8em;
+    top: 0px;
+  }
+  .about-hero-curve {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero-section {
+    padding: 30px 0 20px 0;
+    min-height: 220px;
+  }
+  .about-hero-title {
+    font-size: 2.0rem;
+    margin-bottom: 18px;
+  }
+  .about-hero-digital-pill {
+    font-size: 1.7rem;
+    padding: 0.1em 0.6em;
+    top: 0px;
+  }
+  .about-hero-btn {
+    font-size: 0.9rem;
+    padding: 0.5em 1.2em 0.5em 1em;
+  }
+  .about-hero-curve {
+    min-width: 250px;
+    margin-top: 10px;
+  }
+}

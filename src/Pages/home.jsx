@@ -1,28 +1,34 @@
-import TopBar from "../Components/GeneralComponents/TopBar";
 import Navbar from "../Components/GeneralComponents/Navbar";
+import Header from "../Components/Homepage/Header";
+import Counter from "../Components/Homepage/Counter";
+import ImageGallery from "../Components/Homepage/ImageGallery";
+import ServiceSection from "../Components/Homepage/ServiceSection";
+import ServiceContainer from "../Components/Homepage/ServiceContainer";
+import LatestSolutions from "../Components/Homepage/LastestSolutions";
+import TeamSection from "../Components/Homepage/TeamSection";
+import Approach from '../Components/Homepage/Approach'
+import TestimonialSection from "../Components/Homepage/Testimonials";
+import Blog from "../Components/Homepage/Blog";
+import FAQS from "../Components/Homepage/FAQS";
+import ContactSection from "../Components/Homepage/ContactSection";
 import Footer from "../Components/GeneralComponents/Footer";
-import Header from "../Components/HomeComponents/Header";
-import HeaderBottom from "../Components/HomeComponents/HeaderBottom";
-import HallOfFame from "../Components/HomeComponents/HallOfFame";
-import About from "../Components/HomeComponents/About";
-import WordFromPresident from "../Components/HomeComponents/WordFromPresident";
-import AlumniPrograms from "../Components/HomeComponents/AlumniPrograms";
-import StoriesThatInspire from "../Components/HomeComponents/StoriesThatInspire";
-import CommunityTestimonials from "../Components/HomeComponents/CommunityTestimonials";
 
 function Home() {
   return (
     <>
-      <TopBar />
       <Navbar />
       <Header />
-      <HeaderBottom />
-      <HallOfFame />
-      <About />
-      <WordFromPresident />
-      <AlumniPrograms />
-      <StoriesThatInspire />
-      <CommunityTestimonials />
+      <Counter />
+      <ImageGallery />
+      <ServiceSection />
+      <ServiceContainer />
+      <Approach />
+      <LatestSolutions />
+      <TeamSection />
+      <TestimonialSection />
+      <Blog />
+      <FAQS />
+      <ContactSection />
       <Footer />
     </>
   );

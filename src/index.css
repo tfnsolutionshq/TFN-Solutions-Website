@@ -7,7 +7,8 @@
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Rethink Sans';
+  font-family: 'Inter';
+  background-color: #F7F7F7;
 }
 
 @keyframes blink {

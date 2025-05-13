@@ -1,0 +1,108 @@
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import BlogImg from "../../assets/Images/bajad.png";
+
+export default function BlogSection() {
+  const blogPosts = [
+    {
+      id: 1,
+      image: BlogImg,
+      date: "August 17, 2024",
+      title: "The Future of Software Development: Trends to Watch in 2025 and Beyond",
+      description: "The software development landscape is evolving at an unprecedented pace. As businesses strive to stay competitive in 2025 and beyond, emerging technologies...",
+      link: "/news/future-of-software-development"
+    },
+    {
+      id: 2,
+      image: BlogImg,
+      date: "September 2, 2024",
+      title: "AI is Transforming Business Operations Across Industries",
+      description: "Artificial Intelligence (AI) is no longer a futuristic concept—it’s a transformative force reshaping business operations across industries. From predictive analytics to intelligent automation, AI is enabling organizations to optimize processes, ",
+      link: "/news/ai-business-transformation"
+    },
+    {
+      id: 3,
+      image: BlogImg,
+      date: "November 9, 2024",
+      title: "Building Scalable Network Infrastructure: Best Practices for Growing Businesses",
+      description: "As businesses grow, their network infrastructure must keep pace to support increasing data demands, ensure security, and enable seamless operations. A scalable, secure, and cloud-ready network is no longer a luxury—it’s a necessity for staying competitive. ",
+      link: "/news/building-scalable-network-infrastructure"
+    }
+  ];
+
+  // Animated text state for heading
+  const [textState, setTextState] = useState({
+    part1: true, // "Read our latest"
+    part2: false, // "Articles &"
+    part3: false  // "Blogs"
+  });
+
+  useEffect(() => {
+    const animationInterval = setInterval(() => {
+      setTextState(prev => {
+        if (prev.part1) return { part1: false, part2: true, part3: false };
+        if (prev.part2) return { part1: false, part2: false, part3: true };
+        return { part1: true, part2: false, part3: false };
+      });
+    }, 2000);
+    return () => clearInterval(animationInterval);
+  }, []);
+
+  return (
+    <section className="py-16 bg-[#F7F7F7]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12">
+          <div className="flex flex-col items-start w-full md:w-1/3 mb-6 md:mb-0">
+            <div className="flex items-center">
+              <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2 animate-blink"></span>
+              <span className="text-sm md:text-lg font-medium text-gray-700">Insights</span>
+            </div>
+          </div>
+          <div className="w-full md:w-1/2 flex flex-col items-start md:items-end">
+            {/* Animated heading */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl leading-tight">
+              <span className={textState.part1 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
+                Read our latest
+              </span>{' '}
+              <span className={textState.part2 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
+                Articles &
+              </span>{' '}<br/>
+              <span className={textState.part3 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
+                Blogs
+              </span>
+            </h2>
+          </div>
+        </div>
+
+        {/* Blog Posts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogPosts.map((post) => (
+            <motion.div 
+              key={post.id} 
+              className="group p-1.5 cursor-pointer bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              onClick={() => window.location.href = post.link}
+            >
+              <div className="overflow-hidden">
+                <img 
+                  src={post.image} 
+                  alt={post.title} 
+                  className="w-full h-52 object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="py-6 px-2 space-y-3">
+                <p className="text-sm text-gray-500 font-medium">{post.date}</p>
+                <h3 className="font-bold text-xl group-hover:text-blue-600 transition-colors">{post.title}</h3>
+                <p className="text-gray-600 line-clamp-3 text-sm">{post.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
