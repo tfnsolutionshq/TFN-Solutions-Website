@@ -4,13 +4,13 @@ const WorkDetails = () => {
   // Sample project data - replace with actual data or API call
   const projectData = {
     title: 'Afriwok Digital Marketplace',
-    image: '/src/assets/Images/image 8.png', // Using actual image from assets
+    image: '/src/assets/works/afriwokbanner.jpg', // Using actual image from assets
     description: 'Experience the power of Mobile App Project Management and unlock the potential of your projects.',
     client: 'TFN Solutions Limited',
-    service: 'UI/UX, Software Development',
+    service: 'UI/UX, Product Design, Software Development',
     tools: 'Illustrator, Figma',
     year: '2024',
-    liveUrl: 'https://unizik.edu.ng/',
+    liveUrl: 'https://afriwok.com',
     detailedDescription: 'Afriwok is a digital marketplace platform that connects users with skilled and unskilled service providers across multiple industries in Africa. It facilitates job postings, service discovery, secure payments, and verified ratings — empowering small businesses and freelancers alike.',
     secondaryDescription: 'Cursus felis eget pulvinar aliquam ut laoreet nunc mattis sagittis urna lobortep diam et morbi vel eget arcu magna vel justo viverra a ante. Sagittis vitae vitae ultricies quis eu adipiscing fringillam volutpat massa maecenas ac urna sed elementum amet pharetra nisi tellus sodales sagittae sed elit. Ornare malesuada vel congue felis eget amet a lorem sed sed cursus elementum lectus vulputate.',
     projectHighlights: [
@@ -109,11 +109,11 @@ const WorkDetails = () => {
         <p className="text-gray-600 mb-8">{projectData.detailedDescription}</p>
 
         {/* Project Image - Secondary */}
-        <div className="rounded-lg overflow-hidden bg-gray-100 h-[200px] md:h-[250px] mb-8">
+        <div className="rounded-lg overflow-hidden bg-gray-100 h-[250px] md:h-[300px] mb-8">
           <div
             className="w-full h-full bg-gradient-to-r from-gray-200 to-gray-300"
             style={{
-              backgroundImage: `url('/src/assets/Images/image 7.png')`, // Using actual image from assets
+              backgroundImage: `url('/src/assets/works/afriwoktwo.png')`, // Using actual image from assets
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
@@ -128,6 +128,17 @@ const WorkDetails = () => {
           ))}
         </ul>
       </div>
+
+      <div className="rounded-lg overflow-hidden bg-gray-100 h-[250px] md:h-[300px] mb-8">
+          <div
+            className="w-full h-full bg-gradient-to-r from-gray-200 to-gray-300"
+            style={{
+              backgroundImage: `url('/src/assets/works/afriwokone.png')`, // Using actual image from assets
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          ></div>
+        </div>
 
       {/* What We Did Section */}
       <div className="mb-16">

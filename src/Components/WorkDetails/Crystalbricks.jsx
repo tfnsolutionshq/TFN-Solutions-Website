@@ -4,7 +4,7 @@ const WorkDetails = () => {
   // Sample project data - replace with actual data or API call
   const projectData = {
     title: 'Crystal Bricks Portal & Website',
-    image: '/src/assets/Images/image 8.png', // Using actual image from assets
+    image: '/src/assets/works/crystalbanner.png', // Using actual image from assets
     description: 'Experience the power of Mobile App Project Management and unlock the potential of your projects.',
     client: 'Crystalbricks',
     service: 'UI/UX, Software Development',
@@ -109,11 +109,11 @@ const WorkDetails = () => {
         <p className="text-gray-600 mb-8">{projectData.detailedDescription}</p>
 
         {/* Project Image - Secondary */}
-        <div className="rounded-lg overflow-hidden bg-gray-100 h-[200px] md:h-[250px] mb-8">
+        <div className="rounded-lg overflow-hidden bg-gray-100 h-[250px] md:h-[300px] mb-8">
           <div
             className="w-full h-full bg-gradient-to-r from-gray-200 to-gray-300"
             style={{
-              backgroundImage: `url('/src/assets/Images/image 7.png')`, // Using actual image from assets
+              backgroundImage: `url('/src/assets/works/crystalone.png')`, // Using actual image from assets
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
@@ -128,6 +128,17 @@ const WorkDetails = () => {
           ))}
         </ul>
       </div>
+
+      <div className="rounded-lg overflow-hidden bg-gray-100 h-[250px] md:h-[300px] mb-8">
+          <div
+            className="w-full h-full bg-gradient-to-r from-gray-200 to-gray-300"
+            style={{
+              backgroundImage: `url('/src/assets/works/crystaltwo.png')`, // Using actual image from assets
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          ></div>
+        </div>
 
       {/* What We Did Section */}
       <div className="mb-16">
