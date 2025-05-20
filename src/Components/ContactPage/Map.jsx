@@ -81,7 +81,7 @@ export default function InteractiveMap() {
   }, []);
 
   return (
-    <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden relative">
+    <div className="w-full h-96 bg-gray-200 overflow-hidden relative">
       {/* Map Container */}
       <div className="w-full h-full relative">
         {isLoading ? (

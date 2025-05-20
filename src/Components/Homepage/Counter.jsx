@@ -49,7 +49,7 @@ const Counter = () => {
   return (
     <div className="py-6 bg-[#F7F7F7]">
       <div className="max-w-5xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {counters.map((counter) => (
             <div key={counter.id} className="text-center">
               <h3 className="md:text-5xl text-4xl font-bold text-black mb-2">

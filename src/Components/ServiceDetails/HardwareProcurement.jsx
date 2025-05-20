@@ -1,169 +1,181 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown, Key, Users, BarChart3 } from 'lucide-react';
+import Approach from '../../Components/Homepage/Approach';
 import ServiceImage from '../../assets/Images/image 7.png';
 import ServiceImage2 from '../../assets/Images/image 6.png';
 import ServiceImage3 from '../../assets/Images/image 8.png';
-import Approach from '../../Components/Homepage/Approach';
 
-function SoftwareDevelopment() {
-  const [activeFilter, setActiveFilter] = useState('all');
+const serviceIcons = {
+    licensing: <Key className="w-6 h-6" />,
+    vendor: <Users className="w-6 h-6" />,
+    asset: <BarChart3 className="w-6 h-6" />
+};
 
+function HardwareSoftwareProcurement() {
+    const [activeAccordion, setActiveAccordion] = useState(1);
+    const [activeFilter, setActiveFilter] = useState('all');
 
-  const projects = [
-    {
-      id: 1,
-      title: 'E-commerce Platform',
-      category: 'website',
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 2,
-      title: 'CRM System',
-      category: 'systems',
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 3,
-      title: 'Brand Identity',
-      category: 'branding',
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 4,
-      title: 'Corporate Website',
-      category: 'website',
-      image: '/api/placeholder/400/300'
-    },
-  ];
+    const services = [
+        {
+            id: 1,
+            title: 'Licensing & Subscriptions Management',
+            description: 'Maintain compliance, avoid overpayment, and streamline renewals.',
+            details: [
+                'Software license optimization and tracking',
+                'Subscription renewal management',
+                'Compliance auditing and reporting',
+                'Cost optimization strategies'
+            ],
+            icon: 'licensing'
+        },
+        {
+            id: 2,
+            title: 'Vendor Management',
+            description: 'Liaise with vendors to source high-quality products and services that fit your goals.',
+            details: [
+                'Vendor relationship coordination',
+                'Contract negotiation and management',
+                'Service level agreement monitoring',
+                'Vendor performance evaluation'
+            ],
+            icon: 'vendor'
+        },
+        {
+            id: 3,
+            title: 'Asset Lifecycle Management',
+            description: 'Track IT assets from acquisition to decommissioning to maximize return on investment.',
+            details: [
+                'Hardware and software inventory tracking',
+                'Warranty and maintenance management',
+                'Refresh cycle planning and budgeting',
+                'Secure asset disposal and recycling'
+            ],
+            icon: 'asset'
+        }
+    ];
 
-  const filteredProjects = activeFilter === 'all'
-    ? projects
-    : projects.filter(project => project.category === activeFilter);
-  return (
-    <>
-      <main className=''>
-        <section className="pb-16 pt-36 px-4 bg-[#F7F7F7]">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-8">
-              <p className="text-orange-500 font-medium mb-2">Service</p>
-              <h2 className="text-3xl md:text-6xl font-bold mb-4">Hardware & Software Procurement                            </h2>
-              <p className="text-gray-900 w-full">
-                Simplify your IT purchasing process with expert procurement services</p>  </div>
-            <div className='flex mt-24 flex-col md:flex-row justify-between items-start gap-4'>
-              <div className="flex items-center mb-6">
-                <div className="w-2 h-2 rounded-full bg-orange-400 mr-2"></div>
-                <span className="text-sm font-medium">Core Service</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Our Service to <span className="text-gray-400">delivering<br />Excellence</span>
-              </h2>
-            </div>
+    const projects = [
+        {
+            id: 1,
+            title: 'E-commerce Platform',
+            category: 'website',
+            image: '/api/placeholder/400/300'
+        },
+        {
+            id: 2,
+            title: 'CRM System',
+            category: 'systems',
+            image: '/api/placeholder/400/300'
+        },
+        {
+            id: 3,
+            title: 'Brand Identity',
+            category: 'branding',
+            image: '/api/placeholder/400/300'
+        },
+        {
+            id: 4,
+            title: 'Corporate Website',
+            category: 'website',
+            image: '/api/placeholder/400/300'
+        },
+    ];
 
-            {/* Introduction Text */}
-            <div className="mb-10">
-              <p className="text-sm text-gray-800">
-                We help you get the right technology — at the right time and price — with full lifecycle support.
-              </p>
-              {/* Service Cards */}
-              <div className="space-y-6">
-                {/* Custom Software Development Card */}
-                <div className="bg-[#85858512] p-4 rounded-xl items-center overflow-hidden shadow-sm flex flex-col md:flex-row">
-                  {/* Image on the left */}
-                  <div className="md:w-1/3 h-72 md:h-auto">
-                    <img
-                      src={ServiceImage}
-                      alt="Software Developer"
-                      className="w-full h-full rounded-xl object-cover"
-                      style={{ objectPosition: 'center top' }}
-                    />
-                  </div>
+    const filteredProjects = activeFilter === 'all'
+        ? projects
+        : projects.filter(project => project.category === activeFilter);
 
-                  {/* Text content on the right */}
-                  <div className="md:w-2/3 py-4 md:py-0 md:p-4">
-                    <h3 className="text-xl font-bold mb-1">Licensing & Subscriptions Management</h3>
-                    <p className="text-sm text-gray-700">
-                      Maintain compliance, avoid overpayment, and streamline renewals.
+    const toggleAccordion = (id) => {
+        setActiveAccordion(activeAccordion === id ? null : id);
+    };
+
+    return (
+        <main className="bg-[#F7F7F7]">
+            <section className="pt-36 px-4 max-w-5xl mx-auto">
+                {/* Header */}
+                <div className="mb-8">
+                    <p className="text-orange-500 font-medium mb-2">Service</p>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4">Hardware & Software Procurement</h2>
+                    <p className="text-gray-900 w-full">
+                        Simplify your IT purchasing process with expert procurement services
                     </p>
-                  </div>
                 </div>
 
-                {/* Web Development Card */}
-                <div className="bg-[#85858512] rounded-xl p-4 items-center overflow-hidden shadow-sm flex flex-col md:flex-row">
-                  {/* Text content on the left */}
-                  <div className="md:w-2/3 py-4 md:py-0 md:p-4 order-2 md:order-1">
-                    <h3 className="text-xl font-bold mb-3">Vendor Management</h3>
-                    <p className="text-sm text-gray-700">
-                      Liaise with vendors to source high-quality products and services that fit your goals.
-                    </p>
-                  </div>
-
-                  {/* Image on the right */}
-                  <div className="md:w-1/3 h-72 md:h-auto order-1 md:order-2">
-                    <img
-                      src={ServiceImage2}
-                      alt="Web Development Diagram"
-                      className="w-full h-full rounded-xl object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="bg-[#85858512] p-4 rounded-xl items-center overflow-hidden shadow-sm flex flex-col md:flex-row">
-                  {/* Image on the left */}
-                  <div className="md:w-1/3 h-72 md:h-auto">
-                    <img
-                      src={ServiceImage3}
-                      alt="Software Developer"
-                      className="w-full h-full rounded-xl object-cover"
-                      style={{ objectPosition: 'center top' }}
-                    />
-                  </div>
-
-                  {/* Text content on the right */}
-                  <div className="md:w-2/3 py-4 md:py-0 md:p-4">
-                    <h3 className="text-xl font-bold mb-1">Asset Lifecycle Management</h3>
-                    <p className="text-sm text-gray-700">
-                      Track IT assets from acquisition to decommissioning to maximize return on investment.
-                    </p>
-                  </div>
-                </div>
-
-
-              </div>
-              <Approach />
-              <div className="mb-4 mt-16">
-                <p className="text-orange-500 font-medium mb-2">Related</p>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects Delivered on Software Development</h2>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {filteredProjects.map(project => (
-                  <div key={project.id} className="group relative bg-white rounded-lg overflow-hidden shadow-sm">
-                    <div className="aspect-w-16 p-2 rounded-lg aspect-h-10 w-full">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full rounded-lg h-64 bg-[#EAEAEA] object-cover"
-                      />
+                {/* Core Service Section */}
+                <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-8">
+                    <div className="flex items-center mb-6">
+                        <div className="w-2 h-2 rounded-full bg-orange-400 mr-2"></div>
+                        <span className="text-sm font-medium">Core Service</span>
                     </div>
-                    <div className="px-3 py-2 flex justify-between items-center">
-                      <div>
-                        <p className="text-sm font-medium text-gray-500">{project.category}</p>
-                        <p className="font-medium">{project.title}</p>
-                      </div>
-                      <button className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                        Our Service to <span className="text-gray-400">delivering<br />Excellence</span>
+                    </h2>
+                </div>
 
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+                {/* Introduction */}
+                <div className="mb-10">
+                    <p className="text-gray-800">
+                        We help you get the right technology — at the right time and price — with full lifecycle support.
+                    </p>
+                </div>
 
-      </main>
-    </>
-  )
+                {/* Accordion Services */}
+                <div className="mb-24 space-y-4">
+                    {services.map((service) => (
+                        <div
+                            key={service.id}
+                            className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100"
+                        >
+                            <button
+                                onClick={() => toggleAccordion(service.id)}
+                                className={`w-full p-6 text-left flex justify-between items-center transition-colors ${activeAccordion === service.id ? 'bg-blue-50' : 'hover:bg-gray-50'}`}
+                            >
+                                <div className="flex items-center">
+                                    <div className="mr-4 p-3 rounded-lg bg-blue-100 text-blue-600">
+                                        {serviceIcons[service.icon]}
+                                    </div>
+                                    <h3 className="text-xl font-bold">{service.title}</h3>
+                                </div>
+                                <motion.div
+                                    animate={{ rotate: activeAccordion === service.id ? 180 : 0 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <ChevronDown className="w-5 h-5 text-gray-500" />
+                                </motion.div>
+                            </button>
+
+                            <AnimatePresence>
+                                {activeAccordion === service.id && (
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: 'auto' }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="overflow-hidden"
+                                    >
+                                        <div className="px-6 pb-8 pt-2">
+                                            <p className="text-gray-600 mb-6">{service.description}</p>
+                                            <div className="grid md:grid-cols-2 gap-4">
+                                                {service.details.map((detail, index) => (
+                                                    <div key={index} className="flex items-start">
+                                                        <div className="mt-1 mr-3 w-2 h-2 rounded-full bg-blue-500"></div>
+                                                        <span className="text-gray-700">{detail}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
+                    ))}
+                </div>
+
+                <Approach />
+            </section>
+        </main>
+    )
 }
 
-export default SoftwareDevelopment
+export default HardwareSoftwareProcurement;

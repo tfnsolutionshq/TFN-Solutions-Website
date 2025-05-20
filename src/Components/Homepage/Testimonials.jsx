@@ -221,7 +221,7 @@ const TestimonialSection = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pr-48"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pr-16 md:pr-48"
             >
               {getVisibleTestimonials().map((testimonial, index) => (
                 <motion.div

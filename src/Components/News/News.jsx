@@ -1,20 +1,22 @@
 import { motion } from 'framer-motion';
-import BlogImg from "../../assets/Images/bajad.png";
+import BlogImg from "../../assets/Images/blog1.jpg";
+import BlogImg2 from "../../assets/Images/blog2.jpg";
+import BlogImg3 from "../../assets/Images/blog3.jpg";;
 
 export default function BlogSection() {
   const blogPosts = [
     {
       id: 1,
-      image: BlogImg,
-      date: "August 17, 2024",
+      image: BlogImg2,
+      date: "May 17, 2025",
       title: "The Future of Software Development: Trends to Watch in 2025 and Beyond",
       description: "The software development landscape is evolving at an unprecedented pace. As businesses strive to stay competitive in 2025 and beyond, emerging technologies...",
       link: "/news/future-of-software-development"
     },
     {
       id: 2,
-      image: BlogImg,
-      date: "September 2, 2024",
+      image: BlogImg3,
+      date: "April 11, 2025",
       title: "AI is Transforming Business Operations Across Industries",
       description: "Artificial Intelligence (AI) is no longer a futuristic concept—it’s a transformative force reshaping business operations across industries. From predictive analytics to intelligent automation, AI is enabling organizations to optimize processes, ",
       link: "/news/ai-business-transformation"
@@ -22,59 +24,11 @@ export default function BlogSection() {
     {
       id: 3,
       image: BlogImg,
-      date: "November 9, 2024",
+      date: "March 9, 2025",
       title: "Building Scalable Network Infrastructure: Best Practices for Growing Businesses",
       description: "As businesses grow, their network infrastructure must keep pace to support increasing data demands, ensure security, and enable seamless operations. A scalable, secure, and cloud-ready network is no longer a luxury—it’s a necessity for staying competitive. ",
       link: "/news/building-scalable-network-infrastructure"
-    },
-    {
-        id: 4,
-        image: BlogImg,
-        date: "August 17, 2024",
-        title: "The Power of Storytelling in UI/UX Design",
-        description: "Stay ahead of the curve with the latest web design trends for 2024. From minimalist designs to interactive elements, find out what's hot in the world of web design.",
-        link: "/power-of-storytelling-ui-ux"
-      },
-      {
-        id: 5,
-        image: BlogImg,
-        date: "September 2, 2024",
-        title: "The Impact of User-Centric Design on Business Success",
-        description: "Stay ahead of the curve with the latest web design trends for 2024. From minimalist designs to interactive elements, find out what's hot in the world of web design.",
-        link: "/user-centric-design-impact"
-      },
-      {
-        id: 6,
-        image: BlogImg,
-        date: "November 9, 2024",
-        title: "Skeuomorphism vs. Flat Design: Design Evolution",
-        description: "Stay ahead of the curve with the latest web design trends for 2024. From minimalist designs to interactive elements, find out what's hot in the world of web design.",
-        link: "/skeuomorphism-vs-flat-design"
-      },
-      {
-        id: 7,
-        image: BlogImg,
-        date: "August 17, 2024",
-        title: "The Power of Storytelling in UI/UX Design",
-        description: "Stay ahead of the curve with the latest web design trends for 2024. From minimalist designs to interactive elements, find out what's hot in the world of web design.",
-        link: "/power-of-storytelling-ui-ux"
-      },
-      {
-        id: 8,
-        image: BlogImg,
-        date: "September 2, 2024",
-        title: "The Impact of User-Centric Design on Business Success",
-        description: "Stay ahead of the curve with the latest web design trends for 2024. From minimalist designs to interactive elements, find out what's hot in the world of web design.",
-        link: "/user-centric-design-impact"
-      },
-      {
-        id: 9,
-        image: BlogImg,
-        date: "November 9, 2024",
-        title: "Skeuomorphism vs. Flat Design: Design Evolution",
-        description: "Stay ahead of the curve with the latest web design trends for 2024. From minimalist designs to interactive elements, find out what's hot in the world of web design.",
-        link: "/skeuomorphism-vs-flat-design"
-      }
+    }
   ];
 
 

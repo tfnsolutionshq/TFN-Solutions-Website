@@ -27,8 +27,9 @@ function Home() {
       <TeamSection />
       <TestimonialSection />
       <Blog />
-      <FAQS />
+      
       <ContactSection />
+      <FAQS />
       <Footer />
     </>
   );

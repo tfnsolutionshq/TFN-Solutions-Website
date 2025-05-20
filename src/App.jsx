@@ -23,6 +23,7 @@ import ManagedITServices from "./Pages/ServiceDetails/managed-it-services";
 import Afriwok from "./Pages/ProjectDetails/afriwok";
 import UnizikAlumni from "./Pages/ProjectDetails/unizik-alumni";
 import UnizikPortal from "./Pages/ProjectDetails/unizik-portal";
+import Infrastructure from "./Pages/ProjectDetails/infrastructure-service";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/services/it-support-and-helpdesk" element={<ITSupportAndHelpdesk />} />
         <Route path="/services/managed-it-services" element={<ManagedITServices />} />
         <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/works/infrastructure-service" element={<Infrastructure />} />
       </Routes>
     </Router>
   )

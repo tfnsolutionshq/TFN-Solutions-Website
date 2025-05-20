@@ -1,207 +1,166 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown, CloudUpload, Server, Database, AppWindow, Monitor } from 'lucide-react';
+import Approach from '../../Components/Homepage/Approach';
 import ServiceImage from '../../assets/Images/image 7.png';
 import ServiceImage2 from '../../assets/Images/image 6.png';
 import ServiceImage3 from '../../assets/Images/image 8.png';
 import ServiceImage4 from '../../assets/Images/image 9.png';
-import Approach from '../../Components/Homepage/Approach';
 
-function SoftwareDevelopment() {
+const serviceIcons = {
+    migration: <CloudUpload className="w-6 h-6" />,
+    hosting: <Server className="w-6 h-6" />,
+    storage: <Database className="w-6 h-6" />,
+    saas: <AppWindow className="w-6 h-6" />,
+    vdi: <Monitor className="w-6 h-6" />
+};
+
+function CloudServices() {
+    const [activeAccordion, setActiveAccordion] = useState(1);
     const [activeFilter, setActiveFilter] = useState('all');
 
-
-    const projects = [
+    const services = [
         {
             id: 1,
-            title: 'E-commerce Platform',
-            category: 'website',
-            image: '/api/placeholder/400/300'
+            title: 'Cloud Migration & Integration',
+            description: 'We simplify the transition to the cloud by assessing your current infrastructure, identifying suitable cloud platforms, and executing a seamless migration. Our integration services ensure that your cloud and on-premises systems work cohesively, minimizing disruptions and data loss. We manage the full migration lifecycle including backups, synchronization, and testing.',
+            details: [
+                'Infrastructure assessment and planning',
+                'Workload migration strategy',
+                'Data transfer and synchronization',
+                'Hybrid cloud integration'
+            ],
+            icon: 'migration'
         },
         {
             id: 2,
-            title: 'CRM System',
-            category: 'systems',
-            image: '/api/placeholder/400/300'
+            title: 'Cloud Hosting (AWS, Azure, Google Cloud)',
+            description: 'We host your applications and services on reliable, high-performance platforms like AWS, Microsoft Azure, and Google Cloud. Our managed hosting solutions are designed to provide optimal availability, flexibility, and cost efficiency. We help configure virtual machines, storage, databases, and networking tailored to your business needs.',
+            details: [
+                'Multi-cloud platform management',
+                'Infrastructure as a Service (IaaS)',
+                'Performance optimization',
+                'Cost management and scaling'
+            ],
+            icon: 'hosting'
         },
         {
             id: 3,
-            title: 'Brand Identity',
-            category: 'branding',
-            image: '/api/placeholder/400/300'
+            title: 'Cloud Storage & Backup',
+            description: 'We offer secure cloud storage solutions with automatic backup features to ensure your data is always protected and easily retrievable. This includes file versioning, encryption, geographic redundancy, scheduled backup jobs, and disaster recovery integration to meet compliance and performance goals.',
+            details: [
+                'Secure data encryption and storage',
+                'Automated backup scheduling',
+                'Geographic redundancy',
+                'Disaster recovery integration'
+            ],
+            icon: 'storage'
         },
         {
             id: 4,
-            title: 'Corporate Website',
-            category: 'website',
-            image: '/api/placeholder/400/300'
+            title: 'SaaS Management',
+            description: 'Streamline operations and optimize licensing with centralized management of your Software-as-a-Service tools. We handle procurement, onboarding, access control, compliance, usage monitoring, and vendor relationship management for all major SaaS platforms.',
+            details: [
+                'License optimization and management',
+                'User provisioning and access control',
+                'SaaS spend monitoring',
+                'Vendor relationship management'
+            ],
+            icon: 'saas'
         },
+        {
+            id: 5,
+            title: 'Virtual Desktop Infrastructure (VDI)',
+            description: 'Deploy virtual desktops that provide users with consistent, secure access to their work environments from any device, anywhere. Our VDI solutions support remote workforces, increase security, and reduce hardware dependencies. We provide desktop pooling, profile management, session monitoring, and backup solutions for high availability.',
+            details: [
+                'Remote workforce enablement',
+                'Desktop pooling and management',
+                'User profile management',
+                'Session monitoring and security'
+            ],
+            icon: 'vdi'
+        }
     ];
 
-    const filteredProjects = activeFilter === 'all'
-        ? projects
-        : projects.filter(project => project.category === activeFilter);
+    const toggleAccordion = (id) => {
+        setActiveAccordion(activeAccordion === id ? null : id);
+    };
+
     return (
-        <>
-            <main className=''>
-                <section className="pb-16 pt-36 px-4 bg-[#F7F7F7]">
-                    <div className="max-w-5xl mx-auto">
-                        <div className="mb-8">
-                            <p className="text-orange-500 font-medium mb-2">Service</p>
-                            <h2 className="text-3xl md:text-6xl font-bold mb-4">Cloud Services                            </h2>
-                            <p className="text-gray-900 w-full">
-                            Flexible, scalable cloud solutions to modernize your business infrastructure.
-                            </p>
-                        </div>
-                        <div className='flex mt-24 flex-col md:flex-row justify-between items-start gap-4'>
-                        <div className="flex items-center mb-6">
-                            <div className="w-2 h-2 rounded-full bg-orange-400 mr-2"></div>
-                            <span className="text-sm font-medium">Core Service</span>
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                            Our Service to <span className="text-gray-400">delivering<br />Excellence</span>
-                        </h2>
-                        </div>
+        <main className="bg-[#F7F7F7]">
+            <section className="pt-36 px-4 max-w-5xl mx-auto">
+                {/* Header */}
+                <div className="mb-8">
+                    <p className="text-orange-500 font-medium mb-2">Service</p>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4">Cloud Services</h2>
+                    <p className="text-gray-900 w-full">
+                        Flexible, scalable cloud solutions to modernize your business infrastructure.
+                    </p>
+                </div>
 
-                        {/* Introduction Text */}
-                        <div className="mb-10">
-                            <p className="text-sm text-gray-800">
-                            Our cloud services provide the agility and power needed to operate in today’s digital economy. Whether you are migrating legacy systems, adopting cloud-first strategies, or enhancing business continuity, we tailor secure and scalable cloud solutions to fit your objectives.                            </p>
-                        </div>
+                {/* Introduction */}
+                <div className="mb-10">
+                    <p className="text-gray-800">
+                        Our cloud services provide the agility and power needed to operate in today's digital economy. Whether you are migrating legacy systems, adopting cloud-first strategies, or enhancing business continuity, we tailor secure and scalable cloud solutions to fit your objectives.
+                    </p>
+                </div>
 
-                        {/* Service Cards */}
-                        <div className="space-y-6">
-                            {/* Custom Software Development Card */}
-                            <div className="bg-[#85858512] p-4 rounded-xl items-center overflow-hidden shadow-sm flex flex-col md:flex-row">
-                                {/* Image on the left */}
-                                <div className="md:w-1/3 h-72 md:h-auto">
-                                    <img
-                                        src={ServiceImage}
-                                        alt="Software Developer"
-                                        className="w-full h-full rounded-xl object-cover"
-                                        style={{ objectPosition: 'center top' }}
-                                    />
-                                </div>
-
-                                {/* Text content on the right */}
-                                <div className="md:w-2/3 py-4 md:py-0 md:p-4">
-                                    <h3 className="text-xl font-bold mb-1">Cloud Migration & Integration</h3>
-                                    <p className="text-sm text-gray-700">
-                                    We simplify the transition to the cloud by assessing your current infrastructure, identifying suitable cloud platforms, and executing a seamless migration. Our integration services ensure that your cloud and on-premises systems work cohesively, minimizing disruptions and data loss. We manage the full migration lifecycle including backups, synchronization, and testing.                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Web Development Card */}
-                            <div className="bg-[#85858512] rounded-xl p-4 items-center overflow-hidden shadow-sm flex flex-col md:flex-row">
-                                {/* Text content on the left */}
-                                <div className="md:w-2/3 py-4 md:py-0 md:p-4 order-2 md:order-1">
-                                    <h3 className="text-xl font-bold mb-3">Cloud Hosting (AWS, Azure, Google Cloud)</h3>
-                                    <p className="text-sm text-gray-700">
-                                    We host your applications and services on reliable, high-performance platforms like AWS, Microsoft Azure, and Google Cloud. Our managed hosting solutions are designed to provide optimal availability, flexibility, and cost efficiency. We help configure virtual machines, storage, databases, and networking tailored to your business needs.
-                                    </p>
-                                </div>
-
-                                {/* Image on the right */}
-                                <div className="md:w-1/3 h-72 md:h-auto order-1 md:order-2">
-                                    <img
-                                        src={ServiceImage2}
-                                        alt="Web Development Diagram"
-                                        className="w-full h-full rounded-xl object-cover"
-                                    />
-                                </div>
-                            </div>
-                            <div className="bg-[#85858512] p-4 rounded-xl items-center overflow-hidden shadow-sm flex flex-col md:flex-row">
-                                {/* Image on the left */}
-                                <div className="md:w-1/3 h-72 md:h-auto">
-                                    <img
-                                        src={ServiceImage3}
-                                        alt="Software Developer"
-                                        className="w-full h-full rounded-xl object-cover"
-                                        style={{ objectPosition: 'center top' }}
-                                    />
-                                </div>
-
-                                {/* Text content on the right */}
-                                <div className="md:w-2/3 py-4 md:py-0 md:p-4">
-                                    <h3 className="text-xl font-bold mb-1">Cloud Storage & Backup</h3>
-                                    <p className="text-sm text-gray-700">
-                                    We offer secure cloud storage solutions with automatic backup features to ensure your data is always protected and easily retrievable. This includes file versioning, encryption, geographic redundancy, scheduled backup jobs, and disaster recovery integration to meet compliance and performance goals.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Web Development Card */}
-                            <div className="bg-[#85858512] rounded-xl p-4 items-center overflow-hidden shadow-sm flex flex-col md:flex-row">
-                                {/* Text content on the left */}
-                                <div className="md:w-2/3 py-4 md:py-0 md:p-4 order-2 md:order-1">
-                                    <h3 className="text-xl font-bold mb-3">SaaS Management</h3>
-                                    <p className="text-sm text-gray-700">
-                                    Streamline operations and optimize licensing with centralized management of your Software-as-a-Service tools. We handle procurement, onboarding, access control, compliance, usage monitoring, and vendor relationship management for all major SaaS platforms.                                    </p>
-                                </div>
-
-                                {/* Image on the right */}
-                                <div className="md:w-1/3 h-72 md:h-auto order-1 md:order-2">
-                                    <img
-                                        src={ServiceImage4}
-                                        alt="Web Development Diagram"
-                                        className="w-full h-full rounded-xl object-cover"
-                                    />
-                                </div>
-                            </div>
-                            <div className="bg-[#85858512] p-4 rounded-xl items-center overflow-hidden shadow-sm flex flex-col md:flex-row">
-                                {/* Image on the left */}
-                                <div className="md:w-1/3 h-72 md:h-auto">
-                                    <img
-                                        src={ServiceImage}
-                                        alt="Software Developer"
-                                        className="w-full h-full rounded-xl object-cover"
-                                        style={{ objectPosition: 'center top' }}
-                                    />
-                                </div>
-
-                                {/* Text content on the right */}
-                                <div className="md:w-2/3 py-4 md:py-0 md:p-4">
-                                    <h3 className="text-xl font-bold mb-1">Virtual Desktop Infrastructure (VDI)</h3>
-                                    <p className="text-sm text-gray-700">
-                                    Deploy virtual desktops that provide users with consistent, secure access to their work environments from any device, anywhere. Our VDI solutions support remote workforces, increase security, and reduce hardware dependencies. We provide desktop pooling, profile management, session monitoring, and backup solutions for high availability.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <Approach />
-                        <div className="mb-4 mt-16">
-                            <p className="text-orange-500 font-medium mb-2">Related</p>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects Delivered on Software Development</h2>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {filteredProjects.map(project => (
-                                <div key={project.id} className="group relative bg-white rounded-lg overflow-hidden shadow-sm">
-                                    <div className="aspect-w-16 p-2 rounded-lg aspect-h-10 w-full">
-                                        <img
-                                            src={project.image}
-                                            alt={project.title}
-                                            className="w-full rounded-lg h-64 bg-[#EAEAEA] object-cover"
-                                        />
+                {/* Accordion Services */}
+                <div className="mb-24 space-y-4">
+                    {services.map((service) => (
+                        <div
+                            key={service.id}
+                            className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100"
+                        >
+                            <button
+                                onClick={() => toggleAccordion(service.id)}
+                                className={`w-full p-6 text-left flex justify-between items-center transition-colors ${activeAccordion === service.id ? 'bg-blue-50' : 'hover:bg-gray-50'}`}
+                            >
+                                <div className="flex items-center">
+                                    <div className="mr-4 p-3 rounded-lg bg-blue-100 text-blue-600">
+                                        {serviceIcons[service.icon]}
                                     </div>
-                                    <div className="px-3 py-2 flex justify-between items-center">
-                                        <div>
-                                            <p className="text-sm font-medium text-gray-500">{project.category}</p>
-                                            <p className="font-medium">{project.title}</p>
+                                    <h3 className="text-xl font-bold">{service.title}</h3>
+                                </div>
+                                <motion.div
+                                    animate={{ rotate: activeAccordion === service.id ? 180 : 0 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <ChevronDown className="w-5 h-5 text-gray-500" />
+                                </motion.div>
+                            </button>
+
+                            <AnimatePresence>
+                                {activeAccordion === service.id && (
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: 'auto' }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="overflow-hidden"
+                                    >
+                                        <div className="px-6 pb-8 pt-2">
+                                            <p className="text-gray-600 mb-6">{service.description}</p>
+                                            <div className="grid md:grid-cols-2 gap-4">
+                                                {service.details.map((detail, index) => (
+                                                    <div key={index} className="flex items-start">
+                                                        <div className="mt-1 mr-3 w-2 h-2 rounded-full bg-blue-500"></div>
+                                                        <span className="text-gray-700">{detail}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
-                                        <button className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                
-                            ))}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
-                    </div>
-                </section>
+                    ))}
+                </div>
 
-            </main>
-        </>
+                <Approach />
+            </section>
+        </main>
     )
 }
 
-export default SoftwareDevelopment
+export default CloudServices;

@@ -1,3 +1,6 @@
+import Img1 from "../../assets/Images/image 2.png"
+import Img2 from "../../assets/Images/image 3.png"
+import Img3 from "../../assets/Images/diverse.png"
 
 const ImageGallery = () => {
   return (
@@ -6,7 +9,7 @@ const ImageGallery = () => {
         {/* First image - programmer with code overlay */}
         <div className="relative overflow-hidden rounded-lg shadow-lg h-64 md:h-64 group">
           <img 
-            src="/src/assets/Images/image 2.png" 
+            src={Img1}
             alt="Programmer with code overlay" 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -15,7 +18,7 @@ const ImageGallery = () => {
         {/* Second image - team working on computers */}
         <div className="relative overflow-hidden rounded-lg shadow-lg h-64 md:h-64 group">
           <img 
-            src="/src/assets/Images/image 3.png" 
+            src={Img2} 
             alt="Team working on computers" 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -24,7 +27,7 @@ const ImageGallery = () => {
         {/* Third image - woman with sticky notes */}
         <div className="relative overflow-hidden rounded-lg shadow-lg h-64 md:h-64 group">
           <img 
-            src="/src/assets/Images/diverse.png" 
+            src={Img3}
             alt="Woman with sticky notes" 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />

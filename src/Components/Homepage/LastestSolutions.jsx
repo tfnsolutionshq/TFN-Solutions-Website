@@ -1,32 +1,46 @@
 import { ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import Afriwokbanner from '../../assets/works/afriwokbanner.jpg'
+import ALumniBanner from '../../assets/works/Alumni_Banner.png'
+import CrystalBricksbanner from '../../assets/works/crystalbanner.png';
+import Infrastructure from '../../assets/Images/infrastructure.png';
 
 export default function LatestSolutions() {
 
     const solutions = [
         {
             id: 1,
-            category: 'Website, Webapp',
+            category: 'software',
             title: 'Unizik Alumni Website',
-            image: '/api/placeholder/220/160'
+            image: ALumniBanner,
+            link: '/works/unizik-alumni'
         },
         {
             id: 2,
-            category: 'App',
+            category: 'software',
             title: 'Afriwok',
-            image: '/api/placeholder/280/160'
+            image: Afriwokbanner,
+            link: '/works/afriwok'
         },
+        // {
+        //     id: 3,
+        //     category: 'software',
+        //     title: 'Unizik',
+        //     image: '/api/placeholder/280/160'
+        // },
         {
             id: 3,
-            category: 'Website, Portal',
-            title: 'Unizik',
-            image: '/api/placeholder/280/160'
+            category: 'software',
+            title: 'CrystalBricks',
+            image: CrystalBricksbanner,
+            link: '/works/crystalbricks'
         },
         {
             id: 4,
-            category: 'Website, Web App',
-            title: 'CrystalBricks',
-            image: '/api/placeholder/160/160'
+            category: 'network',
+            title: 'Infrastructure Service',
+            image: Infrastructure,
+            link: '/works/infrastructure-service'
         }
     ];
 
@@ -51,19 +65,17 @@ export default function LatestSolutions() {
     // Add filter state and logic
     const filters = [
         { id: 'all', name: 'All' },
-        { id: 'website', name: 'Website' },
-        { id: 'webapp', name: 'Web App' },
-        { id: 'app', name: 'App' },
-        { id: 'portal', name: 'Portal' }
+        { id: 'software', name: 'Software' },
+        { id: 'network', name: 'Network Solution' },
     ];
 
     // Map solution categories to filter ids for filtering
     const getSolutionCategoryId = (solution) => {
         // You can adjust this logic as needed for your real data
-        if (solution.category.toLowerCase().includes('website')) return 'website';
-        if (solution.category.toLowerCase().includes('webapp')) return 'webapp';
-        if (solution.category.toLowerCase().includes('app')) return 'app';
-        if (solution.category.toLowerCase().includes('portal')) return 'portal';
+        if (solution.category.toLowerCase().includes('software')) return 'software';
+        if (solution.category.toLowerCase().includes('network')) return 'network';
+        // if (solution.category.toLowerCase().includes('app')) return 'app';
+        // if (solution.category.toLowerCase().includes('portal')) return 'portal';
         return 'other';
     };
 
@@ -123,15 +135,18 @@ export default function LatestSolutions() {
                         }
                         return (
                             <div key={solution.id} className={`${colSpan}`}>
-                                <div className="bg-white rounded-lg h-full p-2 relative">
+                                <div 
+                                    className="bg-white rounded-lg h-full p-2 relative cursor-pointer hover:shadow-md transition-shadow"
+                                    onClick={() => window.location.href = solution.link}
+                                >
                                     <img
                                         src={solution.image}
                                         alt={solution.title}
                                         className="w-full h-56 object-cover bg-[#EAEAEA] rounded-lg"
                                     />
-                                    <div className='flex my-3 justify-between items-center'>
+                                    <div className='flex my-3 justify-between items-center px-2'>
                                         <div>
-                                            <p className="text-xs text-gray-500">{solution.category}</p>
+                                            <p className="text-xs text-gray-500">{solution.category.charAt(0).toUpperCase() + solution.category.slice(1)}</p>
                                             <h3 className="font-medium">{solution.title}</h3>
                                         </div>
                                         <div className="bg-orange-500 text-white p-2 rounded-full ml-4 flex-shrink-0">
