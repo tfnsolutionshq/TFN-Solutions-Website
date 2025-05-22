@@ -1,122 +1,3 @@
-// import { useState, useEffect } from 'react';
-// import { ChevronDown } from 'lucide-react';
-
-// export default function FAQAccordion() {
-//   const [openIndex, setOpenIndex] = useState(null);
-
-//   const toggleAccordion = (index) => {
-//     setOpenIndex(openIndex === index ? null : index);
-//   };
-
-//   const faqItems = [
-//     {
-//       id: '01',
-//       question: 'What services do you offer?',
-//       answer: 'We offer a comprehensive range of design and development services including UI/UX design, web development, mobile app development, branding, and digital marketing strategies tailored to your specific business needs.'
-//     },
-//     {
-//       id: '02',
-//       question: 'How do you price your services?',
-//       answer: 'Our pricing is based on project scope, complexity, and timeline. We offer flexible pricing models including fixed-price quotes, hourly rates, and retainer packages. We provide detailed estimates after an initial consultation to understand your requirements.'
-//     },
-//     {
-//       id: '03',
-//       question: 'How long does a typical project take?',
-//       answer: 'Project timelines vary based on scope and complexity. Simple websites might take 2-4 weeks, while complex web applications can take 2-6 months. During our initial discussion, we will provide a realistic timeline based on your specific project requirements.'
-//     },
-//     {
-//       id: '04',
-//       question: 'What support do you offer after launch?',
-//       answer: 'We provide ongoing support and maintenance packages to ensure your product continues to function optimally. This includes bug fixes, security updates, performance optimization, and technical support. We also offer training to help your team manage the platform independently.'
-//     },
-//     {
-//       id: '05',
-//       question: 'How do I begin a project?',
-//       answer: 'Starting a project is simple. Contact us through our website form, email, or phone. We will schedule an initial consultation to discuss your goals, requirements, and vision. After that, we will provide a proposal outlining scope, timeline, and cost before proceeding with the development process.'
-//     }
-//   ];
-
-//   // Animated text state for heading
-//   const [textState, setTextState] = useState({
-//     part1: true, // "Frequently Asked"
-//     part2: false, // "Questions"
-//     part3: false  // (not used, for consistency)
-//   });
-
-//   useEffect(() => {
-//     const animationInterval = setInterval(() => {
-//       setTextState(prev => {
-//         if (prev.part1) return { part1: false, part2: true, part3: false };
-//         if (prev.part2) return { part1: true, part2: false, part3: false };
-//         return { part1: true, part2: false, part3: false };
-//       });
-//     }, 2000);
-//     return () => clearInterval(animationInterval);
-//   }, []);
-
-//   return (
-//     <main className='bg-[#F7F7F7]'>
-//       <section className="max-w-4xl bg-[#F7F7F7] mx-auto px-4 py-12 md:py-16">
-//         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-10">
-//           <div className="flex flex-col items-start w-full md:w-1/3 mb-6 md:mb-0">
-//             <div className="flex items-center">
-//               <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2 animate-blink"></span>
-//               <span className="text-sm md:text-lg font-medium text-gray-700">FAQs</span>
-//             </div>
-//           </div>
-//           <div className="w-full md:w-2/3 flex flex-col items-start md:items-end">
-//             {/* Animated heading */}
-//             <h2 className="text-2xl md:text-3xl lg:text-4xl leading-tight">
-//               <span className={textState.part1 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
-//                 Frequently Asked
-//               </span>{' '}
-//               <span className={textState.part2 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
-//                 Questions
-//               </span>
-//             </h2>
-//           </div>
-//       </div>
-
-//       <div className="space-y-4">
-//         {faqItems.map((item, index) => (
-//           <div 
-//             key={item.id} 
-//             className="border-b border-gray-100 pb-4"
-//           >
-//             <button
-//               onClick={() => toggleAccordion(index)}
-//               className="w-full flex items-center justify-between text-left focus:outline-none"
-//             >
-//               <div className="flex items-center">
-//                 <span className="text-gray-900 text-sm mr-3">({item.id})</span>
-//                 <h3 className="text-xl font-semibold">{item.question}</h3>
-//               </div>
-//               <div className={`bg-gray-100 p-2 rounded-lg transition-transform ${openIndex === index ? 'rotate-180' : ''}`}>
-//                 <ChevronDown size={16} />
-//               </div>
-//             </button>
-            
-//             <div 
-//               className={`mt-2 pl-8 transition-all duration-300 overflow-hidden ${
-//                 openIndex === index ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
-//               }`}
-//             >
-//               <p className="text-gray-600">{item.answer}</p>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//     </main>
-//   );
-// }
-
-
-
-
-
-
-
 import { useState, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Plus, Minus, Search, ArrowRight } from "lucide-react"
@@ -218,7 +99,7 @@ export default function FAQSection() {
 
   const backgroundVariants = {
     default: { scale: 1 },
-    hover: { scale: 1.05, transition: { duration: 0.3 } },
+    hover: { scale: 1.01, transition: { duration: 0.3 } },
   }
 
   return (
@@ -226,7 +107,7 @@ export default function FAQSection() {
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
         <motion.div
-          className="absolute top-10 left-10 w-64 h-64 rounded-full bg-blue-100 opacity-30 blur-3xl"
+          className="absolute top-10 left-10 w-64 h-64 rounded-full bg-[var(background-primary)] opacity-30 blur-3xl"
           animate={{
             x: [0, 50, 0],
             y: [0, 30, 0],
@@ -277,7 +158,7 @@ export default function FAQSection() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#4175FC] to-[#4175FC] bg-clip-text text-transparent"
+            className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#4175FC] to-[#4175FC] bg-clip-text text-transparent"
           >
             Frequently Asked Questions
           </motion.h2>
@@ -308,7 +189,7 @@ export default function FAQSection() {
                 placeholder="Search questions..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 rounded-full border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
+                className="w-full pl-12 pr-4 py-2 rounded-full border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
               />
               <div
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"
@@ -327,7 +208,7 @@ export default function FAQSection() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                     activeCategory === category.id
                       ? "bg-blue-600 text-white shadow-md"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                      : "bg-gray-200 text-gray-700 hover:bg-gray-500"
                   }`}
                 >
                   {category.name}
@@ -357,11 +238,11 @@ export default function FAQSection() {
                 <div className="border border-gray-100 rounded-2xl overflow-hidden bg-white bg-opacity-80 backdrop-blur-sm shadow-sm">
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full flex items-start justify-between p-6 text-left focus:outline-none"
+                    className="w-full flex items-start justify-between px-6 py-5 text-left focus:outline-none"
                   >
                     <div className="flex items-start">
-                      <span className="text-blue-600 font-mono text-sm mr-4 mt-1 opacity-70">{item.id}</span>
-                      <h3 className="text-xl font-semibold text-gray-900">{item.question}</h3>
+                      <span className="text-blue-400 font-mono text-sm mr-4 mt-1 opacity-90">{item.id}</span>
+                      <h3 className="text-xl font-semibold text-[var(--text-primary)]">{item.question}</h3>
                     </div>
                     <div
                       className={`flex-shrink-0 ml-4 p-2 rounded-full ${

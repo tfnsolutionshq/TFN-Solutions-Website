@@ -21,7 +21,7 @@ const ContactSection = () => {
   }
 
   return (
-    <section className="relative h-[500px] overflow-hidden">
+    <section className="relative h-[450px] overflow-hidden">
       {/* Background image with gradient overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -78,7 +78,7 @@ const ContactSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="relative flex items-center bg-white text-blue-900 rounded-full py-3 px-8 w-fit hover:bg-blue-50 transition-colors duration-300 group overflow-hidden font-medium"
+            className="relative flex items-center bg-white text-[var(--text-primary)] rounded-full py-3 px-8 w-fit hover:bg-blue-50 transition-colors duration-300 group overflow-hidden font-medium"
             onClick={handleButtonClick}
           >
             {/* Arrow icon that animates from left to right */}

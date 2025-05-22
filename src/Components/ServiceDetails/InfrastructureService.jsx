@@ -118,7 +118,7 @@ function InfrastructureServices() {
     };
 
     return (
-        <main className="bg-[#F7F7F7]">
+        <main className="bg-[var(--background-primary)]">
             <section className="pt-36 px-4 max-w-5xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">

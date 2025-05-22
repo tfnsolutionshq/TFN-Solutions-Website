@@ -301,7 +301,7 @@ const TeamSection = () => {
     const springConfig = { damping: 30, stiffness: 200 }
 
     return (
-        <section className="py-16 overflow-hidden bg-[#F7F7F7]">
+        <section className="py-16 overflow-hidden bg-[var(--background-primary)]">
 
             <div className="px-4 max-w-6xl mx-auto" ref={containerRef}>
                 {/* Team Section with animated text */}

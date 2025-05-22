@@ -86,24 +86,21 @@ export default function LatestSolutions() {
         : solutions.filter(sol => getSolutionCategoryId(sol) === activeFilter);
 
     return (
-        <section className="bg-[#ECEFF7] py-16 px-4">
+        <section className="bg-gradient-to-b from-[var(--background-secondary)] to-[var(--background-primary)] py-16 px-4">
             <div className="max-w-5xl mx-auto">
-                <div className=" mb-8">
-                    <div className='flex flex-col md:flex-row md:items-center md:justify-between'>
-                        <div className="flex items-center mb-2">
-                            <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2 animate-blink"></span>
-                            <span className="text-sm md:text-lg font-medium text-gray-700">Works</span>
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                            <span className={textState.part1 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
-                                Explore our latest
-                            </span>
-                            <br />
-                            <span className={textState.part2 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
-                                Solutions.
-                            </span>
-                        </h2>
+
+                <div className="text-center mb-12">
+                    <div className="inline-flex items-center mb-3">
+                        <div className="h-px w-8 bg-blue-600 mr-3"></div>
+                        <span className="text-blue-600 font-medium text-sm uppercase tracking-wider">What We've Done</span>
+                        <div className="h-px w-8 bg-blue-600 ml-3"></div>
                     </div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
+                        Our Creative Solutions
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        We have consistently delivered innovative software solutions that have significantly contributed to our clients' success.
+                    </p>
                 </div>
 
                 {/* Filter buttons */}
@@ -112,11 +109,10 @@ export default function LatestSolutions() {
                         <button
                             key={filter.id}
                             onClick={() => setActiveFilter(filter.id)}
-                            className={`px-5 py-2 rounded-full text-sm transition-all ${
-                                activeFilter === filter.id
-                                    ? 'border-blue-600 border text-blue-600 bg-white'
-                                    : 'bg-white border border-gray-200 text-gray-700 hover:bg-gray-100'
-                            }`}
+                            className={`px-5 py-2 rounded-full text-sm transition-all ${activeFilter === filter.id
+                                    ? 'border-blue-600 border text-[var(--text-primary)] bg-white'
+                                    : 'bg-white border border-gray-200 text-[var(--text-primary)] hover:bg-gray-100'
+                                }`}
                         >
                             {filter.name}
                         </button>
@@ -135,7 +131,7 @@ export default function LatestSolutions() {
                         }
                         return (
                             <div key={solution.id} className={`${colSpan}`}>
-                                <div 
+                                <div
                                     className="bg-white rounded-lg h-full p-2 relative cursor-pointer hover:shadow-md transition-shadow"
                                     onClick={() => window.location.href = solution.link}
                                 >

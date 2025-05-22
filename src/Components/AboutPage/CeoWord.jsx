@@ -3,13 +3,12 @@ import { motion } from "framer-motion"
 
 const CeoMessage = () => {
   return (
-    <div className="bg-[#F7F7F7] pt-4 px-4 md:px-16 relative">
+    <div className="bg-[var(--background-primary)] pt-4 px-4 md:px-16 relative">
       <div className="max-w-5xl mx-auto">
         <div className="relative mb-8">
           <h2 className="text-4xl md:text-5xl font-bold">
-            <span className="text-gray-500">From The</span> <span className="text-black">CEO's Desk</span>
+            <span className="text-[var(text-primary)]">From The</span> <span className="text-[var(--text-secondary)]">CEO's Desk</span>
           </h2>
-
           {/* Orange square accent */}
           
         </div>

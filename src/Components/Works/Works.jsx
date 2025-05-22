@@ -52,27 +52,27 @@ export default function PortfolioSection() {
   
   return (
     <main className='border-t border-red-900'>
-      <section className="pb-16 pt-36 px-4 bg-[#F7F7F7]">
+      <section className="pb-16 pt-36 px-4 bg-[var(--background-primary)]">
         <div className="max-w-5xl mx-auto">
           <div className="mb-8">
             <p className="text-orange-500 font-medium mb-2">WORKS</p>
             <h2 className="text-3xl md:text-6xl font-bold mb-4">Our latest works</h2>
-            <p className="text-gray-900 max-w-2xl">
+            <p className="text-[var(text-secondary)] max-w-2xl">
               Deploy smart customized systems for firms, business, or enterprise quickly with expert 
               integration and support.
             </p>
           </div>
           
           {/* Filter buttons */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
+          <div className="flex flex-wrap justify-start gap-3 mb-10">
             {filters.map(filter => (
               <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
                 className={`px-5 py-2 rounded-full text-sm transition-all ${
                   activeFilter === filter.id
-                    ? 'border-blue-600 border text-blue-600 bg-white'
-                    : 'bg-white border border-gray-200 text-gray-700 hover:bg-gray-100'
+                    ? 'border-blue-600 border text-[var(--text-primary)] bg-[var(--background-primary)]'
+                    : 'bg-white border border-gray-200 text-[var(--text-secondary)] hover:bg-gray-100'
                 }`}
               >
                 {filter.name}

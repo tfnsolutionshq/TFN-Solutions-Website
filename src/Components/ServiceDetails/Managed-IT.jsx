@@ -42,7 +42,7 @@
 //     return (
 //         <>
 //             <main className=''>
-//                 <section className="pb-16 pt-36 px-4 bg-[#F7F7F7]">
+//                 <section className="pb-16 pt-36 px-4 bg-[var(--background-primary)]">
 //                     <div className="max-w-5xl mx-auto">
 //                         <div className="mb-8">
 //                             <p className="text-orange-500 font-medium mb-2">Service</p>
@@ -307,7 +307,7 @@ function ManagedIT() {
     };
 
     return (
-        <main className="bg-[#F7F7F7]">
+        <main className="bg-[var(--background-primary)]">
             <section className="pt-36 px-4 max-w-5xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">

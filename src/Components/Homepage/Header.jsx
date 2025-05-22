@@ -21,21 +21,21 @@ const HeroSection = () => {
     return (
         <section className="">
             <div className="flex flex-col min-h-screen md:mt-20 mt-24 md:px-4 px-2 pt-4">
-                <div className="bg-[#E3E9F8] rounded-t-xl py-4 px-4 flex flex-col md:flex-row justify-center items-start md:items-center text-sm text-gray-700 md:gap-6 gap-2">
+                <div className="bg-[var(--header-bg)] rounded-t-xl py-4 px-4 flex flex-col md:flex-row justify-center items-start md:items-center text-sm text-gray-700 md:gap-6 gap-2">
                     <div className="flex items-center">
-                        <Mail className="h-4 w-4 mr-2" />
-                        <span className="">Email Us: <a href="mailto:support@itsolutions.us" className="hover:underline text-[#4175FC]">Support@tfnsolutions.us</a></span>
+                        <Mail className="h-4 w-4 mr-2 text-[var(--text-primary)]" />
+                        <span className="text-[var(--text-primary)]">Email Us: <a href="mailto:support@itsolutions.us" className="hover:underline text-[#4175FC]">Support@tfnsolutions.us</a></span>
                     </div>
                     <div className="flex items-center">
-                        <Phone className="h-4 w-4 mr-2 text-black" />
-                        <span className="text-[#4175FC]"> <span className="text-black">Phone:</span> US (+02 098 0381) NG (+234 708 098 0381)</span>
+                        <Phone className="h-4 w-4 mr-2 text-[var(--text-primary)]" />
+                        <span className="text-[#4175FC]"> <span className="text-[var(--text-primary)]">Phone:</span> US (+02 098 0381) NG (+234 708 098 0381)</span>
                     </div>
                 </div>
                 {/* Hero section with video background */}
-                <div className="relative h-screen w-full overflow-hidden bg-[#E3E9F8] rounded-b-xl">
+                <div className="relative h-screen w-full overflow-hidden bg-[var(--header-bg)] rounded-b-xl">
                     {/* Video Background */}
                     <video
-                        className="absolute top-0 left-0 w-full h-full rounded-xl object-cover bg-[#E3E9F8]"
+                        className="absolute top-0 left-0 w-full h-full rounded-xl object-cover bg-[var(--header-bg)]"
                         autoPlay
                         muted
                         loop
@@ -150,8 +150,7 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                {/* About section - Kept from original code */}
-                <div className="py-16 px-4 md:px-16 max-w-5xl mx-auto">
+                {/* <div className="py-16 px-4 md:px-16 max-w-5xl mx-auto">
                     <div className="flex flex-col md:flex-row items-center gap-12">
                         <div className="md:w-1/3">
                             <div className="relative">
@@ -206,7 +205,7 @@ const HeroSection = () => {
                             </motion.p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     )
@@ -249,7 +248,7 @@ export default HeroSection
 //     return (
 //         <div className="flex flex-col min-h-screen mt-24">
 //             {/* Top bar */}
-//             <div className="bg-[#E3E9F8] py-4 px-4 flex flex-col md:flex-row justify-center items-start md:items-center text-sm text-gray-700 md:gap-6 gap-2">
+//             <div className="bg-[var(--header-bg)] py-4 px-4 flex flex-col md:flex-row justify-center items-start md:items-center text-sm text-gray-700 md:gap-6 gap-2">
 //                 <div className="flex items-center">
 //                     <Mail className="h-4 w-4 mr-2" />
 //                     <span>Email Us: <a href="mailto:support@itsolutions.us" className="hover:underline text-[#4175FC]">support@itsolutions.us</a></span>

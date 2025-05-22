@@ -37,7 +37,7 @@ export default function PortfolioSection() {
   
   return (
     <main className=''>
-    <section className="px-4 sm:px-6 lg:px-8 pb-16 bg-[#F7F7F7]">
+    <section className="px-4 sm:px-6 lg:px-8 pb-16 bg-[var(--background-primary)]">
       <div className="max-w-5xl mx-auto">
         <div className="mb-8">
           <p className="text-orange-500 font-medium mb-2">Related</p>

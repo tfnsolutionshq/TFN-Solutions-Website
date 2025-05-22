@@ -4,7 +4,7 @@ import Img1 from "../../assets/Images/News.png"
 
 function NewsDetails() {
   return (
-    <div className="pt-36 bg-[#F7F7F7] pb-6">
+    <div className="pt-36 bg-[var(--background-primary)] pb-6">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Article Header */}
         <div className="mb-8 text-center">
@@ -33,7 +33,7 @@ function NewsDetails() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Article Content */}
         <div>
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             The software development landscape is evolving at an unprecedented pace. As businesses strive to stay
             competitive in 2025 and beyond, emerging technologies and methodologies are reshaping how software is built,
             deployed, and maintained. From low-code platforms to AI-assisted coding and DevOps automation, these trends
@@ -45,7 +45,7 @@ function NewsDetails() {
 
           <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4">1. Low-Code Platforms: Democratizing Development</h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             Low-code platforms are revolutionizing software development by enabling faster application creation with
             minimal hand-coding. These platforms provide visual interfaces, drag-and-drop components, and pre-built
             templates, allowing both professional developers and citizen developers (non-technical business users) to
@@ -56,7 +56,7 @@ function NewsDetails() {
 
           <img src={Img1 || "/placeholder.svg"} alt="Low-code development platform" className="w-full h-auto my-6" />
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Speed to Market:</strong> Low-code platforms reduce development time by up to 60%, according to
             Forrester, enabling businesses to launch products and features faster.
             <br />
@@ -69,7 +69,7 @@ function NewsDetails() {
             development, fostering collaboration between IT and business units.
           </p>
 
-          <div className="border-l-4 border-orange-500 pl-4 italic my-6 text-gray-700">
+          <div className="border-l-4 border-orange-500 pl-4 italic my-6 text-[var(--text-secondary)]">
             <p>
               In 2025, expect low-code platforms like OutSystems, Mendix, and Microsoft Power Apps to integrate more
               AI-driven features, such as automated testing and intelligent workflow design.
@@ -80,7 +80,7 @@ function NewsDetails() {
             2. AI-Assisted Development: Coding Smarter, Not Harder
           </h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             Artificial Intelligence is no longer just a feature in applications—it's becoming a core part of the
             development process itself. AI-assisted tools, such as GitHub Copilot, Tabnine, and OpenAI's Codex, are
             helping developers write code faster, catch errors, and optimize performance.
@@ -92,7 +92,7 @@ function NewsDetails() {
 
           <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4">Why It Matters</h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Productivity Boost:</strong> Studies from GitHub show that developers using AI tools complete tasks
             up to 55% faster, freeing them to focus on creative problem-solving.
             <br />
@@ -109,13 +109,13 @@ function NewsDetails() {
             3. DevOps Automation: Streamlining Delivery Pipelines
           </h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             DevOps has long been a cornerstone of efficient software delivery, but automation is taking it to new
             heights. Tools like Jenkins, GitLab CI/CD, and Kubernetes are automating testing, deployment, and
             infrastructure management, enabling continuous integration and continuous deployment (CI/CD) at scale.
           </p>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Faster Releases:</strong> Automated pipelines reduce release cycles from weeks to hours, helping
             businesses respond to market demands swiftly.
             <br />
@@ -132,14 +132,14 @@ function NewsDetails() {
             4. Rise of Progressive Web Apps (PWAs) and Cross-Platform Development
           </h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             As users demand seamless experiences across devices, Progressive Web Apps (PWAs) and cross-platform
             frameworks like Flutter, React Native, and .NET MAUI are gaining traction. PWAs combine the best of web and
             mobile apps, offering offline capabilities, push notifications, and fast load times without app store
             dependencies.
           </p>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Cost Savings:</strong> Cross-platform frameworks allow developers to write one codebase for multiple
             platforms, reducing development and maintenance costs.
             <br />
@@ -156,13 +156,13 @@ function NewsDetails() {
             5. Sustainability in Software: Green Coding Practices
           </h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             Sustainability is becoming a priority in software development as organizations aim to reduce their carbon
             footprint. Green coding involves optimizing code to consume less energy, choosing energy-efficient hosting
             providers, and designing leaner applications.
           </p>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Cost Reduction:</strong> Energy-efficient software lowers cloud computing costs, especially for
             large-scale applications.
             <br />
@@ -175,7 +175,7 @@ function NewsDetails() {
             reliability.
           </p>
 
-          <div className="border-l-4 border-orange-500 pl-4 italic my-6 text-gray-700">
+          <div className="border-l-4 border-orange-500 pl-4 italic my-6 text-[var(--text-secondary)]">
             <p>
               By 2025, expect tools that measure the carbon footprint of software deployments and frameworks optimized
               for energy efficiency.
@@ -184,7 +184,7 @@ function NewsDetails() {
 
           <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4">How TFN Solutions Can Help</h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             The future of software development is exciting, but navigating these trends requires expertise and
             foresight. At TFN Solutions, we combine deep technical knowledge with a client-centric approach to deliver
             software that's innovative, scalable, and aligned with your business goals. Whether you're exploring
@@ -192,7 +192,7 @@ function NewsDetails() {
             our team is here to guide you every step of the way.
           </p>
 
-          <p className="text-gray-700 mb-6 leading-relaxed font-bold">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed font-bold">
             Ready to future-proof your software strategy? Contact TFN Solutions today to learn how we can turn these
             trends into tangible results for your business.
           </p>

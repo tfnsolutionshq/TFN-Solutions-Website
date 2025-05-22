@@ -301,7 +301,7 @@ const TeamSection = () => {
   const springConfig = { damping: 30, stiffness: 200 }
 
   return (
-    <section className="py-16 overflow-hidden bg-[#F7F7F7]">
+    <section className="py-16 overflow-hidden bg-[var(--background-primary)]">
       {/* Categories with horizontal scrolling */}
       <div className="relative w-full overflow-hidden mb-16">
         <motion.div

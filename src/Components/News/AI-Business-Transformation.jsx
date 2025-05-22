@@ -4,7 +4,7 @@ import Img1 from "../../assets/Images/News.png"
 
 function NewsDetails() {
   return (
-    <div className="pt-36 bg-[#F7F7F7] pb-6">
+    <div className="pt-36 bg-[var(--background-primary)] pb-6">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Article Header */}
         <div className="mb-8 text-center">
@@ -33,7 +33,7 @@ function NewsDetails() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Article Content */}
         <div>
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             Artificial Intelligence (AI) is no longer a futuristic concept—it's a transformative force reshaping
             business operations across industries. From predictive analytics to intelligent automation, AI is enabling
             organizations to optimize processes, enhance customer experiences, and drive innovation. At TFN Solutions,
@@ -45,7 +45,7 @@ function NewsDetails() {
 
           <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4">1. Predictive Analytics: Anticipating the Future</h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             Predictive analytics uses AI algorithms to analyze historical data and forecast future trends, enabling
             businesses to make data-driven decisions. By identifying patterns in customer behavior, market dynamics, or
             operational performance, AI helps organizations stay ahead of the curve.
@@ -55,7 +55,7 @@ function NewsDetails() {
 
           <img src={Img1 || "/placeholder.svg"} alt="Predictive analytics dashboard" className="w-full h-auto my-6" />
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Retail:</strong> Companies like Amazon use predictive analytics to forecast demand, optimize
             inventory, and recommend products, increasing sales by up to 35%, according to McKinsey.
             <br />
@@ -68,7 +68,7 @@ function NewsDetails() {
             that boost conversion rates.
           </p>
 
-          <div className="border-l-4 border-orange-500 pl-4 italic my-6 text-gray-700">
+          <div className="border-l-4 border-orange-500 pl-4 italic my-6 text-[var(--text-secondary)]">
             <p>
               Predictive analytics minimizes risks, optimizes resources, and enhances strategic planning. For growing
               businesses, it's a game-changer for staying competitive in fast-moving markets.
@@ -79,7 +79,7 @@ function NewsDetails() {
             2. Chatbots and Virtual Assistants: Enhancing Customer Engagement
           </h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             AI-powered chatbots and virtual assistants are revolutionizing customer service by providing 24/7 support,
             personalized interactions, and seamless user experiences. These tools use natural language processing (NLP)
             to understand and respond to customer queries in real time.
@@ -91,7 +91,7 @@ function NewsDetails() {
 
           <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4">Real-World Applications</h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>E-Commerce:</strong> Retailers like Sephora use chatbots to guide customers through product
             selection, increasing engagement and reducing cart abandonment rates.
             <br />
@@ -108,13 +108,13 @@ function NewsDetails() {
             3. Intelligent Automation: Streamlining Operations
           </h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             Intelligent automation combines AI with robotic process automation (RPA) to handle repetitive tasks,
             optimize workflows, and reduce human error. Unlike traditional automation, intelligent automation adapts to
             unstructured data and evolving processes.
           </p>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Logistics:</strong> Companies like DHL use AI to optimize delivery routes, reducing fuel costs by
             15% and improving delivery times, per IBM.
             <br />
@@ -127,7 +127,7 @@ function NewsDetails() {
             saving HR teams hours of manual work.
           </p>
 
-          <div className="border-l-4 border-orange-500 pl-4 italic my-6 text-gray-700">
+          <div className="border-l-4 border-orange-500 pl-4 italic my-6 text-[var(--text-secondary)]">
             <p>
               Intelligent automation boosts efficiency, reduces costs, and allows employees to focus on high-value tasks
               like strategy and innovation.
@@ -138,13 +138,13 @@ function NewsDetails() {
             4. AI in Healthcare: Improving Outcomes and Efficiency
           </h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             In healthcare, AI is transforming diagnostics, treatment planning, and operational efficiency. By analyzing
             vast datasets—medical records, imaging, or genomic data—AI delivers insights that enhance patient care and
             streamline processes.
           </p>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Diagnostics:</strong> AI tools like Google Health's DeepMind detect diseases like diabetic
             retinopathy with accuracy rivaling human experts, improving early intervention.
             <br />
@@ -161,12 +161,12 @@ function NewsDetails() {
             5. AI in Finance: Driving Security and Innovation
           </h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             The finance industry is leveraging AI to enhance security, personalize services, and optimize operations.
             From fraud detection to algorithmic trading, AI is a cornerstone of modern financial systems.
           </p>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Fraud Detection:</strong> AI analyzes transaction patterns to flag anomalies in real time, reducing
             fraud losses by up to 30%, per PwC.
             <br />
@@ -183,11 +183,11 @@ function NewsDetails() {
             Getting Started with AI: Challenges and Opportunities
           </h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             While AI offers immense potential, adoption comes with challenges:
           </p>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Data Quality:</strong> AI relies on clean, comprehensive data. Poor data leads to inaccurate
             outcomes.
             <br />
@@ -200,7 +200,7 @@ function NewsDetails() {
             sensitive industries like healthcare and finance.
           </p>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             At TFN Solutions, we address these challenges by conducting thorough assessments, ensuring robust data
             pipelines, and adhering to ethical AI principles. Our team works closely with clients to identify
             high-impact use cases, pilot solutions, and scale them effectively.
@@ -208,14 +208,14 @@ function NewsDetails() {
 
           <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4">Why Partner with TFN Solutions?</h2>
 
-          <p className="text-gray-700 mb-6 leading-relaxed">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             AI is transforming business operations, but realizing its full potential requires expertise and a strategic
             approach. At TFN Solutions, we combine deep technical knowledge with industry-specific insights to deliver
             AI solutions that drive measurable results. Whether you're looking to implement predictive analytics,
             automate processes, or enhance customer experiences, we're here to guide you every step of the way.
           </p>
 
-          <p className="text-gray-700 mb-6 leading-relaxed font-bold">
+          <p className="text-[var(--text-secondary)] mb-6 leading-relaxed font-bold">
             Ready to explore AI's potential for your business? Contact TFN Solutions today to start your transformation
             journey.
           </p>

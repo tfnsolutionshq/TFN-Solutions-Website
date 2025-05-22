@@ -22,8 +22,8 @@ const ServiceSection = () => {
   }, []);
 
   return (
-    <main className='bg-[#F7F7F7]'>
-      <section className="max-w-6xl mx-auto bg-[#F7F7F7] flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-24 pt-8">
+    <main className='bg-[var(--background-primary)]'>
+      <section className="max-w-6xl mx-auto bg-[var(--background-primary)] flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-24 pt-8">
         <div className="flex flex-col items-start w-full md:w-1/3 mb-6 md:mb-0">
           <div className="flex items-center">
             <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2 animate-blink"></span>

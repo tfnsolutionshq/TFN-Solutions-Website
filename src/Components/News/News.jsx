@@ -33,14 +33,14 @@ export default function BlogSection() {
 
 
   return (
-    <section className="pt-36 bg-[#F7F7F7] pb-16">
+    <section className="pt-36 bg-[var(--background-primary)] pb-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6">
         <div className="mb-">
           <p className="text-orange-500 font-medium mb-2">Insights</p>
           <h2 className="text-3xl md:text-6xl font-bold mb-4">Explore our insights</h2>
-          <p className="text-gray-900 max-w-3xl">
+          <p className="text-[var(--text-secondary)] max-w-3xl">
           Stay ahead in the delivery industry with our insightful blog. We provide a deep dive into user research, problem-solving, and innovative design solutions
           </p>
         </div>

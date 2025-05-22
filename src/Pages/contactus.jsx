@@ -1,6 +1,6 @@
 import Navbar from "../Components/GeneralComponents/Navbar";
 import Footer from "../Components/GeneralComponents/Footer";
-import ContactForm from '../Components/ContactPage/ContactForm'
+import ContactForm from '../Components/ContactPage/ContactForm2'
 import Maps from '../Components/ContactPage/Map'
 
 function Contactus() {

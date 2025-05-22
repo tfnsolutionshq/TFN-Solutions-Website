@@ -53,26 +53,26 @@ export default function BlogSection() {
   }, []);
 
   return (
-    <section className="py-16 bg-[#F7F7F7]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-[var(--background-primary)]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12">
-          <div className="flex flex-col items-start w-full md:w-1/3 mb-6 md:mb-0">
+        <div className="flex flex-col items-start mb-12">
+          <div className="flex flex-col items-start w-full mb-6 md:mb-0">
             <div className="flex items-center">
-              <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2 animate-blink"></span>
-              <span className="text-sm md:text-lg font-medium text-gray-700">{t('blog.insights')}</span>
+              <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+              <span className="text-sm font-medium text-[var(text-primary)]">{t('blog.insights')}</span>
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex flex-col items-start md:items-end">
+          <div className="w-full md:w-1/2 flex flex-col items-start mt-3">
             {/* Animated heading */}
             <h2 className="text-2xl md:text-3xl lg:text-4xl leading-tight">
-              <span className={textState.part1 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
+              <span className={textState.part1 ? 'font-bold text-[var(--text-primary)]' : 'font-bold text-[var(--text-secondary)]'}>
                 {t('blog.readLatest')}
               </span>{' '}
-              <span className={textState.part2 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
+              <span className={textState.part2 ? 'font-bold text-[var(--text-primary)]' : 'font-bold text-[var(--text-secondary)]'}>
                 {t('blog.articlesAnd')}
-              </span>{' '}<br/>
-              <span className={textState.part3 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
+              </span>{' '}
+              <span className={textState.part3 ? 'font-bold text-[var(--text-primary)]' : 'font-bold text-[var(--text-secondary)]'}>
                 {t('blog.blogs')}
               </span>
             </h2>

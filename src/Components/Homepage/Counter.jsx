@@ -47,7 +47,7 @@ const Counter = () => {
   }, []); // Empty dependency array ensures this runs only once on mount
 
   return (
-    <div className="py-6 bg-[#F7F7F7]">
+    <div className="py-6 bg-[var(--background-primary)]">
       <div className="max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {counters.map((counter) => (

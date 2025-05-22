@@ -134,7 +134,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 py-4 w-full z-50 transition-all duration-300
-        ${scrolled ? "bg-[var(--background-primary)]/90 backdrop-blur-sm shadow-md py-4" : "bg-[var(--background-primary)]/100 py-6"}`}
+        ${scrolled ? "bg-[var(--background-primary)]/100 backdrop-blur-3xl shadow-md py-4" : "bg-[var(--background-primary)]/100 py-6"}`}
     >
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
         {/* Logo - Left on mobile, centered on desktop */}
@@ -147,11 +147,11 @@ const Navbar = () => {
         {/* Left Navigation Links - Hidden on mobile */}
         {!isMobile && (
           <div className="flex items-center space-x-8">
-            <Link to="/" className="text-gray-800 hover:text-blue-600 transition-colors">
+            <Link to="/" className="text-[var(--text-primary)] hover:text-blue-600 transition-colors">
               {t("navbar.home")}
             </Link>
 
-            <Link to="/about" className="text-gray-800 hover:text-blue-600 transition-colors">
+            <Link to="/about" className="text-[var(--text-primary)] hover:text-blue-600 transition-colors">
               {t("navbar.about")}
             </Link>
 
@@ -163,7 +163,7 @@ const Navbar = () => {
               onMouseLeave={() => !isMobile && setServicesDropdownOpen(false)}
             >
               <button
-                className="flex items-center text-gray-800 hover:text-blue-600 transition-colors focus:outline-none"
+                className="flex items-center text-[var(--text-primary)] hover:text-blue-600 transition-colors focus:outline-none"
                 onClick={toggleServicesDropdown}
               >
                 {t("navbar.services")}
@@ -181,7 +181,7 @@ const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-1/2 transform -translate-x-1/2 mt-8 w-[800px] bg-white shadow-xl border border-gray-100 z-50"
+                    className="absolute left-1/2 transform -translate-x-1/2 mt-8 w-[800px]  bg-[var(--background-primary)] shadow-xl border border-gray-100 z-50"
                   >
                     <div className="grid grid-cols-3 gap-0 p-6">
                       {services.map((category, idx) => (
@@ -191,10 +191,10 @@ const Navbar = () => {
                               <li key={itemIdx}>
                                 <Link
                                   to={item.path}
-                                  className="flex items-center py-2 px-3  text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors group"
+                                  className="flex items-center py-2 px-3 text-[var(--text-primary)] hover:bg-blue-50 hover:text-blue-600 transition-colors group"
                                   onClick={() => setServicesDropdownOpen(false)}
                                 >
-                                  <span className="mr-3 text-gray-400 group-hover:text-blue-500">{item.icon}</span>
+                                  <span className="mr-3 text-[var(--text-primary)] group-hover:text-blue-500">{item.icon}</span>
                                   {t(item.name)}
                                 </Link>
                               </li>
@@ -208,10 +208,10 @@ const Navbar = () => {
               </AnimatePresence>
             </div>
 
-            <Link to="/works" className="text-gray-800 hover:text-blue-600 transition-colors">
+            <Link to="/works" className="text-[var(--text-primary)] hover:text-blue-600 transition-colors">
               {t("navbar.works")}
             </Link>
-            <Link to="/latest-news" className="text-gray-800 hover:text-blue-600 transition-colors">
+            <Link to="/latest-news" className="text-[var(--text-primary)] hover:text-blue-600 transition-colors">
               {t("navbar.news")}
             </Link>
           </div>
@@ -254,7 +254,7 @@ const Navbar = () => {
             {/* Mobile Menu Button - Show as soon as screen is below breakpoint */}
             {isMobile && (
               <button
-                className="text-gray-800 focus:outline-none"
+                className="text-[var(--text-primary)] focus:outline-none"
                 onClick={toggleMobileMenu}
                 aria-label="Toggle mobile menu"
               >
@@ -295,7 +295,7 @@ const Navbar = () => {
                   </Link>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-gray-800 focus:outline-none"
+                    className="text-[var(--text-primary)] focus:outline-none"
                     aria-label="Close menu"
                   >
                     <X className="w-6 h-6" />
@@ -305,14 +305,14 @@ const Navbar = () => {
                 <div className="flex-1 px-4 py-2 flex flex-col">
                   <Link
                     to="/"
-                    className="text-gray-800 py-3 border-b border-gray-100"
+                    className="text-[var(--text-primary)] py-3 border-b border-gray-100"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {t("navbar.home")}
                   </Link>
                   <Link
                     to="/about"
-                    className="text-gray-800 py-3 border-b border-gray-100"
+                    className="text-[var(--text-primary)] py-3 border-b border-gray-100"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {t("navbar.about")}
@@ -321,7 +321,7 @@ const Navbar = () => {
                   {/* Mobile Services Dropdown */}
                   <div className="border-b border-gray-100">
                     <button
-                      className="flex items-center justify-between w-full text-left text-gray-800 py-3"
+                      className="flex items-center justify-between w-full text-left text-[var(--text-primary)] py-3"
                       onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                     >
                       <span>{t("navbar.services")}</span>
@@ -364,14 +364,14 @@ const Navbar = () => {
 
                   <Link
                     to="/works"
-                    className="text-gray-800 py-3 border-b border-gray-100"
+                    className="text-[var(--text-primary)] py-3 border-b border-gray-100"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {t("navbar.works")}
                   </Link>
                   <Link
                     to="/news"
-                    className="text-gray-800 py-3 border-b border-gray-100"
+                    className="text-[var(--text-primary)] py-3 border-b border-gray-100"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {t("navbar.news")}

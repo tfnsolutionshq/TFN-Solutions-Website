@@ -181,7 +181,7 @@ const TestimonialSection = () => {
   }
 
   return (
-    <section className="pt-16 pb-10 bg-[#F7F7F7]">
+    <section className="pt-16 pb-10 bg-[var(--background-primary)]">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
@@ -243,7 +243,7 @@ const TestimonialSection = () => {
                   </div>
                   <div className="mb-4 text-gray-500">
                     <span className="text-3xl font-serif text-gray-300">"</span>
-                    <p className="mt-1">{testimonial.quote}</p>
+                    <p className="mt-1 text-[var(--text-secondary)]">{testimonial.quote}</p>
                   </div>
                   <div>
                     <h4 className="font-semibold">{testimonial.name}</h4>
@@ -256,14 +256,14 @@ const TestimonialSection = () => {
         </div>
 
         {/* Client Logos Section - Redesigned */}
-        <div className="mt-20 max-w-6xl mx-auto">
+        <div className="mt-28 max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-6">
             <div className="flex items-center mb-2">
               <div className="w-2 h-2 rounded-full bg-orange-500 mr-2"></div>
-              <span className="text-xs font-medium text-gray-700">Clients/Partners</span>
+              <span className="text-sm font-medium text-[var(--text-primary)]">Clients/Partners</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-center">
-              We build for <span className="text-black">Startup</span> <span className="text-black font-normal">and</span> <span className="text-gray-400 font-normal">enterprise businesses</span>
+            <h3 className="text-2xl md:text-4xl font-bold text-center">
+              We build for <span className="text-[var(--text-secondary)]">Startup and</span> <span className="text-black font-normal"></span> <span className="text-gray-400 font-normal">enterprise businesses</span>
             </h3>
           </div>
           <motion.div
@@ -277,7 +277,7 @@ const TestimonialSection = () => {
                 key={client.id}
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="grayscale hover:grayscale-0 transition-all duration-300"
+                className=" hover:grayscale-0 transition-all duration-300"
               >
                 <img src={client.logo || "/placeholder.svg"} alt={client.name} className="h-10 md:h-12 w-auto" />
               </motion.div>
