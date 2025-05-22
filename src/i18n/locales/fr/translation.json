@@ -1,0 +1,49 @@
+{
+    "navbar": {
+      "home": "Accueil",
+      "about": "À Propos",
+      "services": "Services",
+      "works": "Travaux",
+      "news": "Actualités",
+      "contact": "Contactez-nous",
+      "viewAllServices": "Voir tous les services"
+    },
+    "services": {
+      "categories": {
+        "infrastructure": "Infrastructure",
+        "development": "Développement",
+        "security": "Sécurité"
+      },
+      "items": {
+        "infrastructureServices": "Services d'Infrastructure",
+        "cloudServices": "Services Cloud",
+        "backupSolutions": "Solutions de Sauvegarde",
+        "softwareDevelopment": "Développement Logiciel",
+        "mobileAppDevelopment": "Développement d'Applications Mobiles",
+        "webDevelopment": "Développement Web",
+        "cybersecurity": "Cybersécurité",
+        "networkSecurity": "Sécurité Réseau",
+        "securityAudits": "Audits de Sécurité"
+      }
+    },
+    "language": {
+      "en": "Anglais",
+      "fr": "Français",
+      "es": "Espagnol",
+      "de": "Allemand",
+      "ng": "Nigérian"
+    },
+    "blog": {
+      "futureTitle": "L'avenir du développement logiciel : tendances à surveiller en 2025 et au-delà",
+      "futureDescription": "Le paysage du développement logiciel évolue à un rythme sans précédent. Alors que les entreprises s'efforcent de rester compétitives en 2025 et au-delà, de nouvelles technologies émergent...",
+      "aiTitle": "L'IA transforme les opérations commerciales dans divers secteurs",
+      "aiDescription": "L'intelligence artificielle (IA) change la façon dont les entreprises fonctionnent dans divers secteurs. De l'automatisation des tâches à la fourniture d'informations...",
+      "networkTitle": "Construire une infrastructure réseau évolutive pour l'avenir",
+      "networkDescription": "Dans un monde de plus en plus connecté, la construction d'une infrastructure réseau évolutive est cruciale pour le succès. Les entreprises doivent s'assurer que leurs réseaux...",
+      "insights": "Aperçus",
+      "readLatest": "Lisez nos derniers",
+      "articlesAnd": "Articles &",
+      "blogs": "Blogs"
+    }
+  }
+  

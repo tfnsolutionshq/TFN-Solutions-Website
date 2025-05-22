@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Suspense } from "react"
 import Home from "./Pages/home";
 import About from "./Pages/about";
 import Works from "./Pages/works";
@@ -29,6 +30,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <Suspense fallback={<div className="flex items-center justify-center h-screen">Loading...</div>}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -55,6 +57,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/works/infrastructure-service" element={<Infrastructure />} />
       </Routes>
+      </Suspense>
     </Router>
   )
 }

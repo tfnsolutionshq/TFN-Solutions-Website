@@ -1,4 +1,4 @@
-import Img3 from "../../assets/Images/News3.png"
+import Img3 from "../../assets/Images/blog1.jpg"
 import Img2 from "../../assets/Images/News2.png"
 import Img1 from "../../assets/Images/News.png"
 
@@ -9,7 +9,7 @@ function NewsDetails() {
         {/* Article Header */}
         <div className="mb-8 text-center">
           <div className="flex items-center justify-center text-center mb-4">
-            <p className="text-sm text-center font-medium text-gray-500">August 12, 2024</p>
+            <p className="text-sm text-center font-medium text-gray-500">March 9, 2025</p>
             <span className="mx-2">•</span>
             <p className="text-sm font-medium text-orange-500">Blog</p>
           </div>
@@ -25,7 +25,7 @@ function NewsDetails() {
           <img
             src={Img3 || "/placeholder.svg"}
             alt="Network infrastructure visualization"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-top object-cover"
           />
         </div>
       </div>

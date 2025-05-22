@@ -6,6 +6,8 @@ import { TypeAnimation } from "react-type-animation"
 
 const HeroSection = () => {
     const [textToggle, setTextToggle] = useState(false)
+    const [showCalendly, setShowCalendly] = useState(false)
+
 
     // Toggle text styling every 4 seconds
     useEffect(() => {
@@ -18,7 +20,7 @@ const HeroSection = () => {
 
     return (
         <section className="">
-            <div className="flex flex-col min-h-screen md:mt-20 mt-24 px-4 pt-4">
+            <div className="flex flex-col min-h-screen md:mt-20 mt-24 md:px-4 px-2 pt-4">
                 <div className="bg-[#E3E9F8] rounded-t-xl py-4 px-4 flex flex-col md:flex-row justify-center items-start md:items-center text-sm text-gray-700 md:gap-6 gap-2">
                     <div className="flex items-center">
                         <Mail className="h-4 w-4 mr-2" />
@@ -48,7 +50,7 @@ const HeroSection = () => {
 
                     {/* Content */}
                     <div className="relative z-10 max-w-5xl mx-auto px-4 pt-32 h-full flex flex-col justify-center">
-                        <div className="grid md:grid-cols-2 gap-8 items-center">
+                        <div className=" gap-8 items-center">
                             {/* Left Column - Heading */}
                             <div className="text-white">
                                 <div className="flex items-center mb-4">
@@ -61,44 +63,89 @@ const HeroSection = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8 }}
                                 >
-                                    Powering Your
-                                    <br />
-                                    Digital Future.
+                                    Powering Your Digital Future.
                                 </motion.h1>
+                                <div className="text-white">
+                                    <p className="text-base md:text-base mb-8 max-w-md">
+                                        TFN Solution blends innovation, expertise, and purpose to deliver smart, scalable technology that drives business growth and transformation.
+
+                                    </p>
+                                    <div className="hidden md:block">
+                                        <motion.button
+                                            className="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 group flex items-center"
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            onClick={() => setShowCalendly(true)}
+                                        >
+                                            <span>Get in touch with us</span>
+                                            <div className="ml-2 bg-white rounded-full p-1">
+                                                <ArrowRight className="w-4 h-4 text-blue-600 transform group-hover:translate-x-1 transition-transform duration-300" />
+                                            </div>
+                                        </motion.button>
+                                        {showCalendly && (
+                                        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+                                            <div className="bg-white rounded-lg shadow-lg p-4 max-w-xl w-full relative">
+                                                <button
+                                                    className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold"
+                                                    onClick={() => setShowCalendly(false)}
+                                                    aria-label="Close"
+                                                >
+                                                    &times;
+                                                </button>
+                                                <iframe
+                                                    src="https://calendly.com/ebenezernwolisa100"
+                                                    width="100%"
+                                                    height="400"
+                                                    frameBorder="0"
+                                                    title="Book a call"
+                                                    className="rounded-lg"
+                                                    allow="fullscreen"
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                    )}
+                                    </div>
+                                </div>
 
                                 <div className="md:hidden mt-6">
                                     <motion.button
                                         className="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 group flex items-center"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
+                                        onClick={() => setShowCalendly(true)}
                                     >
                                         <span>Get in touch with us</span>
                                         <div className="ml-2 bg-white rounded-full p-1">
                                             <ArrowRight className="w-4 h-4 text-blue-600 transform group-hover:translate-x-1 transition-transform duration-300" />
                                         </div>
                                     </motion.button>
+                                    {showCalendly && (
+                                        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+                                            <div className="bg-white rounded-lg shadow-lg p-4 max-w-xl w-full relative">
+                                                <button
+                                                    className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold"
+                                                    onClick={() => setShowCalendly(false)}
+                                                    aria-label="Close"
+                                                >
+                                                    &times;
+                                                </button>
+                                                <iframe
+                                                    src="https://calendly.com/ebenezernwolisa100"
+                                                    width="100%"
+                                                    height="400"
+                                                    frameBorder="0"
+                                                    title="Book a call"
+                                                    className="rounded-lg"
+                                                    allow="fullscreen"
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
 
                             {/* Right Column - Description and Button */}
-                            <div className="text-white">
-                                <p className="text-base md:text-base mb-8 max-w-md">
-                                    A US based company that blends innovation, expertise, and purpose to deliver smart, scalable technology
-                                    that drives business growth and transformation.
-                                </p>
-                                <div className="hidden md:block">
-                                    <motion.button
-                                        className="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 group flex items-center"
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                    >
-                                        <span>Get in touch with us</span>
-                                        <div className="ml-2 bg-white rounded-full p-1">
-                                            <ArrowRight className="w-4 h-4 text-blue-600 transform group-hover:translate-x-1 transition-transform duration-300" />
-                                        </div>
-                                    </motion.button>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -112,11 +159,11 @@ const HeroSection = () => {
                                     <span className="inline-block w-2 h-2 bg-orange-400 rounded-full mr-2"></span>
                                     <span className="text-sm md:text-lg font-medium text-gray-700">About</span>
                                 </div>
-                                <div className="w-96 md:w-72 h-56 md:h-48 bg-[#FE992D] mt-4 rounded-full"></div>
+                                <div className="w-80 md:w-72 h-56 md:h-48 bg-[#FE992D] mt-4 rounded-full"></div>
                                 <img
                                     src={Img}
                                     alt="About us"
-                                    className="rounded-full w-96 md:w-72 h-56 md:h-48 absolute -bottom-3 left-0 md:left-2"
+                                    className="rounded-full w-80 md:w-72 h-56 md:h-48 absolute -bottom-3 left-0 md:left-2"
                                 />
                             </div>
                         </div>

@@ -1,0 +1,53 @@
+/* Theme variables for light and dark mode */
+:root {
+  /* Light theme (default) */
+  --background-primary: #F7F7F7;
+  --background-secondary: #FFFFFF;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: #E5E5E5;
+  --accent-color: #FF6B00; /* Orange accent color */
+  --accent-hover: #E05A00;
+  --card-bg: #FFFFFF;
+  --input-bg: #FFFFFF;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+  --background-primary: #121212;
+  --background-secondary: #1E1E1E;
+  --text-primary: #F5F5F5;
+  --text-secondary: #AAAAAA;
+  --border-color: #333333;
+  --accent-color: #FF6B00; /* Keep accent color consistent */
+  --accent-hover: #FF8533;
+  --card-bg: #252525;
+  --input-bg: #2A2A2A;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Apply theme variables to elements */
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Common elements styling */
+.bg-white {
+  background-color: var(--card-bg) !important;
+}
+
+.text-gray-600 {
+  color: var(--text-secondary) !important;
+}
+
+.border-gray-200 {
+  border-color: var(--border-color) !important;
+}
+
+/* Transition for smooth theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

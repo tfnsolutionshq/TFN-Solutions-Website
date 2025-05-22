@@ -1,0 +1,49 @@
+{
+    "navbar": {
+      "home": "Startseite",
+      "about": "Über Uns",
+      "services": "Dienstleistungen",
+      "works": "Arbeiten",
+      "news": "Neuigkeiten",
+      "contact": "Kontakt",
+      "viewAllServices": "Alle Dienstleistungen anzeigen"
+    },
+    "services": {
+      "categories": {
+        "infrastructure": "Infrastruktur",
+        "development": "Entwicklung",
+        "security": "Sicherheit"
+      },
+      "items": {
+        "infrastructureServices": "Infrastrukturdienstleistungen",
+        "cloudServices": "Cloud-Dienste",
+        "backupSolutions": "Backup-Lösungen",
+        "softwareDevelopment": "Softwareentwicklung",
+        "mobileAppDevelopment": "Mobile App-Entwicklung",
+        "webDevelopment": "Webentwicklung",
+        "cybersecurity": "Cybersicherheit",
+        "networkSecurity": "Netzwerksicherheit",
+        "securityAudits": "Sicherheitsaudits"
+      }
+    },
+    "language": {
+      "en": "Englisch",
+      "fr": "Französisch",
+      "es": "Spanisch",
+      "de": "Deutsch",
+      "ng": "Nigerianisch"
+    },
+    "blog": {
+      "futureTitle": "Die Zukunft der Softwareentwicklung: Trends, die man 2025 und darüber hinaus im Auge behalten sollte",
+      "futureDescription": "Die Softwareentwicklungslandschaft entwickelt sich in einem beispiellosen Tempo. Da Unternehmen bestrebt sind, 2025 und darüber hinaus wettbewerbsfähig zu bleiben, tauchen neue Technologien auf...",
+      "aiTitle": "KI transformiert Geschäftsabläufe in verschiedenen Branchen",
+      "aiDescription": "Künstliche Intelligenz (KI) verändert die Art und Weise, wie Unternehmen in verschiedenen Branchen arbeiten. Von der Automatisierung von Aufgaben bis zur Bereitstellung von Einblicken...",
+      "networkTitle": "Aufbau einer skalierbaren Netzwerkinfrastruktur für die Zukunft",
+      "networkDescription": "In einer zunehmend vernetzten Welt ist der Aufbau einer skalierbaren Netzwerkinfrastruktur entscheidend für den Erfolg. Unternehmen müssen sicherstellen, dass ihre Netzwerke...",
+      "insights": "Einblicke",
+      "readLatest": "Lesen Sie unsere neuesten",
+      "articlesAnd": "Artikel &",
+      "blogs": "Blogs"
+    }
+  }
+  

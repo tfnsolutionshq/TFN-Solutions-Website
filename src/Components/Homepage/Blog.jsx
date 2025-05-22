@@ -1,33 +1,35 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import BlogImg from "../../assets/Images/blog1.jpg";
 import BlogImg2 from "../../assets/Images/blog2.jpg";
 import BlogImg3 from "../../assets/Images/blog3.jpg";
 
 export default function BlogSection() {
+  const { t } = useTranslation();
   const blogPosts = [
     {
       id: 1,
       image: BlogImg2,
       date: "May 17, 2025",
-      title: "The Future of Software Development: Trends to Watch in 2025 and Beyond",
-      description: "The software development landscape is evolving at an unprecedented pace. As businesses strive to stay competitive in 2025 and beyond, emerging technologies...",
+      title: t('blog.futureTitle'),
+      description: t('blog.futureDescription'),
       link: "/news/future-of-software-development"
     },
     {
       id: 2,
       image: BlogImg3,
       date: "April 11, 2025",
-      title: "AI is Transforming Business Operations Across Industries",
-      description: "Artificial Intelligence (AI) is no longer a futuristic concept—it’s a transformative force reshaping business operations across industries. From predictive analytics to intelligent automation, AI is enabling organizations to optimize processes, ",
+      title: t('blog.aiTitle'),
+      description: t('blog.aiDescription'),
       link: "/news/ai-business-transformation"
     },
     {
       id: 3,
       image: BlogImg,
       date: "March 9, 2025",
-      title: "Building Scalable Network Infrastructure: Best Practices for Growing Businesses",
-      description: "As businesses grow, their network infrastructure must keep pace to support increasing data demands, ensure security, and enable seamless operations. A scalable, secure, and cloud-ready network is no longer a luxury—it’s a necessity for staying competitive. ",
+      title: t('blog.networkTitle'),
+      description: t('blog.networkDescription'),
       link: "/news/building-scalable-network-infrastructure"
     }
   ];
@@ -58,20 +60,20 @@ export default function BlogSection() {
           <div className="flex flex-col items-start w-full md:w-1/3 mb-6 md:mb-0">
             <div className="flex items-center">
               <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2 animate-blink"></span>
-              <span className="text-sm md:text-lg font-medium text-gray-700">Insights</span>
+              <span className="text-sm md:text-lg font-medium text-gray-700">{t('blog.insights')}</span>
             </div>
           </div>
           <div className="w-full md:w-1/2 flex flex-col items-start md:items-end">
             {/* Animated heading */}
             <h2 className="text-2xl md:text-3xl lg:text-4xl leading-tight">
               <span className={textState.part1 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
-                Read our latest
+                {t('blog.readLatest')}
               </span>{' '}
               <span className={textState.part2 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
-                Articles &
+                {t('blog.articlesAnd')}
               </span>{' '}<br/>
               <span className={textState.part3 ? 'font-bold text-black' : 'font-normal text-gray-400'}>
-                Blogs
+                {t('blog.blogs')}
               </span>
             </h2>
           </div>

@@ -320,8 +320,7 @@ const TeamSection = () => {
                 </div>
             </div>
 
-
-            <div className="w-full pl-32">
+            <div className="w-full md:pl-18 pl-0">
                 <div className="overflow-hidden cursor-grab">
                     <motion.div
                         ref={boardContainerRef}

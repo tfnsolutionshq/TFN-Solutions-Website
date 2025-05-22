@@ -54,7 +54,7 @@ export default function ApproachSection() {
     }, []);
 
     return (
-        <section className="py-16 px-4 bg-[#F7F7F7]">
+        <section className="py-10 px-4 bg-[#F7F7F7]">
             <div className="max-w-5xl mx-auto">
                 {/* Header section - now animated and styled like ServiceSection */}
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">

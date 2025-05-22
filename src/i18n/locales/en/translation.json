@@ -1,0 +1,49 @@
+{
+    "navbar": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "works": "Works",
+      "news": "News",
+      "contact": "Contact us",
+      "viewAllServices": "View all services"
+    },
+    "services": {
+      "categories": {
+        "infrastructure": "Infrastructure",
+        "development": "Development",
+        "security": "Security"
+      },
+      "items": {
+        "infrastructureServices": "Infrastructure Services",
+        "cloudServices": "Cloud Services",
+        "backupSolutions": "Backup Solutions",
+        "softwareDevelopment": "Software Development",
+        "mobileAppDevelopment": "Mobile App Development",
+        "webDevelopment": "Web Development",
+        "cybersecurity": "Cybersecurity",
+        "networkSecurity": "Network Security",
+        "securityAudits": "Security Audits"
+      }
+    },
+    "blog": {
+      "futureTitle": "The Future of Software Development: Trends to Watch in 2025 and Beyond",
+      "futureDescription": "The software development landscape is evolving at an unprecedented pace. As businesses strive to stay competitive in 2025 and beyond, emerging technologies...",
+      "aiTitle": "AI is Transforming Business Operations Across Industries",
+      "aiDescription": "Artificial Intelligence (AI) is no longer a futuristic concept—it’s a transformative force reshaping business operations across industries. From predictive analytics to intelligent automation, AI is enabling organizations to optimize processes, ",
+      "networkTitle": "Building Scalable Network Infrastructure: Best Practices for Growing Businesses",
+      "networkDescription": "As businesses grow, their network infrastructure must keep pace to support increasing data demands, ensure security, and enable seamless operations. A scalable, secure, and cloud-ready network is no longer a luxury—it’s a necessity for staying competitive.",
+      "insights": "Insights",
+      "readLatest": "Read our latest",
+      "articlesAnd": "Articles &",
+      "blogs": "Blogs"
+    },
+    "language": {
+      "en": "English",
+      "fr": "French",
+      "es": "Spanish",
+      "de": "German",
+      "ng": "Nigerian"
+    }
+  }
+  

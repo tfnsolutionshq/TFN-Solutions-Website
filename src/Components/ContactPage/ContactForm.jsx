@@ -57,7 +57,7 @@ const ContactForm = () => {
                 <div>
                   <h3 className="text-sm font-medium text-gray-500 mb-2">Email</h3>
                   <a href="mailto:hello@institution.us" className="text-black hover:text-blue-600 transition-colors">
-                    hello@institution.us
+                    support@tfnsolutions.us
                   </a>
                 </div>
 
@@ -65,10 +65,10 @@ const ContactForm = () => {
                   <h3 className="text-sm font-medium text-gray-500 mb-2">Phone</h3>
                   <div>
                     <p className="mb-1 font-medium">
-                      <span className="text-gray-500 text-sm">US:</span> +1 (123) 456 7890
+                      <span className="text-gray-500 text-sm">US:</span> (+02 098 0381)
                     </p>
                     <p className="font-medium">
-                      <span className="text-gray-500 text-sm">NG:</span> +1 (123) 456 7890
+                      <span className="text-gray-500 text-sm">NG:</span> (+234 708 098 0381)
                     </p>
                   </div>
                 </div>
@@ -76,10 +76,11 @@ const ContactForm = () => {
               <div className="mt-6">
                 <h3 className="text-sm font-medium text-gray-500 mb-2">Address</h3>
                 <p className="text-sm">
-                  USA - <br />
-                  <span className="font-bold text-base">Lorem Ipsum, Texas</span> <br />
-                  Nigeria <br />
-                  <span className="font-bold text-base">Plot 107 Divine Estate, Behind Federal Housing, New Sauka, Lugbe, FCT, Abuja</span>
+                  {/* USA - <br /> */}
+                  <span className="font-semibold text-base">United States</span> <br />
+                  <span className="font-semibold text-base">Europe</span> <br />
+                  {/* Nigeria <br /> */}
+                  <span className="font-semibold text-base">Africa</span>
                 </p>
               </div>
             </div>

@@ -262,6 +262,8 @@ export default function Footer() {
     <motion.a
       href={href}
       aria-label={label}
+      target="_blank"
+      rel="noopener noreferrer"
       whileHover={{ scale: 1.2, rotate: 5 }}
       whileTap={{ scale: 0.9 }}
       className="w-10 h-10 rounded-full bg-blue-900/50 flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
@@ -339,37 +341,29 @@ export default function Footer() {
                 whileHover={{ y: -2 }}
               >
                 <ArrowUp size={16} className="mr-2 group-hover:animate-bounce transition-transform" />
-                <span>back to top</span>
+                <span>Back to top</span>
               </motion.button>
             </motion.div>
 
             {/* Navigation Links Column 1 */}
             <motion.div variants={itemVariants}>
               <h3 className="font-medium mb-4 text-blue-300">Quick Links</h3>
-              <ul className="space-y-3">
-                {["Home", "About", "Works", "Contact Us"].map((item) => (
-                  <motion.li key={item} whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                    <a href="#" className="text-sm text-white hover:text-blue-400 transition-colors flex items-center">
-                      <span className="w-0 h-px bg-blue-400 mr-0 transition-all duration-300 group-hover:w-2 group-hover:mr-2"></span>
-                      {item}
-                    </a>
-                  </motion.li>
-                ))}
+              <ul className="space-y-2">
+                <li><Link to={`/`} className="text-sm text-white hover:text-blue-400">Home</Link></li>
+                <li><Link to={`/about`} className="text-sm text-white hover:text-blue-400">About</Link></li>
+                <li><Link to={`/works`} className="text-sm text-white hover:text-blue-400">Works</Link></li>
+                <li><Link to={`/contactus`} className="text-sm text-white hover:text-blue-400">Contact Us</Link></li>
               </ul>
             </motion.div>
 
             {/* Navigation Links Column 2 */}
             <motion.div variants={itemVariants}>
-              <h3 className="font-medium mb-4 text-blue-300">Others</h3>
-              <ul className="space-y-3">
-                {["Career", "Blog", "Quote"].map((item) => (
-                  <motion.li key={item} whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                    <a href="#" className="text-sm text-white hover:text-blue-400 transition-colors flex items-center">
-                      <span className="w-0 h-px bg-blue-400 mr-0 transition-all duration-300 group-hover:w-2 group-hover:mr-2"></span>
-                      {item}
-                    </a>
-                  </motion.li>
-                ))}
+              <h3 className="font-medium mb-4 text-blue-300">Works</h3>
+              <ul className="space-y-2">
+                <li><Link to={`/works/afriwok`} className="text-sm text-white hover:text-blue-400">Afriwok</Link></li>
+                <li><Link to={`/works/unizik-alumni`} className="text-sm text-white hover:text-blue-400">Unizik Alumni</Link></li>
+                <li><Link to={`/works/crystalbricks`} className="text-sm text-white hover:text-blue-400">Crystalbricks</Link></li>
+                {/* <li><Link to={`/contactus`} className="text-sm text-white hover:text-blue-400">Contact Us</Link></li> */}
               </ul>
             </motion.div>
 
@@ -378,10 +372,10 @@ export default function Footer() {
               <ul className="space-y-3">
                 {["United States", "Africa", "Europe"].map((item) => (
                   <motion.li key={item} whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                    <a href="#" className="text-sm text-white hover:text-blue-400 transition-colors flex items-center">
+                    <div className="text-sm text-white hover:text-blue-400 transition-colors flex items-center">
                       <span className="w-0 h-px bg-blue-400 mr-0 transition-all duration-300 group-hover:w-2 group-hover:mr-2"></span>
                       {item}
-                    </a>
+                    </div>
                   </motion.li>
                 ))}
               </ul>
@@ -393,27 +387,27 @@ export default function Footer() {
               <ul className="space-y-4">
                 <li>
                   <a
-                    href="mailto:hello@tfnsoln.com"
+                    href="mailto:support@tfnsolutions.us"
                     className="text-sm text-white hover:text-blue-400 transition-colors flex items-start"
                   >
                     <Mail size={16} className="mr-2 mt-1 text-blue-400" />
                     <div>
                       <span className="text-blue-200">Email:</span>
                       <br />
-                      <span className="font-bold hover:underline">hello@tfnsoln.com</span>
+                      <span className="font-bold hover:underline">support@tfnsolutions.us</span>
                     </div>
                   </a>
                 </li>
                 <li>
                   <a
-                    href="tel:+14052973833"
+                    href="tel:+02 098 0381"
                     className="text-sm text-white hover:text-blue-400 transition-colors flex items-start"
                   >
                     <Phone size={16} className="mr-2 mt-1 text-blue-400" />
                     <div>
                       <span className="text-blue-200">Phone:</span>
                       <br />
-                      <span className="font-bold hover:underline">+1(405)297-3833</span>
+                      <span className="font-bold hover:underline">US (+02 098 0381)</span>
                     </div>
                   </a>
                 </li>
@@ -422,7 +416,7 @@ export default function Footer() {
                   <div>
                     <span className="text-blue-200">Global Offices:</span>
                     <br />
-                    <span className="text-white/80">USA • Nigeria • Europe</span>
+                    <span className="text-white/80">USA • Africa • Europe</span>
                   </div>
                 </li>
               </ul>
@@ -432,11 +426,11 @@ export default function Footer() {
             <motion.div variants={itemVariants}>
               <h3 className="font-medium mb-4 text-blue-300">Social</h3>
               <div className="flex flex-wrap gap-3 mt-4">
-                <SocialIcon icon={Linkedin} href="#" label="LinkedIn" />
-                <SocialIcon icon={Instagram} href="#" label="Instagram" />
-                <SocialIcon icon={Facebook} href="#" label="Facebook" />
-                <SocialIcon icon={Twitter} href="#" label="Twitter" />
-                <SocialIcon icon={Youtube} href="#" label="YouTube" />
+                <SocialIcon icon={Linkedin} href="https://www.linkedin.com/company/tfnsolutionshq/" label="LinkedIn" />
+                <SocialIcon icon={Instagram} href="https://www.instagram.com/tfnsolutionshq?igsh=YzR6bGJncjNpbnJr" label="Instagram" />
+                <SocialIcon icon={Facebook} href="https://www.facebook.com/share/18zjsHrP4a/" label="Facebook" />
+                <SocialIcon icon={Twitter} href="https://x.com/tfnsolutionshq?t=IZzbCy8cpcp6TjjTWR_NEQ&s=09" label="Twitter" />
+                {/* <SocialIcon icon={Youtube} href="#" label="YouTube" /> */}
               </div>
             </motion.div>
           </motion.div>
@@ -463,7 +457,7 @@ export default function Footer() {
               </a>
               <span>|</span>
               <a href="#" className="hover:text-blue-400 transition-colors">
-                Cookies
+                Terms & Conditions
               </a>
             </div>
           </motion.div>
@@ -511,7 +505,7 @@ export default function Footer() {
         transition={{ delay: 1, type: "spring", stiffness: 100 }}
       >
         <Link
-          to="https://wa.me/2349111086777"
+          to="https://wa.me/2348063961963"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-4 right-4 z-50 flex items-center px-4 py-2 bg-white border-2 border-green-400 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 group"

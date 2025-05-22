@@ -118,41 +118,41 @@ const TeamSection = () => {
   // Board members data
   const boardMembers = [
     {
-        id: 1,
-        name: "Martins Okolojigwu",
-        role: "Non-Executive Director",
-        image: Martins,
-        bgColor: "bg-[#FE992D]",
+      id: 1,
+      name: "Martins Okolojigwu",
+      role: "Non-Executive Director",
+      image: Martins,
+      bgColor: "bg-[#FE992D]",
     },
     {
-        id: 2,
-        name: "Ekene Ezeasor",
-        role: "Board Member",
-        image: Ekene,
-        bgColor: "bg-[#FE992D]",
+      id: 2,
+      name: "Ekene Ezeasor",
+      role: "Board Member",
+      image: Ekene,
+      bgColor: "bg-[#FE992D]",
     },
     {
-        id: 3,
-        name: "Chinyelu Emechieta",
-        role: "Board Member",
-        image: Chinyelu,
-        bgColor: "bg-[#FE992D]",
+      id: 3,
+      name: "Chinyelu Emechieta",
+      role: "Board Member",
+      image: Chinyelu,
+      bgColor: "bg-[#FE992D]",
     },
     {
-        id: 4,
-        name: "Uche ThankGod",
-        role: "Board Member",
-        image: Uche,
-        bgColor: "bg-[#FE992D]",
+      id: 4,
+      name: "Uche ThankGod",
+      role: "Board Member",
+      image: Uche,
+      bgColor: "bg-[#FE992D]",
     },
     {
-        id: 5,
-        name: "Prevail Ejimadu",
-        role: "Board Member",
-        image: Prevail,
-        bgColor: "bg-[#FE992D]",
+      id: 5,
+      name: "Prevail Ejimadu",
+      role: "Board Member",
+      image: Prevail,
+      bgColor: "bg-[#FE992D]",
     },
-]
+  ]
 
   // Calculate widths on mount and window resize
   useEffect(() => {
@@ -322,7 +322,7 @@ const TeamSection = () => {
         </motion.div>
       </div>
 
-      <div className="px-4 max-w-6xl mx-auto" ref={containerRef}>
+      <div className="px-4" ref={containerRef}>
         {/* Team Section with animated text */}
         <div className="mb-6">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-24 py-10">
@@ -338,7 +338,7 @@ const TeamSection = () => {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="w-full md:pl-18 pl-0">
           <div className="overflow-hidden cursor-grab">
             <motion.div
               ref={boardContainerRef}
@@ -356,69 +356,69 @@ const TeamSection = () => {
             >
               {/* First set of board members */}
               {boardMembers.map((member) => (
-                            <motion.div
-                                key={`board-${member.id}`}
-                                className={`flex-shrink-0 w-64 p-2 rounded-lg overflow-hidden bg-white shadow-lg`}
-                                whileHover={{ y: -5 }}
-                                transition={{ type: "spring", ...springConfig }}
-                            >
-                                <div className="aspect-square relative ">
-                                    <img
-                                        src={member.image || "/placeholder.svg"}
-                                        alt={member.name}
-                                        className={`flex-shrink-0 w-64 rounded-lg overflow-hidden ${member.bgColor}`}
-                                    />
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="font-bold">{member.name}</h3>
-                                    <p className="text-sm opacity-80">{member.role}</p>
-                                </div>
-                            </motion.div>
-                        ))}
+                <motion.div
+                  key={`board-${member.id}`}
+                  className={`flex-shrink-0 w-64 p-2 rounded-lg overflow-hidden bg-white shadow-lg`}
+                  whileHover={{ y: -5 }}
+                  transition={{ type: "spring", ...springConfig }}
+                >
+                  <div className="aspect-square relative ">
+                    <img
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      className={`flex-shrink-0 w-64 rounded-lg overflow-hidden ${member.bgColor}`}
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold">{member.name}</h3>
+                    <p className="text-sm opacity-80">{member.role}</p>
+                  </div>
+                </motion.div>
+              ))}
 
               {/* Duplicate set for seamless looping */}
               {boardMembers.map((member) => (
-                            <motion.div
-                                key={`board-${member.id}`}
-                                className={`flex-shrink-0 w-64 p-2 rounded-lg overflow-hidden bg-white shadow-lg`}
-                                whileHover={{ y: -5 }}
-                                transition={{ type: "spring", ...springConfig }}
-                            >
-                                <div className="aspect-square relative ">
-                                    <img
-                                        src={member.image || "/placeholder.svg"}
-                                        alt={member.name}
-                                        className={`flex-shrink-0 w-64 rounded-lg overflow-hidden ${member.bgColor}`}
-                                    />
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="font-bold">{member.name}</h3>
-                                    <p className="text-sm opacity-80">{member.role}</p>
-                                </div>
-                            </motion.div>
-                        ))}
+                <motion.div
+                  key={`board-${member.id}`}
+                  className={`flex-shrink-0 w-64 p-2 rounded-lg overflow-hidden bg-white shadow-lg`}
+                  whileHover={{ y: -5 }}
+                  transition={{ type: "spring", ...springConfig }}
+                >
+                  <div className="aspect-square relative ">
+                    <img
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      className={`flex-shrink-0 w-64 rounded-lg overflow-hidden ${member.bgColor}`}
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold">{member.name}</h3>
+                    <p className="text-sm opacity-80">{member.role}</p>
+                  </div>
+                </motion.div>
+              ))}
 
               {/* Third set for extra smooth looping when dragging */}
               {boardMembers.map((member) => (
-                            <motion.div
-                                key={`board-${member.id}`}
-                                className={`flex-shrink-0 w-64 p-2 rounded-lg overflow-hidden bg-white shadow-lg`}
-                                whileHover={{ y: -5 }}
-                                transition={{ type: "spring", ...springConfig }}
-                            >
-                                <div className="aspect-square relative ">
-                                    <img
-                                        src={member.image || "/placeholder.svg"}
-                                        alt={member.name}
-                                        className={`flex-shrink-0 w-64 rounded-lg overflow-hidden ${member.bgColor}`}
-                                    />
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="font-bold">{member.name}</h3>
-                                    <p className="text-sm opacity-80">{member.role}</p>
-                                </div>
-                            </motion.div>
-                        ))}
+                <motion.div
+                  key={`board-${member.id}`}
+                  className={`flex-shrink-0 w-64 p-2 rounded-lg overflow-hidden bg-white shadow-lg`}
+                  whileHover={{ y: -5 }}
+                  transition={{ type: "spring", ...springConfig }}
+                >
+                  <div className="aspect-square relative ">
+                    <img
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      className={`flex-shrink-0 w-64 rounded-lg overflow-hidden ${member.bgColor}`}
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold">{member.name}</h3>
+                    <p className="text-sm opacity-80">{member.role}</p>
+                  </div>
+                </motion.div>
+              ))}
             </motion.div>
           </div>
         </div>

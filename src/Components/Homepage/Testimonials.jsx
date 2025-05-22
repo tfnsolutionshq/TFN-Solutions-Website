@@ -3,7 +3,11 @@
 import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import TestImage from "../../assets/Images/testimage.png"
+import TestImage from "../../assets/Images/man.jpg"
+import TestImage2 from "../../assets/Images/man2.jpg"
+import TestImage3 from "../../assets/Images/man3.jpg"
+import TestImage4 from "../../assets/Images/woman.jpg"
+import TestImage5 from "../../assets/Images/woman2.jpg"
 import Unizik from  '../../assets/sponsors/unizik.png'
 import Flutterwave from  '../../assets/sponsors/flutterwave.png'
 import Crystal from  '../../assets/sponsors/crystal.png'
@@ -17,12 +21,12 @@ const testimonials = [
     quote: "Our business has seen incredible growth since partnering with this team. They really know their stuff!",
     name: "Kathryn Murphy",
     position: "Content Writer",
-    image: TestImage,
+    image: TestImage5,
   },
   {
     id: 2,
     quote: "Our business has seen incredible growth since partnering with this team. They really know their stuff!",
-    name: "Donna Russell",
+    name: "Harry Russell",
     position: "Web Developer",
     image: TestImage,
   },
@@ -31,21 +35,21 @@ const testimonials = [
     quote: "Our business has seen incredible growth since partnering with this team. They really know their stuff!",
     name: "Holiday Hasan",
     position: "CEO, Remote Digital",
-    image: TestImage,
+    image: TestImage2,
   },
   {
     id: 4,
     quote: "The team delivered our project ahead of schedule and exceeded all our expectations. Highly recommended!",
     name: "James Wilson",
     position: "Marketing Director",
-    image: TestImage,
+    image: TestImage3,
   },
   {
     id: 5,
     quote: "Working with this team transformed our digital presence completely. Our conversion rates have doubled!",
     name: "Sarah Chen",
     position: "Product Manager",
-    image: TestImage,
+    image: TestImage4,
   },
 ]
 

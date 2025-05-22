@@ -1,0 +1,49 @@
+{
+    "navbar": {
+      "home": "Inicio",
+      "about": "Sobre Nosotros",
+      "services": "Servicios",
+      "works": "Trabajos",
+      "news": "Noticias",
+      "contact": "Contáctenos",
+      "viewAllServices": "Ver todos los servicios"
+    },
+    "services": {
+      "categories": {
+        "infrastructure": "Infraestructura",
+        "development": "Desarrollo",
+        "security": "Seguridad"
+      },
+      "items": {
+        "infrastructureServices": "Servicios de Infraestructura",
+        "cloudServices": "Servicios en la Nube",
+        "backupSolutions": "Soluciones de Respaldo",
+        "softwareDevelopment": "Desarrollo de Software",
+        "mobileAppDevelopment": "Desarrollo de Aplicaciones Móviles",
+        "webDevelopment": "Desarrollo Web",
+        "cybersecurity": "Ciberseguridad",
+        "networkSecurity": "Seguridad de Red",
+        "securityAudits": "Auditorías de Seguridad"
+      }
+    },
+    "blog": {
+      "futureTitle": "El futuro del desarrollo de software: tendencias a observar en 2025 y más allá",
+      "futureDescription": "El panorama del desarrollo de software está evolucionando a un ritmo sin precedentes. A medida que las empresas se esfuerzan por mantenerse competitivas en 2025 y más allá, las tecnologías emergentes...",
+      "aiTitle": "La IA está transformando las operaciones comerciales en todas las industrias",
+      "aiDescription": "La inteligencia artificial (IA) ya no es un concepto futurista, es una fuerza transformadora que está remodelando las operaciones comerciales en todas las industrias. Desde el análisis predictivo hasta la automatización inteligente, la IA está permitiendo a las organizaciones optimizar procesos, ",
+      "networkTitle": "Construyendo una infraestructura de red escalable: mejores prácticas para empresas en crecimiento",
+      "networkDescription": "A medida que las empresas crecen, su infraestructura de red debe mantenerse al día para soportar la creciente demanda de datos, garantizar la seguridad y permitir operaciones sin problemas. Una red escalable, segura y preparada para la nube ya no es un lujo, es una necesidad para mantenerse competitivo.",
+      "insights": "Perspectivas",
+      "readLatest": "Lea nuestras últimas",
+      "articlesAnd": "Artículos y",
+      "blogs": "Blogs"
+    },
+    "language": {
+      "en": "Inglés",
+      "fr": "Francés",
+      "es": "Español",
+      "de": "Alemán",
+      "ng": "Nigeriano"
+    }
+  }
+  

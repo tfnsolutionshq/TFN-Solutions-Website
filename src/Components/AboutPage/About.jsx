@@ -501,19 +501,20 @@ import { useNavigate } from "react-router-dom"
 
 const AboutUs = () => {
   const [isAnimating, setIsAnimating] = useState(false)
+  const [showCalendly, setShowCalendly] = useState(false)
   const navigate = useNavigate()
 
   const handleStartProject = (e) => {
     e.preventDefault()
     setIsAnimating(true)
     setTimeout(() => {
-      navigate("/contact")
       setIsAnimating(false)
+      setShowCalendly(true)
     }, 500)
   }
 
   return (
-    <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-b from-[#F7F7F7] mt-24 via-blue-50 to-[#F7F7F7]">
+    <section className="relative py-20 px-4 overflow-hidden mt-24 bg-gradient-to-b from-[#F7F7F7] via-blue-50 to-[#F7F7F7]">
       {/* Simple background elements */}
       <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-yellow-300 opacity-20 blur-3xl -z-10"></div>
       <div className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-blue-300 opacity-20 blur-3xl -z-10"></div>
@@ -552,9 +553,8 @@ const AboutUs = () => {
               style={{ minWidth: "200px" }}
             >
               <span
-                className={`flex items-center justify-center rounded-full transition-all duration-500 ease-in-out absolute ${
-                  isAnimating ? "left-full -translate-x-12" : "left-4 bg-white"
-                }`}
+                className={`flex items-center justify-center rounded-full transition-all duration-500 ease-in-out absolute ${isAnimating ? "left-full -translate-x-12" : "left-4 bg-white"
+                  }`}
                 style={{ width: "2rem", height: "2rem" }}
               >
                 <ArrowRight
@@ -562,9 +562,8 @@ const AboutUs = () => {
                 />
               </span>
               <span
-                className={`transition-transform duration-500 ease-in-out ${
-                  isAnimating ? "-translate-x-8" : "translate-x-0"
-                } pl-10 font-medium`}
+                className={`transition-transform duration-500 ease-in-out ${isAnimating ? "-translate-x-8" : "translate-x-0"
+                  } pl-10 font-medium`}
               >
                 Start a project
               </span>
@@ -597,6 +596,40 @@ const AboutUs = () => {
           </motion.div>
         </motion.div>
       </div>
+
+      {showCalendly && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm"
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: "spring", damping: 20 }}
+            className="bg-white rounded-xl shadow-2xl p-4 max-w-xl w-full relative"
+          >
+            <button
+              className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-red-500 transition-colors"
+              onClick={() => setShowCalendly(false)}
+              aria-label="Close"
+            >
+              ✕
+            </button>
+            <iframe
+              src="https://calendly.com/ebenezernwolisa100"
+              width="100%"
+              height="400"
+              frameBorder="0"
+              title="Book a call"
+              className="rounded-lg mt-2"
+              allow="fullscreen"
+            ></iframe>
+          </motion.div>
+        </motion.div>
+      )}
+
     </section>
   )
 }

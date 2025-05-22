@@ -302,7 +302,7 @@ const AboutSection = () => {
         </div>
 
         {/* Counters */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {counters.map((counter, index) => (
             <motion.div
               key={counter.id}
@@ -315,7 +315,7 @@ const AboutSection = () => {
               <p className="text-sm text-gray-500 mt-2">{counter.title}</p>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   )
