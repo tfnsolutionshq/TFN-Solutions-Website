@@ -350,7 +350,7 @@ export default function Footer() {
           }}
           aria-label="Send WhatsApp Message"
         >
-          <span className="text-xs font-medium text-black mr-2">Send a DM</span>
+          <span className="text-sm font-medium text-[var(--text-primary)] mr-2">Send a DM</span>
           <motion.span
             animate={{ rotate: [0, 180, 360] }}
             transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}

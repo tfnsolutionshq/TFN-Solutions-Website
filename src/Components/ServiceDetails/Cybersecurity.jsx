@@ -106,20 +106,20 @@ function Cybersecurity() {
                 <div className="mb-8">
                     <p className="text-orange-500 font-medium mb-2">Service</p>
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">Cybersecurity</h2>
-                    <p className="text-gray-900 w-full">
+                    <p className="text-[var(--text-secondary)] w-full">
                         Protect your digital assets with proactive, layered security solutions.
                     </p>
                 </div>
 
                 {/* Introduction */}
                 <div className="mb-10">
-                    <p className="text-gray-800">
+                    <p className="text-[var(--text-secondary)]">
                         We deliver end-to-end cybersecurity services that defend against evolving threats and strengthen your organization's resilience. Our multi-layered approach covers prevention, detection, and rapid incident response, supported by compliance-aligned strategies.
                     </p>
                 </div>
 
                 {/* Accordion Services */}
-                <div className="mb-24 space-y-4">
+                <div className="mb-10 space-y-4">
                     {services.map((service) => (
                         <div
                             key={service.id}

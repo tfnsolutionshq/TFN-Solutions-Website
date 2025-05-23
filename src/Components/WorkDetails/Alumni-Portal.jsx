@@ -5,14 +5,11 @@ const WorkDetails = () => {
   const projectData = {
     title: 'UNIZIK Educational Portal',
     image: '/src/assets/Images/image 8.png', // Using actual image from assets
-    description: 'Experience the power of Mobile App Project Management and unlock the potential of your projects.',
     client: 'TFN Solutions Limited',
     service: 'UI/UX, Software Development',
-    tools: 'Illustrator, Figma',
     year: '2025',
     liveUrl: 'https://unizik.edu.ng/',
     detailedDescription: 'The official web presence of Nnamdi Azikiwe University serves students, staff, and the public with key information, updates, and institutional visibility. TFN Solutions led the modernization of the site to improve user experience, performance, and administrative control',
-    secondaryDescription: 'Cursus felis eget pulvinar aliquam ut laoreet nunc mattis sagittis urna lobortep diam et morbi vel eget arcu magna vel justo viverra a ante. Sagittis vitae vitae ultricies quis eu adipiscing fringillam volutpat massa maecenas ac urna sed elementum amet pharetra nisi tellus sodales sagittae sed elit. Ornare malesuada vel congue felis eget amet a lorem sed sed cursus elementum lectus vulputate.',
     projectHighlights: [
       "Information hub for academic programs, admissions, and resources",
       "Real-time updates for news, circulars, and events",

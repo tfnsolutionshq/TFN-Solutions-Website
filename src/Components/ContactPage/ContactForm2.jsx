@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown, ChevronRight } from "lucide-react"
+import { ChevronDown, ChevronRight, Mail, Phone, MapPin } from "lucide-react"
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +32,7 @@ const ContactForm = () => {
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Left Column - Contact Info */}
           <div className="lg:w-1/2">
-            <div className="flex items-center mb-6">
+            <div className="flex items-center mb-2">
               <div className="w-2 h-2 rounded-full bg-blue-600 mr-2"></div>
               <span className="text-blue-600 font-medium">Contact Us</span>
             </div>
@@ -54,41 +54,54 @@ const ContactForm = () => {
 
             <div className="mt-12 pt-8 border-t border-gray-500">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-sm font-medium text-gray-500 mb-2">Email</h3>
-                  <a href="mailto:hello@institution.us" className="text-black hover:text-blue-600 transition-colors">
-                    support@tfnsolutions.us
-                  </a>
+                <div className="flex items-start gap-3">
+                  <div className="bg-blue-100 text-blue-600 rounded-full p-2 flex items-center justify-center mt-1">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-medium text-[var(--text-secondary)] mb-1">Email</h3>
+                    <a href="mailto:hello@institution.us" className="text-[var(--text-primary)] hover:text-blue-600 transition-colors font-medium">
+                      support@tfnsolutions.us
+                    </a>
+                  </div>
                 </div>
 
-                <div>
-                  <h3 className="text-sm font-medium text-gray-500 mb-2">Phone</h3>
+                <div className="flex items-start gap-3">
+                  <div className="bg-blue-100 text-blue-600 rounded-full p-2 flex items-center justify-center mt-1">
+                    <Phone className="w-5 h-5" />
+                  </div>
                   <div>
-                    <p className="mb-1 font-medium">
-                      <span className="text-gray-500 text-sm">US:</span> (+02 098 0381)
-                    </p>
-                    <p className="font-medium">
-                      <span className="text-gray-500 text-sm">NG:</span> (+234 708 098 0381)
-                    </p>
+                    <h3 className="text-sm font-medium text-[var(--text-secondary)] mb-1">Phone</h3>
+                    <div>
+                      <p className="mb-1 font-medium">
+                        <span className="text-[var(--text-secondary)] text-sm">US:</span> (+02 098 0381)
+                      </p>
+                      <p className="font-medium">
+                        <span className="text-[var(--text-secondary)] text-sm">NG:</span> (+234 708 098 0381)
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="mt-6">
-                <h3 className="text-sm font-medium text-gray-500 mb-2">Address</h3>
-                <p className="text-sm">
-                  {/* USA - <br /> */}
-                  <span className="font-semibold text-base">United States</span> <br />
-                  <span className="font-semibold text-base">Europe</span> <br />
-                  {/* Nigeria <br /> */}
-                  <span className="font-semibold text-base">Africa</span>
-                </p>
+              <div className="mt-6 flex items-start gap-3">
+                <div className="bg-blue-100 text-blue-600 rounded-full p-2 flex items-center justify-center mt-1">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-sm font-medium text-gray-500 mb-1">Address</h3>
+                  <p className="text-sm">
+                    <span className="font-semibold text-base">United States</span> <br />
+                    <span className="font-semibold text-base">Europe</span> <br />
+                    <span className="font-semibold text-base">Africa</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Right Column - Form */}
           <div className="lg:w-1/2">
-            <form onSubmit={handleSubmit} className="bg-white md:p-6 p-3 rounded-lg shadow-sm">
+            <form onSubmit={handleSubmit} className="bg-[var(--background-secondary)] md:p-6 p-3 rounded-lg shadow-sm">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <input
@@ -97,7 +110,7 @@ const ContactForm = () => {
                     value={formData.firstName}
                     onChange={handleChange}
                     placeholder="First Name"
-                    className="w-full px-3 py-3 border-b border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    className="w-full px-3 py-3 border-b bg-[var(--background-secondary)] border-gray-300 focus:outline-none"
                     required
                   />
                 </div>
@@ -108,7 +121,7 @@ const ContactForm = () => {
                     value={formData.lastName}
                     onChange={handleChange}
                     placeholder="Last Name"
-                    className="w-full px-3 py-3 border-b border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    className="w-full px-3 py-3 border-b bg-[var(--background-secondary)] border-gray-300 focus:outline-none"
                     required
                   />
                 </div>
@@ -121,7 +134,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Email Address"
-                  className="w-full px-3 py-3 border-b border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full px-3 py-3 border-b bg-[var(--background-secondary)] border-gray-300 focus:outline-none"
                   required
                 />
               </div>
@@ -131,7 +144,7 @@ const ContactForm = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-3 py-3 border-b border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 appearance-none bg-white"
+                  className="w-full px-3 py-3 border-b border-gray-300 text-[var(--text-secondary)] focus:outline-none  appearance-none bg-[var(--background-secondary)]"
                   required
                 >
                   <option value="" disabled>
@@ -142,7 +155,7 @@ const ContactForm = () => {
                   <option value="partnership">Partnership</option>
                   <option value="other">Other</option>
                 </select>
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[var(--text-secondary)] pointer-events-none" />
               </div>
 
               <div className="mb-6">
@@ -152,7 +165,7 @@ const ContactForm = () => {
                   onChange={handleChange}
                   placeholder="Message"
                   rows="5"
-                  className="w-full px-3 py-3 border-b border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none"
+                  className="w-full px-3 py-3 border-b border-gray-300 focus:outline-none bg-[var(--background-secondary)] resize-none"
                   required
                 ></textarea>
               </div>

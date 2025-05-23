@@ -93,13 +93,13 @@ function ITConsulting() {
                 <div className="mb-8">
                     <p className="text-orange-500 font-medium mb-2">Service</p>
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">IT Consulting & Strategy</h2>
-                    <p className="text-gray-900 w-full">
+                    <p className="text-[var(--text-secondary)] w-full">
                         Strategic advisory to align IT with business growth.
                     </p>
                 </div>
 
                 {/* Accordion Services */}
-                <div className="mb-24 space-y-4">
+                <div className="mb-10 space-y-4">
                     {services.map((service) => (
                         <div
                             key={service.id}
@@ -107,7 +107,7 @@ function ITConsulting() {
                         >
                             <button
                                 onClick={() => toggleAccordion(service.id)}
-                                className={`w-full p-6 text-left flex justify-between items-center transition-colors ${activeAccordion === service.id ? 'bg-blue-50' : 'hover:bg-gray-50'}`}
+                                className={`w-full p-6 text-left flex justify-between items-center transition-colors ${activeAccordion === service.id ? 'bg-[var(--background-secondary)]' : 'hover:bg-[var(--background-primary)]'}`}
                             >
                                 <div className="flex items-center">
                                     <div className="mr-4 p-3 rounded-lg bg-blue-100 text-blue-600">
@@ -119,7 +119,7 @@ function ITConsulting() {
                                     animate={{ rotate: activeAccordion === service.id ? 180 : 0 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    <ChevronDown className="w-5 h-5 text-gray-500" />
+                                    <ChevronDown className="w-5 h-5 text-[var(--text-primary)]" />
                                 </motion.div>
                             </button>
 
@@ -133,12 +133,12 @@ function ITConsulting() {
                                         className="overflow-hidden"
                                     >
                                         <div className="px-6 pb-8 pt-2">
-                                            <p className="text-gray-600 mb-6">{service.description}</p>
+                                            <p className="text-[var(--text-secondary)] mb-6">{service.description}</p>
                                             <div className="grid md:grid-cols-2 gap-4">
                                                 {service.details.map((detail, index) => (
-                                                    <div key={index} className="flex items-start">
-                                                        <div className="mt-1 mr-3 w-2 h-2 rounded-full bg-blue-500"></div>
-                                                        <span className="text-gray-700">{detail}</span>
+                                                    <div key={index} className="flex items-start items-center">
+                                                        <div className="mr-2 w-2 h-2 rounded-full bg-blue-500"></div>
+                                                        <span className="text-[var(--text-secondary)]">{detail}</span>
                                                     </div>
                                                 ))}
                                             </div>

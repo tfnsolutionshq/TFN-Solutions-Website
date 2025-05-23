@@ -133,7 +133,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 py-4 w-full z-50 transition-all duration-300
+      className={`fixed top-0 left-0 py-4 w-full z-[60] transition-all duration-300
         ${scrolled ? "bg-[var(--background-primary)]/100 backdrop-blur-3xl shadow-md py-4" : "bg-[var(--background-primary)]/100 py-6"}`}
     >
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
@@ -275,7 +275,7 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/50 z-40"
+              className="fixed inset-0 bg-black/50 z-[65]"
               onClick={() => setMobileMenuOpen(false)}
             />
 
@@ -285,7 +285,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white shadow-xl z-50 overflow-y-auto"
+              className="fixed top-0 right-0 h-screen w-3/4 max-w-xs bg-white shadow-xl z-[70] overflow-y-auto"
             >
               <div className="flex flex-col h-full">
                 {/* Header with Logo and Close Button */}
@@ -337,7 +337,7 @@ const Navbar = () => {
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3 }}
-                          className="overflow-hidden bg-gray-50 rounded-lg mb-3"
+                          className="overflow-hidden bg-[var(--background-secondary)] rounded-lg mb-3"
                         >
                           {services.map((category, idx) => (
                             <div key={idx} className="py-2 px-3">
@@ -351,8 +351,8 @@ const Navbar = () => {
                                     setServicesDropdownOpen(false)
                                   }}
                                 >
-                                  <span className="mr-2 text-gray-400">{item.icon}</span>
-                                  <span className="text-sm">{t(item.name)}</span>
+                                  <span className="mr-2 text-[var(--text-secondary)]">{item.icon}</span>
+                                  <span className="text-sm text-[var(--text-secondary)]">{t(item.name)}</span>
                                 </Link>
                               ))}
                             </div>
