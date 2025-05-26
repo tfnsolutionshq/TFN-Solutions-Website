@@ -93,7 +93,7 @@ const HeroSection = () => {
                                                     &times;
                                                 </button>
                                                 <iframe
-                                                    src="https://calendly.com/ebenezernwolisa100"
+                                                    src="https://calendly.com/ezeasorekene/30min"
                                                     width="100%"
                                                     height="400"
                                                     frameBorder="0"
@@ -130,7 +130,7 @@ const HeroSection = () => {
                                                     &times;
                                                 </button>
                                                 <iframe
-                                                    src="https://calendly.com/ebenezernwolisa100"
+                                                    src="https://calendly.com/ezeasorekene/30min"
                                                     width="100%"
                                                     height="400"
                                                     frameBorder="0"

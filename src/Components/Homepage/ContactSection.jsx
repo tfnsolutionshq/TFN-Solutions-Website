@@ -122,7 +122,7 @@ const ContactSection = () => {
               ✕
             </button>
             <iframe
-              src="https://calendly.com/ebenezernwolisa100" // Replace with your Calendly link
+              src="https://calendly.com/ezeasorekene/30min" // Replace with your Calendly link
               width="100%"
               height="400"
               frameBorder="0"
