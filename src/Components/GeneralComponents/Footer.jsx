@@ -235,17 +235,17 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="tel:+02 098 0381"
+                  <div
                     className="text-sm text-white hover:text-blue-400 transition-colors flex items-start"
                   >
                     <Phone size={16} className="mr-2 mt-1 text-blue-400" />
                     <div>
                       <span className="text-blue-200">Phone:</span>
                       <br />
-                      <span className="font-bold hover:underline">US (+02 098 0381)</span>
+                      <a href="tel:+14237971633" className="font-bold hover:underline">US: +1 (423) 797-1633</a> <br />
+                      <a href="tel:+2348063961963" className="font-bold hover:underline">NG: +(234) 806 396 1963</a>
                     </div>
-                  </a>
+                  </div>
                 </li>
                 <li className="text-sm text-white flex items-start">
                   <MapPin size={16} className="mr-2 mt-1 text-blue-400" />

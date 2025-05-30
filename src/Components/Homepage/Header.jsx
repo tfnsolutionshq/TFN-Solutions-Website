@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import { ArrowRight, Mail, Phone } from "lucide-react"
-import Img from '../../assets/Images/image 10.png'
-import { TypeAnimation } from "react-type-animation"
 
 const HeroSection = () => {
     const [textToggle, setTextToggle] = useState(false)
@@ -28,7 +26,11 @@ const HeroSection = () => {
                     </div>
                     <div className="flex items-center">
                         <Phone className="h-4 w-4 mr-2 text-[var(--text-primary)]" />
-                        <span className="text-[#4175FC]"> <span className="text-[var(--text-primary)]">Phone:</span> US (+02 098 0381) NG (+234 708 098 0381)</span>
+                        <span className="text-[#4175FC]">
+                            <span className="text-[var(--text-primary)]">Phone: </span>
+                            US <a href="tel:+14237971633" className="hover:underline cursor-pointer">+1 (423) 797-1633</a>,
+                            NG <a href="tel:+2348063961963" className="hover:underline cursor-pointer">(+234) 806 3961 963</a>
+                        </span>                    
                     </div>
                 </div>
                 {/* Hero section with video background */}
@@ -83,27 +85,27 @@ const HeroSection = () => {
                                             </div>
                                         </motion.button>
                                         {showCalendly && (
-                                        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
-                                            <div className="bg-white rounded-lg shadow-lg p-4 max-w-xl w-full relative">
-                                                <button
-                                                    className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold"
-                                                    onClick={() => setShowCalendly(false)}
-                                                    aria-label="Close"
-                                                >
-                                                    &times;
-                                                </button>
-                                                <iframe
-                                                    src="https://calendly.com/ezeasorekene/30min"
-                                                    width="100%"
-                                                    height="400"
-                                                    frameBorder="0"
-                                                    title="Book a call"
-                                                    className="rounded-lg"
-                                                    allow="fullscreen"
-                                                ></iframe>
+                                            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+                                                <div className="bg-white rounded-lg shadow-lg p-4 max-w-xl w-full relative">
+                                                    <button
+                                                        className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold"
+                                                        onClick={() => setShowCalendly(false)}
+                                                        aria-label="Close"
+                                                    >
+                                                        &times;
+                                                    </button>
+                                                    <iframe
+                                                        src="https://calendly.com/ezeasorekene/30min"
+                                                        width="100%"
+                                                        height="400"
+                                                        frameBorder="0"
+                                                        title="Book a call"
+                                                        className="rounded-lg"
+                                                        allow="fullscreen"
+                                                    ></iframe>
+                                                </div>
                                             </div>
-                                        </div>
-                                    )}
+                                        )}
                                     </div>
                                 </div>
 

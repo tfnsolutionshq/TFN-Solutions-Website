@@ -25,14 +25,14 @@ const testimonials = [
   },
   {
     id: 2,
-    quote: "Our business has seen incredible growth since partnering with this team. They really know their stuff!",
+    quote: "We were impressed with the level of expertise and professionalism. The results speak for themselves!",
     name: "Harry Russell",
     position: "Web Developer",
     image: TestImage,
   },
   {
     id: 3,
-    quote: "Our business has seen incredible growth since partnering with this team. They really know their stuff!",
+    quote: "All we wanted was a simple website, and they delivered beyond our expectations. A true partner!",
     name: "Holiday Hasan",
     position: "CEO, Remote Digital",
     image: TestImage2,

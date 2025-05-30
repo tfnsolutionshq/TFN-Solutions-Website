@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Afriwokbanner from '../../assets/works/afriwokbanner.jpg'
 import ALumniBanner from '../../assets/works/Alumni_Banner.png'
 import CrystalBricksbanner from '../../assets/works/crystalbanner.png';
-import Infrastructure from '../../assets/Images/infrastructure.png';
+import Infrastructure from '../../assets/Images/infra1.jpg';
 
 export default function LatestSolutions() {
 

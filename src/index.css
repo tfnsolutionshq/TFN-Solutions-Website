@@ -3,11 +3,21 @@
 @tailwind utilities;
 
 @import './styles/fonts.css';
-*{
-  scroll-behavior: smooth;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
 }
-body {
-  font-family: 'Inter';
+
+
+* {
+  scroll-behavior: smooth;
+  font-family: 'inter', sans-serif;
 }
 
 @keyframes blink {
@@ -18,4 +28,3 @@ body {
   .animate-blink {
     animation: blink 1.2s infinite ease-in-out;
   }
-  

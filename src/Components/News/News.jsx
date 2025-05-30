@@ -34,7 +34,7 @@ export default function BlogSection() {
 
   return (
     <section className="pt-36 bg-[var(--background-primary)] pb-16">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6">
         <div className="mb-">

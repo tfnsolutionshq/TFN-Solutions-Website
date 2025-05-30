@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, HardDrive, FileCheck, Clock, Cloud } from 'lucide-react';
 import Approach from '../../Components/Homepage/Approach';
@@ -17,6 +17,17 @@ const serviceIcons = {
 function Backup() {
     const [activeAccordion, setActiveAccordion] = useState(1);
     const [activeFilter, setActiveFilter] = useState('all');
+
+    useEffect(() => {
+        // Ensure the page can scroll and scroll to top
+        document.body.style.overflow = 'auto';
+        window.scrollTo(0, 0);
+        
+        return () => {
+            // Cleanup if needed
+            document.body.style.overflow = 'auto';
+        };
+    }, []);
 
     const services = [
         {

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Afriwok from '../../assets/works/afriwokbanner.jpg';
 import Crystalbricks from '../../assets/works/crystalbanner.png';
 import UnizikAlumni from '../../assets/works/Alumni_Banner.png';
-import Infrastructure from '../../assets/Images/infrastructure.png';
+import Infrastructure from '../../assets/Images/infra1.jpg';
 import { Link } from 'react-router-dom';
 
 export default function PortfolioSection() {
