@@ -1,16 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import BlogImg from "../../assets/Images/blog1.jpg";
-import BlogImg2 from "../../assets/Images/blog2.jpg";
-import BlogImg3 from "../../assets/Images/blog3.jpg";
 
 export default function BlogSection() {
   const { t } = useTranslation();
   const blogPosts = [
     {
       id: 1,
-      image: BlogImg2,
+      image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/blog2.jpg",
       date: "May 17, 2025",
       title: t('blog.futureTitle'),
       description: t('blog.futureDescription'),
@@ -18,7 +15,7 @@ export default function BlogSection() {
     },
     {
       id: 2,
-      image: BlogImg3,
+      image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/blog3.jpg",
       date: "April 11, 2025",
       title: t('blog.aiTitle'),
       description: t('blog.aiDescription'),
@@ -26,7 +23,7 @@ export default function BlogSection() {
     },
     {
       id: 3,
-      image: BlogImg,
+      image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/blog1.jpg",
       date: "March 9, 2025",
       title: t('blog.networkTitle'),
       description: t('blog.networkDescription'),

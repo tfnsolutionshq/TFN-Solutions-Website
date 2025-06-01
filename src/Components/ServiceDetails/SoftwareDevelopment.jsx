@@ -1,10 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Code, Cpu, Smartphone, Server, GitMerge } from 'lucide-react';
 import Approach from '../../Components/Homepage/Approach';
-import Afriwok from '../../assets/works/afriwokbanner.jpg';
-import Crystalbricks from '../../assets/works/crystalbanner.png';
-import UnizikAlumni from '../../assets/works/Alumni_Banner.png';
 import { Link } from 'react-router-dom';
 
 const serviceIcons = {
@@ -87,21 +84,21 @@ function SoftwareDevelopment() {
             id: 1,
             title: 'Afriwok',
             category: 'Software',
-            image: Afriwok,
+            image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/afriwokbanner.jpg",
             slug: 'afriwok',
         },
         {
             id: 2,
             title: 'Crystalbricks',
             category: 'Software',
-            image: Crystalbricks,
+            image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/crystalbanner.png",
             slug: 'crystalbricks'
         },
         {
             id: 3,
             title: 'Unizik ALumni',
             category: 'Software',
-            image: UnizikAlumni,
+            image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/Alumni_banner.png",
             slug: 'unizik-alumni'
         },
     ];
@@ -113,6 +110,24 @@ function SoftwareDevelopment() {
     const toggleAccordion = (id) => {
         setActiveAccordion(activeAccordion === id ? null : id);
     };
+
+    useEffect(() => {
+    const scrollToTop = () => {
+        // Try multiple methods to ensure it works
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        window.scrollTo(0, 0);
+    };
+    
+    // Immediate scroll
+    scrollToTop();
+    
+    // Delayed scroll as backup
+    const timer = setTimeout(scrollToTop, 50);
+    
+    return () => clearTimeout(timer);
+}, []);
+
 
     return (
         <main className="bg-[var(--background-primary)]">

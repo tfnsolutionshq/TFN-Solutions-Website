@@ -77,7 +77,7 @@ const LanguageSwitcher = () => {
                   key={language.code}
                   onClick={() => changeLanguage(language.code)}
                   className={`flex items-center w-full px-4 py-2 text-sm text-left hover:bg-gray-50 transition-colors ${
-                    currentLanguage === language.code ? "bg-blue-50 text-blue-600" : "text-gray-700"
+                    currentLanguage === language.code ? "bg-blue-50 text-blue-600" : "text-[var(--text-secondary)]"
                   }`}
                 >
                   

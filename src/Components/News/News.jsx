@@ -1,13 +1,10 @@
 import { motion } from 'framer-motion';
-import BlogImg from "../../assets/Images/blog1.jpg";
-import BlogImg2 from "../../assets/Images/blog2.jpg";
-import BlogImg3 from "../../assets/Images/blog3.jpg";;
 
 export default function BlogSection() {
   const blogPosts = [
     {
       id: 1,
-      image: BlogImg2,
+      image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/blog2.jpg",
       date: "May 17, 2025",
       title: "The Future of Software Development: Trends to Watch in 2025 and Beyond",
       description: "The software development landscape is evolving at an unprecedented pace. As businesses strive to stay competitive in 2025 and beyond, emerging technologies...",
@@ -15,7 +12,7 @@ export default function BlogSection() {
     },
     {
       id: 2,
-      image: BlogImg3,
+      image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/blog3.jpg",
       date: "April 11, 2025",
       title: "AI is Transforming Business Operations Across Industries",
       description: "Artificial Intelligence (AI) is no longer a futuristic concept—it’s a transformative force reshaping business operations across industries. From predictive analytics to intelligent automation, AI is enabling organizations to optimize processes, ",
@@ -23,7 +20,7 @@ export default function BlogSection() {
     },
     {
       id: 3,
-      image: BlogImg,
+      image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/blog1.jpg",
       date: "March 9, 2025",
       title: "Building Scalable Network Infrastructure: Best Practices for Growing Businesses",
       description: "As businesses grow, their network infrastructure must keep pace to support increasing data demands, ensure security, and enable seamless operations. A scalable, secure, and cloud-ready network is no longer a luxury—it’s a necessity for staying competitive. ",

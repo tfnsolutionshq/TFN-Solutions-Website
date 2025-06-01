@@ -1,11 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Server, Network, HardDrive, Layers, MoveIcon as TruckMoving } from 'lucide-react';
 import Approach from '../../Components/Homepage/Approach';
-import ServiceImage from '../../assets/Images/image 7.png';
-import ServiceImage2 from '../../assets/Images/image 6.png';
-import ServiceImage3 from '../../assets/Images/image 8.png';
-import ServiceImage4 from '../../assets/Images/image 9.png';
 
 const serviceIcons = {
     server: <Server className="w-6 h-6" />,
@@ -23,7 +19,7 @@ function InfrastructureServices() {
         {
             id: 1,
             title: 'Server Management',
-            description: 'Provision, configure, and maintain physical and virtual servers for optimal performance, uptime, and security.',
+            description: 'We expertly provision, configure, and maintain physical and virtual servers to ensure optimal performance, maximum uptime, and uncompromised security',
             details: [
                 'Server deployment and configuration',
                 'Performance monitoring and optimization',
@@ -116,6 +112,24 @@ function InfrastructureServices() {
     const toggleAccordion = (id) => {
         setActiveAccordion(activeAccordion === id ? null : id);
     };
+
+    useEffect(() => {
+    const scrollToTop = () => {
+        // Try multiple methods to ensure it works
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        window.scrollTo(0, 0);
+    };
+    
+    // Immediate scroll
+    scrollToTop();
+    
+    // Delayed scroll as backup
+    const timer = setTimeout(scrollToTop, 50);
+    
+    return () => clearTimeout(timer);
+}, []);
+
 
     return (
         <main className="bg-[var(--background-primary)]">

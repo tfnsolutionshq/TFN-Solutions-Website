@@ -6,7 +6,6 @@ const HeroSection = () => {
     const [textToggle, setTextToggle] = useState(false)
     const [showCalendly, setShowCalendly] = useState(false)
 
-
     // Toggle text styling every 4 seconds
     useEffect(() => {
         const interval = setInterval(() => {
@@ -16,20 +15,24 @@ const HeroSection = () => {
         return () => clearInterval(interval)
     }, [])
 
+     const UsPhone = import.meta.env.VITE_PHONE_US;
+    const NgPhone = import.meta.env.VITE_PHONE_NG;
+    const CompanyEmail = import.meta.env.VITE_EMAIL_PRIMARY;
+
     return (
         <section className="">
             <div className="flex flex-col min-h-screen md:mt-20 mt-24 md:px-4 px-2 pt-4">
                 <div className="bg-[var(--header-bg)] rounded-t-xl py-4 px-4 flex flex-col md:flex-row justify-center items-start md:items-center text-sm text-gray-700 md:gap-6 gap-2">
                     <div className="flex items-center">
                         <Mail className="h-4 w-4 mr-2 text-[var(--text-primary)]" />
-                        <span className="text-[var(--text-primary)]">Email Us: <a href="mailto:support@itsolutions.us" className="hover:underline text-[#4175FC]">Support@tfnsolutions.us</a></span>
+                        <span className="text-[var(--text-primary)]">Email Us: <a href={`mailto:${CompanyEmail}`}  className="hover:underline text-[#4175FC]">{CompanyEmail}</a></span>
                     </div>
                     <div className="flex items-center">
                         <Phone className="h-4 w-4 mr-2 text-[var(--text-primary)]" />
                         <span className="text-[#4175FC]">
                             <span className="text-[var(--text-primary)]">Phone: </span>
-                            US <a href="tel:+14237971633" className="hover:underline cursor-pointer">+1 (423) 797-1633</a>,
-                            NG <a href="tel:+2348063961963" className="hover:underline cursor-pointer">(+234) 806 3961 963</a>
+                            US <a href={`tel:${UsPhone}`} className="hover:underline cursor-pointer">{UsPhone}</a>,
+                            NG <a href={`tel:${NgPhone}`} className="hover:underline cursor-pointer">{NgPhone}</a>
                         </span>                    
                     </div>
                 </div>
@@ -44,7 +47,7 @@ const HeroSection = () => {
                         playsInline
                         poster="/placeholder.svg?height=1080&width=1920&text=Video+Background"
                     >
-                        <source src="/1477657_People_Business_3840x2160.mov" type="video/mp4" />
+                        <source src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/1477657_People_Business_3840x2160.mov" type="video/mp4" />
                     </video>
 
                     {/* Dark Overlay */}

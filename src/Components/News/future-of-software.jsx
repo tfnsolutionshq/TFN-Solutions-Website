@@ -1,6 +1,3 @@
-import Img3 from "../../assets/Images/blog2.jpg"
-import Img2 from "../../assets/Images/News2.png"
-import Img1 from "../../assets/Images/News.png"
 
 function NewsDetails() {
   return (
@@ -23,7 +20,7 @@ function NewsDetails() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-10 rounded-xl overflow-hidden bg-gray-100 h-[250px] md:h-[400px]">
           <img
-            src={Img3 || "/placeholder.svg"}
+            src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/blog2.jpg"
             alt="Software development trends"
             className="w-full h-full object-top object-cover"
           />
@@ -54,7 +51,7 @@ function NewsDetails() {
 
           <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4">Why It Matters</h2>
 
-          <img src={Img1 || "/placeholder.svg"} alt="Low-code development platform" className="w-full h-auto my-6" />
+          <img src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/News.png" alt="Low-code development platform" className="w-full h-auto my-6" />
 
           <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Speed to Market:</strong> Low-code platforms reduce development time by up to 60%, according to
@@ -87,7 +84,7 @@ function NewsDetails() {
           </p>
 
           <div className="my-8 rounded-lg overflow-hidden">
-            <img src={Img2 || "/placeholder.svg"} alt="AI-assisted development" className="w-full h-auto" />
+            <img src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/News2.png" alt="AI-assisted development" className="w-full h-auto" />
           </div>
 
           <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4">Why It Matters</h2>

@@ -13,6 +13,7 @@ import FAQS from "../Components/Homepage/FAQS";
 import ContactSection from "../Components/Homepage/ContactSection";
 import Footer from "../Components/GeneralComponents/Footer";
 import Counter from "../Components/Homepage/Counter2";
+import ClientLogos from "../Components/Homepage/ClientLogos";
 
 function Home() {
   return (
@@ -27,6 +28,7 @@ function Home() {
       <LatestSolutions />
       {/* <TeamSection /> */}
       <TestimonialSection />
+      <ClientLogos />
       <Blog />
       <ContactSection />
       <FAQS />

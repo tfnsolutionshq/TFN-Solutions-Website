@@ -2,16 +2,6 @@ import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ChevronDown, ArrowRight } from "lucide-react"
 import { useNavigate } from "react-router-dom"
-import image2 from "../../assets/Images/image 2.png"
-import image3 from "../../assets/Images/image 3.png"
-import image5 from "../../assets/Images/image 5.png"
-import image6 from "../../assets/Images/image 6.png"
-import image7 from "../../assets/Images/image 7.png"
-import image8 from "../../assets/Images/image 8.png"
-import image9 from "../../assets/Images/image 9.png"
-import image10 from "../../assets/Images/image 10.png"
-import image11 from "../../assets/Images/image 11.png"
-import diverse from "../../assets/Images/diverse.png"
 
 const ServicesSection = () => {
   const scrollContainerRef = useRef(null)
@@ -24,67 +14,67 @@ const ServicesSection = () => {
     {
         id: 1,
         title: "Managed IT Services",
-        image: diverse,
+        image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/diverse.png",
         path: "/services/managed-it-services"
     },
     {
         id: 2,
         title: "Cloud Services",
-        image: image2,
+        image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%203.png",
         path: "/services/cloud-services"
     },
     {
         id: 3,
         title: "Cybersecurity Services",
-        image: image3,
+        image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%2011.png",
         path: "/services/cybersecurity-services"
     },
     {
         id: 4,
         title: "IT Consulting & Strategy",
-        image: image5,
+        image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%205.png",
         path: "/services/it-consulting-and-strategy"
     },
     {
         id: 5,
         title: "Software Development & Integration",
-        image: image6,
+        image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%206.png",
         path: "/services/software-development"
     },
     {
         id: 6,
         title: "Data Services",
-        image: image7,
+        image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%207.png",
         path: "/services/data-services"
     },
     {
         id: 7,
         title: "Infrastructure Services -(onsite/Remote)",
-        image: image8,
+        image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%208.png",
         path: "/services/infrastructure-services"
     },
     {
         id: 8,
         title: "IT Support & Helpdesk",
-        image: image9,
+        image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%209.png",
         path: "/services/it-support-and-helpdesk"
     },
     {
         id: 9,
         title: "Communication & Collaboration Tools",
-        image: image10,
+        image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%2010.png",
         path: "/services/communication-and-collaboration-tools"
     },
     {
         id: 10,
         title: "Backup & Disaster Recovery (BDR)",
-        image: diverse,
+        image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/diverse.png",
         path: "/services/backup-and-disaster-recovery"
     },
     {
         id: 11,
         title: "Hardware & Software Procurement",
-        image: image2,
+        image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%202.png",
         path: "/services/hardware-and-software-procurement"
     },
   ]

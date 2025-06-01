@@ -1,25 +1,28 @@
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react" // Import useEffect
 import { motion, AnimatePresence } from "framer-motion"
-import { Plus, Minus, Search, ArrowRight } from "lucide-react"
+import { Plus, Minus } from "lucide-react" // Remove Search, ArrowRight as they are no longer needed
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null)
-  const [searchQuery, setSearchQuery] = useState("")
-  const [activeCategory, setActiveCategory] = useState("all")
+  // Removed searchQuery and activeCategory states
+  // const [searchQuery, setSearchQuery] = useState("");
+  // const [activeCategory, setActiveCategory] = useState("all");
   const [hoveredIndex, setHoveredIndex] = useState(null)
-  const searchRef = useRef(null)
+  // Removed searchRef as it's no longer needed
+  // const searchRef = useRef(null);
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index)
   }
 
-  const categories = [
-    { id: "all", name: "All Questions" },
-    { id: "services", name: "Services" },
-    { id: "pricing", name: "Pricing" },
-    { id: "timeline", name: "Timeline" },
-    { id: "support", name: "Support" },
-  ]
+  // Categories are no longer needed for filtering, but can be kept for display if desired, though removed here for simplicity.
+  // const categories = [
+  //   { id: "all", name: "All Questions" },
+  //   { id: "services", name: "Services" },
+  //   { id: "pricing", name: "Pricing" },
+  //   { id: "timeline", name: "Timeline" },
+  //   { id: "support", name: "Support" },
+  // ];
 
   const faqItems = [
     {
@@ -59,21 +62,23 @@ export default function FAQSection() {
     },
   ]
 
-  const filteredFaqs = faqItems.filter(
-    (item) =>
-      (activeCategory === "all" || item.category === activeCategory) &&
-      (item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.answer.toLowerCase().includes(searchQuery.toLowerCase())),
-  )
+  // The filteredFaqs is now just faqItems since there's no filtering.
+  // const filteredFaqs = faqItems.filter(
+  //   (item) =>
+  //     (activeCategory === "all" || item.category === activeCategory) &&
+  //     (item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  //       item.answer.toLowerCase().includes(searchQuery.toLowerCase())),
+  // );
+  const filteredFaqs = faqItems; // All items are displayed
 
-  // Focus search input when clicking the search icon
-  const focusSearch = () => {
-    if (searchRef.current) {
-      searchRef.current.focus()
-    }
-  }
+  // Removed focusSearch as it's no longer needed
+  // const focusSearch = () => {
+  //   if (searchRef.current) {
+  //     searchRef.current.focus();
+  //   }
+  // };
 
-  // Animation variants
+  // Animation variants remain the same as they are for the FAQ items themselves
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -101,6 +106,11 @@ export default function FAQSection() {
     default: { scale: 1 },
     hover: { scale: 1.01, transition: { duration: 0.3 } },
   }
+
+  // Add the useEffect hook to scroll to the top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <section className="py-10 relative overflow-hidden">
@@ -173,7 +183,8 @@ export default function FAQSection() {
           </motion.p>
         </div>
 
-        {/* Search and Filter */}
+        {/* Removed Search and Filter Section */}
+        {/*
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -181,7 +192,6 @@ export default function FAQSection() {
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-6 justify-between items-center">
-            {/* Search */}
             <div className="relative w-full md:w-auto md:min-w-[320px]">
               <input
                 ref={searchRef}
@@ -198,8 +208,6 @@ export default function FAQSection() {
                 <Search size={18} />
               </div>
             </div>
-
-            {/* Category Filters */}
             <div className="flex flex-wrap gap-2 justify-center">
               {categories.map((category) => (
                 <button
@@ -217,6 +225,7 @@ export default function FAQSection() {
             </div>
           </div>
         </motion.div>
+        */}
 
         {/* FAQ Items */}
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="grid grid-cols-1 gap-6">
@@ -273,6 +282,8 @@ export default function FAQSection() {
               </motion.div>
             ))
           ) : (
+            // This 'No questions found' message will now never be displayed
+            // as filteredFaqs will always contain all faqItems.
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -281,8 +292,8 @@ export default function FAQSection() {
               <p className="text-gray-500 mb-4">No questions found matching your criteria.</p>
               <button
                 onClick={() => {
-                  setSearchQuery("")
-                  setActiveCategory("all")
+                  // setSearchQuery(""); // Removed as searchQuery state is gone
+                  // setActiveCategory("all"); // Removed as activeCategory state is gone
                 }}
                 className="text-blue-600 font-medium hover:underline"
               >

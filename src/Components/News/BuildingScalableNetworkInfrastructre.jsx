@@ -1,6 +1,3 @@
-import Img3 from "../../assets/Images/blog1.jpg"
-import Img2 from "../../assets/Images/News2.png"
-import Img1 from "../../assets/Images/News.png"
 
 function NewsDetails() {
   return (
@@ -23,7 +20,7 @@ function NewsDetails() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-10 rounded-xl overflow-hidden bg-gray-100 h-[250px] md:h-[400px]">
           <img
-            src={Img3 || "/placeholder.svg"}
+            src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/blog1.jpg"
             alt="Network infrastructure visualization"
             className="w-full h-full object-top object-cover"
           />
@@ -54,7 +51,7 @@ function NewsDetails() {
 
           <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4">Best Practices</h2>
 
-          <img src={Img1 || "/placeholder.svg"} alt="SD-WAN architecture diagram" className="w-full h-auto my-6" />
+          <img src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/News.png" alt="SD-WAN architecture diagram" className="w-full h-auto my-6" />
 
           <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Prioritize Application Performance:</strong> Configure SD-WAN to optimize bandwidth for critical
@@ -86,7 +83,7 @@ function NewsDetails() {
 
           <div className="my-8 rounded-lg overflow-hidden">
             <img
-              src={Img2 || "/placeholder.svg"}
+              src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/News2.png"
               alt="Network security monitoring dashboard"
               className="w-full h-auto"
             />

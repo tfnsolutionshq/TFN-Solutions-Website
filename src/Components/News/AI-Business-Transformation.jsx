@@ -1,6 +1,4 @@
-import Img3 from "../../assets/Images/blog3.jpg"
-import Img2 from "../../assets/Images/News2.png"
-import Img1 from "../../assets/Images/News.png"
+
 
 function NewsDetails() {
   return (
@@ -23,7 +21,7 @@ function NewsDetails() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-10 rounded-xl overflow-hidden bg-gray-100 h-[250px] md:h-[400px]">
           <img
-            src={Img3 || "/placeholder.svg"}
+            src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets/3d-rendering-biorobots-concept.jpg"
             alt="AI transforming business operations"
             className="w-full h-full object-cover"
           />
@@ -53,7 +51,7 @@ function NewsDetails() {
 
           <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4">Real-World Applications</h2>
 
-          <img src={Img1 || "/placeholder.svg"} alt="Predictive analytics dashboard" className="w-full h-auto my-6" />
+          <img src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/News.png" alt="Predictive analytics dashboard" className="w-full h-auto my-6" />
 
           <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">
             <strong>Retail:</strong> Companies like Amazon use predictive analytics to forecast demand, optimize
@@ -86,7 +84,7 @@ function NewsDetails() {
           </p>
 
           <div className="my-8 rounded-lg overflow-hidden">
-            <img src={Img2 || "/placeholder.svg"} alt="AI chatbot interface" className="w-full h-auto" />
+            <img src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/News2.png" alt="AI chatbot interface" className="w-full h-auto" />
           </div>
 
           <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4">Real-World Applications</h2>

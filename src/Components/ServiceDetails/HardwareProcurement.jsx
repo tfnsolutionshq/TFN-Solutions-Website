@@ -1,10 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Key, Users, BarChart3 } from 'lucide-react';
 import Approach from '../../Components/Homepage/Approach';
-import ServiceImage from '../../assets/Images/image 7.png';
-import ServiceImage2 from '../../assets/Images/image 6.png';
-import ServiceImage3 from '../../assets/Images/image 8.png';
 
 const serviceIcons = {
     licensing: <Key className="w-6 h-6" />,
@@ -89,6 +86,24 @@ function HardwareSoftwareProcurement() {
     const toggleAccordion = (id) => {
         setActiveAccordion(activeAccordion === id ? null : id);
     };
+
+    useEffect(() => {
+    const scrollToTop = () => {
+        // Try multiple methods to ensure it works
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        window.scrollTo(0, 0);
+    };
+    
+    // Immediate scroll
+    scrollToTop();
+    
+    // Delayed scroll as backup
+    const timer = setTimeout(scrollToTop, 50);
+    
+    return () => clearTimeout(timer);
+}, []);
+
 
     return (
         <main className="bg-[var(--background-primary)]">

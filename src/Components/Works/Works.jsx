@@ -1,15 +1,11 @@
 import { useState } from 'react';
-import Afriwok from '../../assets/works/afriwokbanner.jpg';
-import Crystalbricks from '../../assets/works/crystalbanner.png';
-import UnizikAlumni from '../../assets/works/Alumni_Banner.png';
-import Infrastructure from '../../assets/Images/infra1.jpg';
 import { Link } from 'react-router-dom';
 
 export default function PortfolioSection() {
   const [activeFilter, setActiveFilter] = useState('all');
   
   const filters = [
-    { id: 'all', name: 'All Work' },
+    { id: 'all', name: 'All Projects' },
     { id: 'software', name: 'Software Development' },
     { id: 'network', name: 'Network Solutions' },
     // { id: 'startup', name: 'Sta' }
@@ -20,28 +16,28 @@ export default function PortfolioSection() {
       id: 1,
       title: 'Afriwok',
       category: 'software',
-      image: Afriwok,
+      image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/afriwokbanner.jpg",
       slug: 'afriwok' // Added slug for URL
     },
     {
       id: 2,
       title: 'Unizik Alumni Portal',
       category: 'software',
-      image: UnizikAlumni,
+      image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/Alumni_banner.png",
       slug: 'unizik-alumni'
     },
     {
       id: 3,
       title: 'Crystalbricks',
       category: 'software',
-      image: Crystalbricks,
+      image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/crystalbanner.png",
       slug: 'crystalbricks'
     },
     {
       id: 4,
       title: 'Infrastructure Service',
       category: 'network',
-      image: Infrastructure,
+      image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/infra1.jpg",
       slug: 'infrastructure-service'
     }
   ];
@@ -55,8 +51,8 @@ export default function PortfolioSection() {
       <section className="pb-16 pt-36 px-4 bg-[var(--background-primary)]">
         <div className="max-w-5xl mx-auto">
           <div className="mb-8">
-            <p className="text-orange-500 font-medium mb-2">WORKS</p>
-            <h2 className="text-3xl md:text-6xl font-bold mb-4">Our latest works</h2>
+            <p className="text-orange-500 font-medium mb-2">Projects</p>
+            <h2 className="text-3xl md:text-6xl font-bold mb-4">Our Latest Projects</h2>
             <p className="text-[var(text-secondary)] max-w-2xl">
               Deploy smart customized systems for firms, business, or enterprise quickly with expert 
               integration and support.
@@ -84,7 +80,7 @@ export default function PortfolioSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filteredProjects.map(project => (
               <Link 
-                to={`/works/${project.slug}`} 
+                to={`/projects/${project.slug}`} 
                 key={project.id}
                 className="group relative bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               >

@@ -194,7 +194,7 @@ const WorkDetails = () => {
   // Sample project data - replace with actual data or API call
   const projectData = {
     title: "Crystal Bricks Portal & Website",
-    image: "/src/assets/works/crystalbanner.png", // Using actual image from assets
+    image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/crystalbanner.png", // Using actual image from assets
     description: "Experience the power of Mobile App Project Management and unlock the potential of your projects.",
     client: "Crystalbricks",
     service: "UI/UX, Software Development",
@@ -227,7 +227,7 @@ const WorkDetails = () => {
         className="mb-12"
       >
         <Link
-          to="/works"
+          to="/projects"
           className="inline-flex items-center text-sm text-gray-500 hover:text-orange-500 transition-colors"
         >
           <ChevronRight className="mr-1 h-4 w-4 rotate-180" />
@@ -369,7 +369,7 @@ const WorkDetails = () => {
             <div
               className="w-full h-[300px] bg-gray-100"
               style={{
-                backgroundImage: `url('/src/assets/works/crystalone.png')`,
+                backgroundImage: `url('https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/crystalone.png')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -380,7 +380,7 @@ const WorkDetails = () => {
             <div
               className="w-full h-[300px] bg-gray-100"
               style={{
-                backgroundImage: `url('/src/assets/works/crystaltwo.png')`,
+                backgroundImage: `url('https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/crystaltwo.png')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}

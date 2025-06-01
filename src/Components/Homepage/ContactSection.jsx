@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight, Mail, Phone } from "lucide-react"
-import BG from '../../assets/Images/image 11.png'
 
 const ContactSection = () => {
   const [isAnimating, setIsAnimating] = useState(false)
@@ -20,12 +19,16 @@ const ContactSection = () => {
     setShowCalendly(false)
   }
 
+   const UsPhone = import.meta.env.VITE_PHONE_US;
+    const NgPhone = import.meta.env.VITE_PHONE_NG;
+    const CompanyEmail = import.meta.env.VITE_EMAIL_PRIMARY;
+
   return (
-    <section className="relative h-[450px] overflow-hidden">
+    <section className="relative h-[500px] overflow-hidden">
       {/* Background image with gradient overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={BG}
+          src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%2011.png"
           alt="Office environment"
           className="w-full h-full object-cover"
         />
@@ -56,8 +59,8 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-sm text-blue-200">Email Us</p>
-                <a href="mailto:support@itsolutions.us" className="text-white hover:text-blue-300 transition-colors">
-                  support@tfnsolutions.us
+                <a href={`mailto:${CompanyEmail}`} className="text-white hover:text-blue-300 transition-colors">
+                  {CompanyEmail}
                 </a>
               </div>
             </div>
@@ -68,8 +71,8 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-sm text-blue-200">Call Us</p>
-                <a href="tel:++02 098 0381" className="text-white hover:text-blue-300 transition-colors">
-                  US (+02 098 0381)
+                <a href={`tel:${UsPhone}`} className="text-white hover:text-blue-300 transition-colors">
+                  {UsPhone}
                 </a>
               </div>
             </div>

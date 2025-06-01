@@ -2,9 +2,6 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { ArrowUpRight, ChevronRight, Server, Network, Database, Shield, Zap } from "lucide-react"
-import Infrastructure1 from "../../assets/Images/infra1.jpg"
-import Infrastructure2 from "../../assets/Images/infra2.jpg"
-import Infrastructure3 from "../../assets/Images/infra3.jpg"
 
 const Infrastructure = () => {
   // Animation state
@@ -26,7 +23,7 @@ const Infrastructure = () => {
         icon: <Server className="w-6 h-6" />,
         title: "Server Design & Deployment",
         description:
-          "Provision, configure, and maintain physical and virtual servers for optimal performance, uptime, and security.",
+          "We expertly provision, configure, and maintain physical and virtual servers to ensure optimal performance, maximum uptime, and uncompromised security.",
       },
       {
         icon: <Network className="w-6 h-6" />,
@@ -53,7 +50,7 @@ const Infrastructure = () => {
       },
     ],
     achievements: [
-      "Design & Deploy: Provision, configure, and maintain physical and virtual servers for optimal performance, uptime, and security.",
+      "Design & Deploy: We expertly provision, configure, and maintain physical and virtual servers to ensure optimal performance, maximum uptime, and uncompromised security",
       "Network Design & Implementation: End-to-end wired and wireless infrastructure design, tailored to your scale, industry, and goals.",
       "Storage Solutions: Deploy scalable and secure SAN, NAS, or cloud storage systems for enterprise-grade file and backup management.",
       "Virtualization (VMware, Hyper-V): Increase agility and reduce hardware costs with robust virtual machine and container orchestration.",
@@ -71,7 +68,7 @@ const Infrastructure = () => {
         className="mb-12"
       >
         <Link
-          to="/works"
+          to="/projects"
           className="inline-flex items-center text-sm text-gray-500 hover:text-orange-500 transition-colors"
         >
           <ChevronRight className="mr-1 h-4 w-4 rotate-180" />
@@ -103,7 +100,7 @@ const Infrastructure = () => {
       >
         <div className="relative rounded-2xl overflow-hidden">
           <img
-            src={Infrastructure1 || "/placeholder.svg"}
+            src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/infra1.jpg"
             alt="Main Infrastructure"
             className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover"
           />
@@ -201,7 +198,7 @@ const Infrastructure = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="rounded-xl overflow-hidden">
             <img
-              src={Infrastructure2 || "/placeholder.svg"}
+              src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/infra2.jpg"
               alt="Infrastructure Detail 1"
               className="w-full h-[300px] object-cover"
             />
@@ -209,7 +206,7 @@ const Infrastructure = () => {
 
           <div className="rounded-xl overflow-hidden">
             <img
-              src={Infrastructure3 || "/placeholder.svg"}
+              src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/infra3.jpg"
               alt="Infrastructure Detail 2"
               className="w-full h-[300px] object-cover"
             />

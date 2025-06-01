@@ -2,10 +2,6 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, HardDrive, FileCheck, Clock, Cloud } from 'lucide-react';
 import Approach from '../../Components/Homepage/Approach';
-import ServiceImage from '../../assets/Images/image 7.png';
-import ServiceImage2 from '../../assets/Images/image 6.png';
-import ServiceImage3 from '../../assets/Images/image 8.png';
-import ServiceImage4 from '../../assets/Images/image 9.png';
 
 const serviceIcons = {
     backup: <HardDrive className="w-6 h-6" />,
@@ -19,15 +15,22 @@ function Backup() {
     const [activeFilter, setActiveFilter] = useState('all');
 
     useEffect(() => {
-        // Ensure the page can scroll and scroll to top
-        document.body.style.overflow = 'auto';
+    const scrollToTop = () => {
+        // Try multiple methods to ensure it works
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
         window.scrollTo(0, 0);
-        
-        return () => {
-            // Cleanup if needed
-            document.body.style.overflow = 'auto';
-        };
-    }, []);
+    };
+    
+    // Immediate scroll
+    scrollToTop();
+    
+    // Delayed scroll as backup
+    const timer = setTimeout(scrollToTop, 50);
+    
+    return () => clearTimeout(timer);
+}, []);
+
 
     const services = [
         {

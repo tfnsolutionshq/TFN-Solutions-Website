@@ -1,6 +1,4 @@
-import Img1 from "../../assets/Images/image 2.png"
-import Img2 from "../../assets/Images/image 3.png"
-import Img3 from "../../assets/Images/diverse.png"
+
 
 const ImageGallery = () => {
   return (
@@ -9,7 +7,7 @@ const ImageGallery = () => {
         {/* First image - programmer with code overlay */}
         <div className="relative overflow-hidden rounded-lg shadow-lg h-64 md:h-64 group">
           <img 
-            src={Img1}
+            src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%202.png"
             alt="Programmer with code overlay" 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -18,7 +16,7 @@ const ImageGallery = () => {
         {/* Second image - team working on computers */}
         <div className="relative overflow-hidden rounded-lg shadow-lg h-64 md:h-64 group">
           <img 
-            src={Img2} 
+            src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/image%203.png" 
             alt="Team working on computers" 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -27,7 +25,7 @@ const ImageGallery = () => {
         {/* Third image - woman with sticky notes */}
         <div className="relative overflow-hidden rounded-lg shadow-lg h-64 md:h-64 group">
           <img 
-            src={Img3}
+            src="https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/diverse.png"
             alt="Woman with sticky notes" 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />

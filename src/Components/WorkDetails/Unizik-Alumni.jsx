@@ -197,7 +197,7 @@ const WorkDetails = () => {
     client: "Nnamdi Azikiwe University",
     service: "UI/UX, Software Development",
     year: "2025",
-    liveUrl: "https://alimniportal.com/",
+    liveUrl: "https://unizikalumni.tfnsolutions.us/",
     detailedDescription:
       "The UNIZIK Alumni Portal was developed to bridge the gap between graduates and their alma mater — Nnamdi Azikiwe University. It provides a modern digital experience that fosters networking, community engagement, and alumni support programs.",
     projectHighlights: [
@@ -223,7 +223,7 @@ const WorkDetails = () => {
         className="mb-12"
       >
         <Link
-          to="/works"
+          to="/projects"
           className="inline-flex items-center text-sm text-gray-500 hover:text-orange-500 transition-colors"
         >
           <ChevronRight className="mr-1 h-4 w-4 rotate-180" />

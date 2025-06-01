@@ -1,9 +1,5 @@
 import { ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import Afriwokbanner from '../../assets/works/afriwokbanner.jpg'
-import ALumniBanner from '../../assets/works/Alumni_Banner.png'
-import CrystalBricksbanner from '../../assets/works/crystalbanner.png';
-import Infrastructure from '../../assets/Images/infra1.jpg';
 
 export default function LatestSolutions() {
 
@@ -12,15 +8,15 @@ export default function LatestSolutions() {
             id: 1,
             category: 'software',
             title: 'Unizik Alumni Website',
-            image: ALumniBanner,
-            link: '/works/unizik-alumni'
+            image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/Alumni_banner.png",
+            link: '/projects/unizik-alumni'
         },
         {
             id: 2,
             category: 'software',
             title: 'Afriwok',
-            image: Afriwokbanner,
-            link: '/works/afriwok'
+            image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/afriwokbanner.jpg",
+            link: '/projects/afriwok'
         },
         // {
         //     id: 3,
@@ -32,15 +28,15 @@ export default function LatestSolutions() {
             id: 3,
             category: 'software',
             title: 'CrystalBricks',
-            image: CrystalBricksbanner,
-            link: '/works/crystalbricks'
+            image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/works/crystalbanner.png",
+            link: '/projects/crystalbricks'
         },
         {
             id: 4,
             category: 'network',
             title: 'Infrastructure Service',
-            image: Infrastructure,
-            link: '/works/infrastructure-service'
+            image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/infra1.jpg",
+            link: '/projects/infrastructure-service'
         }
     ];
 

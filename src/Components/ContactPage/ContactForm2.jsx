@@ -272,6 +272,10 @@ const ContactForm = () => {
     }
   };
 
+  const UsPhone = import.meta.env.VITE_PHONE_US;
+    const NgPhone = import.meta.env.VITE_PHONE_NG;
+    const CompanyEmail = import.meta.env.VITE_EMAIL_PRIMARY;
+
   return (
     <div className="pb-16 mt-44">
       <div className="max-w-6xl mx-auto px-4">
@@ -289,7 +293,7 @@ const ContactForm = () => {
 
             <div className="mt-8">
               <a
-                href="mailto:support@tfnsolutions.us"
+                href={`mailto:${CompanyEmail}`}
                 className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-full font-medium transition-colors"
               >
                 <span>Email Us</span>
@@ -305,8 +309,8 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium text-[var(--text-secondary)] mb-1">Email</h3>
-                    <a href="mailto:support@tfnsolutions.us" className="text-[var(--text-primary)] hover:text-blue-600 transition-colors font-medium">
-                      support@tfnsolutions.us
+                    <a href={`mailto:${CompanyEmail}`} className="text-[var(--text-primary)] hover:text-blue-600 transition-colors font-medium">
+                      {CompanyEmail}
                     </a>
                   </div>
                 </div>
@@ -318,11 +322,11 @@ const ContactForm = () => {
                   <div>
                     <h3 className="text-sm font-medium text-[var(--text-secondary)] mb-1">Phone</h3>
                     <div>
-                      <a href="tel:+14237971633" className="mb-1 font-medium hover:underline cursor:pointer">
-                        <span className="text-[var(--text-secondary)] text-sm">US:</span> +1(423)797-1633
+                      <a href={`tel:${UsPhone}`} className="mb-1 font-medium hover:underline cursor:pointer">
+                        <span className="text-[var(--text-secondary)] text-sm">US:</span> {UsPhone}
                       </a> <br />
-                      <a href="tel:+2348063961963" className="font-medium hover:underline">
-                        <span className="text-[var(--text-secondary)] text-sm">NG:</span> +(234) 806 396 1963
+                      <a href={`tel:${NgPhone}`} className="font-medium hover:underline">
+                        <span className="text-[var(--text-secondary)] text-sm">NG:</span> {NgPhone}
                       </a>
                     </div>
                   </div>

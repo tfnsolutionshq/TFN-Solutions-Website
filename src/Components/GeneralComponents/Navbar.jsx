@@ -146,7 +146,7 @@ const Navbar = () => {
 
         {/* Left Navigation Links - Hidden on mobile */}
         {!isMobile && (
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4">
             <Link to="/" className="text-[var(--text-primary)] hover:text-blue-600 transition-colors">
               {t("navbar.home")}
             </Link>
@@ -207,9 +207,9 @@ const Navbar = () => {
                 )}
               </AnimatePresence>
             </div>
-
-            <Link to="/works" className="text-[var(--text-primary)] hover:text-blue-600 transition-colors">
-              {t("navbar.works")}
+            <Link to="/careers" className="text-[var(--text-primary)] hover:text-blue-600 transition-colors">Careers</Link>
+            <Link to="/projects" className="text-[var(--text-primary)] hover:text-blue-600 transition-colors">
+              Projects
             </Link>
             <Link to="/latest-news" className="text-[var(--text-primary)] hover:text-blue-600 transition-colors">
               {t("navbar.news")}
@@ -361,13 +361,19 @@ const Navbar = () => {
                       )}
                     </AnimatePresence>
                   </div>
-
                   <Link
-                    to="/works"
+                    to="/careers"
                     className="text-[var(--text-primary)] py-3 border-b border-gray-100"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {t("navbar.works")}
+                    Careers
+                  </Link>
+                  <Link
+                    to="/projects"
+                    className="text-[var(--text-primary)] py-3 border-b border-gray-100"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Projects
                   </Link>
                   <Link
                     to="/news"
@@ -378,20 +384,19 @@ const Navbar = () => {
                   </Link>
                 </div>
 
-                <div className="p-4 mt-auto">
+                <div className="p-4 mt-auto border-t border-gray-100">
                   <Link
                     to="/contactus"
-                    className="flex items-center justify-center bg-blue-600 text-white px-4 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 w-full"
+                    className="flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 w-full text-lg font-medium shadow-lg"
                     onClick={() => {
                       setMobileMenuOpen(false)
                       navigate("/contactus")
                     }}
                   >
                     <span>{t("navbar.contact")}</span>
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                    <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
-                </div>
-              </div>
+                </div>              </div>
             </motion.div>
           </>
         )}

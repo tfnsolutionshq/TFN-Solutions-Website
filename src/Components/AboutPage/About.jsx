@@ -34,7 +34,7 @@ const AboutUs = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            We're a dedicated{" "}
+            We're a dedicated team of{" "}
             <span className="relative inline-block">
               <span className="relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Digital

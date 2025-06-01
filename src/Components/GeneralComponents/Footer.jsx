@@ -91,6 +91,10 @@ export default function Footer() {
     </motion.a>
   )
 
+  const UsPhone = import.meta.env.VITE_PHONE_US;
+  const NgPhone = import.meta.env.VITE_PHONE_NG;
+  const CompanyEmail = import.meta.env.VITE_EMAIL_PRIMARY;
+
   return (
     <>
       <footer
@@ -171,7 +175,7 @@ export default function Footer() {
                 {[
                   { to: "/", label: "Home" },
                   { to: "/about", label: "About" },
-                  { to: "/works", label: "Works" },
+                  { to: "/projects", label: "Projects" },
                   { to: "/contactus", label: "Contact Us" },
                 ].map((item) => (
                   <motion.li key={item.to} whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
@@ -186,12 +190,12 @@ export default function Footer() {
 
             {/* Navigation Links Column 2 */}
             <motion.div variants={itemVariants}>
-              <h3 className="font-medium mb-4 text-blue-300">Works</h3>
+              <h3 className="font-medium mb-4 text-blue-300">Projects</h3>
               <ul className="space-y-3">
                 {[
-                  { to: "/works/afriwok", label: "Afriwok" },
-                  { to: "/works/unizik-alumni", label: "Unizik Alumni" },
-                  { to: "/works/crystalbricks", label: "Crystalbricks" },
+                  { to: "/projects/afriwok", label: "Afriwok" },
+                  { to: "/projects/unizik-alumni", label: "Unizik Alumni" },
+                  { to: "/projects/crystalbricks", label: "Crystalbricks" },
                 ].map((item) => (
                   <motion.li key={item.to} whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                     <Link to={item.to} className="text-sm text-white hover:text-blue-400 transition-colors flex items-center">
@@ -223,14 +227,14 @@ export default function Footer() {
               <ul className="space-y-4">
                 <li>
                   <a
-                    href="mailto:support@tfnsolutions.us"
+                    href={`mailto:${CompanyEmail}`}
                     className="text-sm text-white hover:text-blue-400 transition-colors flex items-start"
                   >
                     <Mail size={16} className="mr-2 mt-1 text-blue-400" />
                     <div>
                       <span className="text-blue-200">Email:</span>
                       <br />
-                      <span className="font-bold hover:underline">support@tfnsolutions.us</span>
+                      <span className="font-bold hover:underline">{CompanyEmail}</span>
                     </div>
                   </a>
                 </li>
@@ -242,8 +246,8 @@ export default function Footer() {
                     <div>
                       <span className="text-blue-200">Phone:</span>
                       <br />
-                      <a href="tel:+14237971633" className="font-bold hover:underline">US: +1 (423) 797-1633</a> <br />
-                      <a href="tel:+2348063961963" className="font-bold hover:underline">NG: +(234) 806 396 1963</a>
+                      <a href={`tel:${UsPhone}`} className="font-bold hover:underline">US: {UsPhone}</a> <br />
+                      <a href={`tel:${NgPhone}`} className="font-bold hover:underline">NG: {NgPhone}</a>
                     </div>
                   </div>
                 </li>
@@ -288,13 +292,13 @@ export default function Footer() {
               </div>
             </div>
             <div className="mt-4 md:mt-0 space-x-4 text-xs text-white/70">
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <Link to={`/legal/privacy-policy`} className="hover:text-blue-400 transition-colors">
                 Privacy Policy
-              </a>
+              </Link>
               <span>|</span>
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <Link to={`/legal/terms-and-conditions`} className="hover:text-blue-400 transition-colors">
                 Terms & Conditions
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -341,7 +345,7 @@ export default function Footer() {
         transition={{ delay: 1, type: "spring", stiffness: 100 }}
       >
         <Link
-          to="https://wa.me/2348063961963"
+          to="https://api.whatsapp.com/send/?phone=2348063961963&text&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-4 right-4 z-50 flex items-center px-4 py-2 bg-white border-2 border-green-400 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 group"
@@ -352,8 +356,7 @@ export default function Footer() {
         >
           <span className="text-sm font-medium text-[var(--text-primary)] mr-2">Send a DM</span>
           <motion.span
-            animate={{ rotate: [0, 180, 360] }}
-            transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+            
             className="flex items-center justify-center w-6 h-6 bg-black rounded-full"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

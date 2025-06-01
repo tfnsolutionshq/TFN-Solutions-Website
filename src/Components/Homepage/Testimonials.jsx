@@ -1,19 +1,6 @@
-"use client"
-
 import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import TestImage from "../../assets/Images/man.jpg"
-import TestImage2 from "../../assets/Images/man2.jpg"
-import TestImage3 from "../../assets/Images/man3.jpg"
-import TestImage4 from "../../assets/Images/woman.jpg"
-import TestImage5 from "../../assets/Images/woman2.jpg"
-import Unizik from  '../../assets/sponsors/unizik.png'
-import Flutterwave from  '../../assets/sponsors/flutterwave.png'
-import Crystal from  '../../assets/sponsors/crystal.png'
-import Afriwok from  '../../assets/sponsors/afriwok.png'
-import Google from  '../../assets/sponsors/google.png'
-import Credo from  '../../assets/sponsors/credo.png'
 
 const testimonials = [
   {
@@ -21,68 +8,35 @@ const testimonials = [
     quote: "Our business has seen incredible growth since partnering with this team. They really know their stuff!",
     name: "Kathryn Murphy",
     position: "Content Writer",
-    image: TestImage5,
+    image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/woman.jpg",
   },
   {
     id: 2,
     quote: "We were impressed with the level of expertise and professionalism. The results speak for themselves!",
     name: "Harry Russell",
     position: "Web Developer",
-    image: TestImage,
+    image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/man.jpg",
   },
   {
     id: 3,
     quote: "All we wanted was a simple website, and they delivered beyond our expectations. A true partner!",
     name: "Holiday Hasan",
     position: "CEO, Remote Digital",
-    image: TestImage2,
+    image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/man2.jpg",
   },
   {
     id: 4,
     quote: "The team delivered our project ahead of schedule and exceeded all our expectations. Highly recommended!",
     name: "James Wilson",
     position: "Marketing Director",
-    image: TestImage3,
+    image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/man3.jpg",
   },
   {
     id: 5,
     quote: "Working with this team transformed our digital presence completely. Our conversion rates have doubled!",
     name: "Sarah Chen",
     position: "Product Manager",
-    image: TestImage4,
-  },
-]
-
-const clientLogos = [
-  {
-    id: 1,
-    name: "University",
-    logo: Unizik,
-  },
-  {
-    id: 2,
-    name: "CrystalBricks",
-    logo: Crystal,
-  },
-  {
-    id: 3,
-    name: "Flutterwave",
-    logo: Flutterwave,
-  },
-  {
-    id: 4,
-    name: "Afriwok",
-    logo: Afriwok,
-  },
-  {
-    id: 5,
-    name: "Google",
-    logo: Google,
-  },
-  {
-    id: 6,
-    name: "Credo",
-    logo: Credo,
+    image: "https://cdn.jsdelivr.net/gh/tfnsolutionshq/TFN-Solutions-Website-Assets@main/woman2.jpg",
   },
 ]
 
@@ -253,36 +207,6 @@ const TestimonialSection = () => {
               ))}
             </motion.div>
           </AnimatePresence>
-        </div>
-
-        {/* Client Logos Section - Redesigned */}
-        <div className="mt-28 max-w-6xl mx-auto">
-          <div className="flex flex-col items-center mb-6">
-            <div className="flex items-center mb-2">
-              <div className="w-2 h-2 rounded-full bg-orange-500 mr-2"></div>
-              <span className="text-sm font-medium text-[var(--text-primary)]">Clients/Partners</span>
-            </div>
-            <h3 className="text-2xl md:text-4xl font-bold text-center">
-              We build for <span className="text-[var(--text-secondary)]">Startup and</span> <span className="text-black font-normal"></span> <span className="text-gray-400 font-normal">enterprise businesses</span>
-            </h3>
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="flex flex-wrap justify-center items-center gap-8 md:gap-12"
-          >
-            {clientLogos.map((client) => (
-              <motion.div
-                key={client.id}
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className=" hover:grayscale-0 transition-all duration-300"
-              >
-                <img src={client.logo || "/placeholder.svg"} alt={client.name} className="h-10 md:h-12 w-auto" />
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </div>
     </section>
