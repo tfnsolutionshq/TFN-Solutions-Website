@@ -23,7 +23,7 @@ const TermsAndConditions = () => {
       {/* Main heading */}
       <h1 className="text-3xl md:text-5xl font-bold mb-6 text-[var(--text-primary)]">Terms of Service</h1>
       {/* Last updated date - secondary text */}
-      <p className="text-sm text-[var(--text-secondary)] mb-8">Last Updated: 30th May, 2024</p>
+      <p className="text-sm text-[var(--text-secondary)] mb-8">Last Updated: 30th May, 2025</p>
 
       {/* Introduction */}
       <h2 className="text-2xl font-semibold mb-4 text-[var(--text-primary)]">1. Introduction</h2>

@@ -72,12 +72,12 @@ export const jobOpenings = [
     {
         id: 'sales-manager-hybrid',
         title: 'Sales Manager',
-        location: 'Hybrid (Awka, Lagos, Abuja)',
+        location: 'On-site (Awka)',
         company: 'TFN Solutions',
         industry: 'Information Technology & Digital Solutions',
         applicationDeadline: 'Jun 15, 2025',
         startDate: 'Immediate', // Assuming immediate if not specified
-        engagement: 'Full-time, Hybrid', // Based on location
+        engagement: 'Full-time, On-site', // Based on location
         aboutUs: `TFN Solutions is a forward-thinking technology company delivering scalable digital solutions across software development, cybersecurity, networking, IT consulting, and cloud services. We're passionate about helping businesses and institutions grow with technology — and now, we’re looking for a results-driven Sales Manager to drive our next phase of growth.`,
         roleSummary: `As a Sales Manager, you will lead and execute strategies to attract new clients, close high-impact deals, and expand our footprint across local and global markets. You’ll work closely with our technical and marketing teams to align solutions with customer needs and build long-term relationships that fuel recurring business.`,
         responsibilities: [

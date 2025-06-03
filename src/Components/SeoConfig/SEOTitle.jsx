@@ -58,7 +58,7 @@ const SEOTitle = ({
       { property: 'og:type', content: type },
       { property: 'og:url', content: currentUrl },
       { property: 'og:site_name', content: 'TFN Solutions' },
-      { property: 'og:image', content: image || '/default-og-image.jpg' }
+      { property: 'og:image', content: image || 'https://www.tfnsolutions.us/logo.png' }
     ];
 
     ogTags.forEach(tag => {
@@ -76,7 +76,7 @@ const SEOTitle = ({
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title ? `${t(title)} | TFN Solutions` : 'TFN Solutions' },
       { name: 'twitter:description', content: description ? t(description) : 'Leading technology solutions provider' },
-      { name: 'twitter:image', content: image || '/default-twitter-image.jpg' }
+      { name: 'twitter:image', content: image || 'https://www.tfnsolutions.us/logo.png' }
     ];
 
     twitterTags.forEach(tag => {

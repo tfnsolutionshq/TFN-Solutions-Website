@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
       {/* Main heading */}
       <h1 className="text-3xl md:text-5xl font-bold mb-6 text-[var(--text-primary)]">Privacy Policy</h1>
       {/* Last updated date - secondary text */}
-      <p className="text-sm text-[var(--text-secondary)] mb-8">Last Updated: 30th May, 2024</p>
+      <p className="text-sm text-[var(--text-secondary)] mb-8">Last Updated: 30th May, 2025</p>
 
       {/* General paragraph text - secondary */}
       <p className="mb-6 text-[var(--text-secondary)]">
